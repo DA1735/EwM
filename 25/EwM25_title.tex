@@ -1,0 +1,139 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第25回}
+\newcommand{\EwMtitle}{Weil 予想}
+\newcommand{\EwMdate}{2002年12月13日（金）14:40～18:00 ～ 12月14日（土）10:30～16:50}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{12月13日（金）}
+
+\talk
+{14:40～16:00}
+{Weil 予想，その由来と例}
+{堀田 良之 氏（岡山理大・理）}
+
+\talk
+{16:40～18:00}
+{Grothendieck と Weil 予想}
+{藤原 一宏 氏（名大・多元数理）}
+
+\subsection*{12月14日（土）}
+
+\talk
+{10:30～11:50}
+{Deligne と Weil 予想}
+{斎藤 毅 氏（東大・数理）}
+
+\talk
+{13:40～15:00}
+{Weil 予想と表現論}
+{宇澤 達 氏（名大・多元数理）}
+
+\talk
+{15:30～16:50}
+{Weil 予想と数論\\[1mm]応用と今後}
+{藤原 一宏 氏（名大・多元数理）}
+
+\bigskip
+
+17:00～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第25回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

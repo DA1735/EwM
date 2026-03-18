@@ -1,0 +1,140 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第34回}
+\newcommand{\EwMtitle}{非線型の特殊函数論\\[2mm]\large Painlevé 方程式の応用}
+\newcommand{\EwMdate}{2005年7月8日（金）14:30～18:00 ～ 7月9日（土）10:30～17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{7月8日（金）}
+
+\talk
+{14:30～16:00}
+{変形理論からみた Riemann–Hilbert 問題\\[1mm]Painlevé 方程式入門}
+{大山 陽介 氏（阪大・情報）}
+
+\talk
+{16:40～18:00}
+{ガウスを超えてパンルヴェへ\\[1mm]新しい確率分布函数の話}
+{村瀬 元彦 氏（UC Davis）}
+
+\subsection*{7月9日（土）}
+
+\talk
+{10:30～12:00}
+{ソリトンから見たパンルヴェ方程式}
+{筧 三郎 氏（立教大・理）}
+
+\talk
+{13:50～15:00}
+{モノドロミ可解な Painlevé 函数}
+{大山 陽介 氏（阪大・情報）}
+
+\talk
+{15:20～17:00}
+{特殊函数としての生成函数\\[1mm]幾何を足す}
+{村瀬 元彦 氏（UC Davis）}
+
+\bigskip
+
+17:15～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第34回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS  
+e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

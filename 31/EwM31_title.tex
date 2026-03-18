@@ -1,0 +1,150 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第31回}
+\newcommand{\EwMtitle}{スペクトル・散乱理論\\[2mm]\large 基本解への問いかけから学ぶ数理物理}
+\newcommand{\EwMdate}{2004年10月1日（金）14:30～18:00 ～ 10月2日（土）10:30～17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{10月1日（金）}
+
+\talk
+{14:30～15:00}
+{講演会の趣旨について}
+{池部 晃生 氏}
+
+\talk
+{15:00～16:00}
+{定数磁場中の Aharonov–Bohm 効果について}
+{峯 拓矢 氏（京大・理）}
+
+\talk
+{16:30～18:00}
+{Regularity and decay estimates for Schr\"odinger equations}
+{谷島 賢二 氏（学習院大・理）}
+
+\subsection*{10月2日（土）}
+
+\talk
+{10:30～12:00}
+{非線形波動方程式に対する散乱作用素の1つの構成法}
+{久保 英夫 氏（阪大・理）}
+
+\talk
+{13:30～14:30}
+{Dirac 作用素のスペクトルについて}
+{山田 修宣 氏（立命館大・理工）}
+
+\talk
+{15:00～15:50}
+{指数積公式の話題 I\\[1mm]ノルム収束}
+{田村 英男 氏（岡山大・理）}
+
+\talk
+{16:10～17:00}
+{指数積公式の話題 II\\[1mm]Schr\"odinger 半群の積分核近似}
+{田村 英男 氏（岡山大・理）}
+
+\bigskip
+
+17:15～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第31回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS  
+e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

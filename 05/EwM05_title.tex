@@ -1,0 +1,141 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第5回}
+\newcommand{\EwMtitle}{Web幾何学}
+\newcommand{\EwMdate}{1997年11月28日（金）14:30 ～ 11月29日（土）16:30}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部5号館 5534号室}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{2mm}
+
+{\large 今甦る数理物理の豊穣な素材 : 織物理論の秘密を解明!}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{3mm}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{1日目（11月28日（金））}
+
+\talk
+{14:30～15:45}
+{なぜ2重 Translation 面からリーマン面がでてくるか？}
+{中居 功 氏（北大・理）}
+
+\talk
+{16:30～17:45}
+{計算図表、WEB、微分方程式の標準化とツイスター理論 I}
+{佐藤 肇 氏（名古屋大学・多元数理）}
+
+\subsection*{2日目（11月29日（土））}
+
+\talk
+{10:30～11:45}
+{Webの微分幾何の初歩：カルタン、ブラシュケ、チャーンから現在まで}
+{中居 功 氏（北大・理）}
+
+\talk
+{13:20～14:35}
+{計算図表、WEB、微分方程式の標準化とツイスター理論 II}
+{佐藤 肇 氏（名古屋大学・多元数理）}
+
+\talk
+{15:10～16:25}
+{幾何光学におけるWAVE FRONT の Web幾何学の試み}
+{中居 功 氏（北大・理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第5回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112 東京都文京区春日1-13-27 中央大学理工学部数学教室
+
+tel : 03-3817-1745
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

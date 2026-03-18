@@ -1,0 +1,134 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第12回}
+\newcommand{\EwMtitle}{微分トポロジーと代数的トポロジー}
+\newcommand{\EwMdate}{1999年6月18日（金）15:00～17:40 ～ 6月19日（土）10:30～16:50}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{6月18日（金）}
+
+\talk
+{15:00～16:00}
+{20世紀の花形数学(アダ花？)：トポロジー I}
+{佐藤 肇 氏（名大・多元数理）}
+
+\talk
+{16:40～17:40}
+{20世紀の花形数学(アダ花？)：トポロジー II}
+{佐藤 肇 氏（名大・多元数理）}
+
+\subsection*{6月19日（土）}
+
+\talk
+{10:30～12:00}
+{Adams 予想を巡って}
+{服部 晶夫 氏（明大・理工）}
+
+\talk
+{14:00～14:50}
+{指数定理への思い入れ}
+{吉田 朋好 氏（東工大・理）}
+
+\talk
+{15:20～16:50}
+{Panel Discussion}
+{司会：土屋 昭博 氏（名大・多元数理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別掲の趣旨に沿った集会の第12回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演とパネルディスカッションをお願い致しました。  
+多くの方々のご参加をお待ちしております。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

@@ -1,0 +1,139 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第23回}
+\newcommand{\EwMtitle}{複素力学系\\[2mm]\large 単純な関数の iteration が生み出す多彩な世界}
+\newcommand{\EwMdate}{2002年6月7日（金）14:30～18:00 ～ 6月8日（土）10:30～17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{6月7日（金）}
+
+\talk
+{14:30～15:50}
+{複素力学系 I\\[1mm]ジュリア集合とは}
+{宍倉 光広 氏（京大・理）}
+
+\talk
+{16:30～18:00}
+{クライン群のタイヒミュラー空間}
+{松崎 克彦 氏（お茶の水女子大・理）}
+
+\subsection*{6月8日（土）}
+
+\talk
+{10:30～12:00}
+{複素力学系 II\\[1mm]サリバンの非遊走定理と擬等角写像}
+{宍倉 光広 氏（京大・理）}
+
+\talk
+{14:00～15:30}
+{実2次関数の力学系}
+{辻井 正人 氏（北大・理）}
+
+\talk
+{15:50～17:00}
+{複素力学系 III\\[1mm]2次多項式とその周辺}
+{宍倉 光広 氏（京大・理）}
+
+\bigskip
+
+17:10～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第23回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

@@ -1,0 +1,136 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第4回}
+\newcommand{\EwMtitle}{Mordell-Weil 格子\\[2mm]\large および関連する話題}
+\newcommand{\EwMdate}{1997年9月26日（金）14:30 ～ 9月27日（土）16:30}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部5号館 5533号室}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{3mm}
+
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{1日目（9月26日（金））}
+
+\talk
+{14:30～15:45}
+{モーデル・ヴェイユ格子入門 I}
+{塩田 徹治 氏（立教大・理）}
+
+\talk
+{16:30～17:45}
+{モーデル・ヴェイユ格子入門 II}
+{塩田 徹治 氏（立教大・理）}
+
+\subsection*{2日目（9月27日（土））}
+
+\talk
+{10:30～11:45}
+{モーデル・ヴェイユ格子入門 III}
+{塩田 徹治 氏（立教大・理）}
+
+\talk
+{13:20～14:35}
+{階数の高いアーベル多様体の構成について}
+{寺杣 友秀 氏（東大・数理）}
+
+\talk
+{15:10～16:25}
+{Mordell-Weil 群, 代数的サイクル, モチーフ...}
+{斎藤 毅 氏（東大・数理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別掲の趣旨に沿った集会の第4回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112 東京都文京区春日1-13-27 中央大学理工学部数学教室
+
+tel : 03-3817-1745
+
+ENCOUNTER with MATHEMATICS  
+\url{http://www.math.chuo-u.ac.jp/ENCwMATH}
+
+\end{document}

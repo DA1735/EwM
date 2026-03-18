@@ -1,0 +1,1018 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx,a4paper,12pt]{jlreq}
+\usepackage{amsmath,amssymb,amscd,amsthm}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{example}[theorem]{Examples}
+
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\HH}{\mathbf{H}}
+\newcommand{\ImHH}{\operatorname{Im}\mathbf{H}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\CP}{\mathbf{CP}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\proper}{\mathrm{proper}}
+\newcommand{\Map}{\mathrm{Map}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\sign}{\mathrm{sign}}
+\newcommand{\Ker}{\operatorname{Ker}}
+
+\pagestyle{plain}
+
+\begin{document}
+
+\title{Adams 予想を巡って}
+\author{服部 晶夫%
+  \thanks{これは講演に用いた OHP シートを古田幹雄氏が補足して
+    作ったノートである。古田氏の労に感謝する。2001.6.30\quad 服部}}
+\date{ENCOUNTER with MATHEMATICS\\
+  第12回　微分トポロジーと代数的トポロジー\\
+  1999年6月18日〜6月19日\\
+  中央大学理工学部}
+
+\maketitle
+
+%======================================================================
+\section{序}
+%======================================================================
+
+1960年代のトポロジーを振り返って見ると、
+５次元以上の多様体の分類理論で頂点に達した微分位相幾何学の発展が
+一番華々しい成果を残している。
+一方、同じ60年代には指数定理が完成されようとしていた
+（不動点定理、族指数定理）。
+そこから発する流れは今に至るも続いている。
+これらの動きは若い研究者にとっても全く未知のものではないと思われる。
+実はその60年代には Adams により提出された Adams 予想が
+当時の代数的位相幾何学の研究者の強い関心をよんでいた
+（この見解には筆者の個人的な思い入れがあるかもしれない）。
+Adams 予想はその年代の終わりに Quillen と Sullivan により解決されたが、
+その解決自体がアイディアの新しさ（Quillen）と定式化の発展性（Sullivan）により
+トポロジストに衝撃を与えるものであった
+（ここにも筆者の個人的な思い入れがあるかもしれない）。
+この Adams 予想は今では人々の口の端に上ることもなく、
+若い人の中ではそれがどういうものかも正確に知らない人もいると思われる。
+そのような意味でこの機会に Adams 予想について振り返ってみるのも
+多少の意義があると考えここで取り上げることにした。
+なお、Adams 予想が（その解決の前に）何故当時関心の的であったかについて
+簡単に解説しておこう。
+
+直交群の極限を $O = \displaystyle\lim_{\longrightarrow} O(n)$ とし、群
+\[
+  G_n = \{f : S^{n-1} \to S^{n-1} \mid f \text{ はホモトピー同値}\}
+\]
+の極限を $G$ とする。
+$X$ を有限 CW 複体とすると $X$ のベクトルバンドルの Grothendieck 群
+$KO(X)$ の被約群 $\widetilde{KO}(X)$ はホモトピー集合 $[X, BO]$ と同一視される。
+$\mathit{Sph}(X) = [X, BG]$ とおいて自然な写像の像を $J(X)$ と書く。
+$J(X)$ を求めることが当面の目標である。
+$KO(X)$ については十分な情報があるとすれば、
+$J$ の核 $\Ker J$ を定めることにより $J(X)$ が求められる。
+$KO$ 理論には Adams 作用素と呼ばれる各整数 $k$ 毎に定まる
+コホモロジー作用素 $\Psi^k$ がある。
+Adams の予想は $KO(X)$ におけるすべての $\Psi^k$ の情報が
+$\Ker J$ を決定するというものである。
+ホモトピーに関する問題では扱うホモトピー集合をコホモロジー作用素を考慮に入れた
+（一般）コホモロジー群に表現して研究するのが一般的であるが、
+その表現が忠実であるのは稀である。
+表現が忠実になるのは問題とコホモロジー理論の相性が特別によい幸福な場合である。
+そして、そのような場合には、結果はたいてい非常に美しい。
+Adams 予想はその典型的な一例である。
+
+%======================================================================
+\section{Adams 予想の沿革}
+%======================================================================
+
+以下の記号を用いる。
+\begin{align*}
+  O   &= \lim_{\longrightarrow} O(n), \\
+  G   &= \lim_{\longrightarrow} G_n, \qquad
+        J : O \longrightarrow G, \\
+  G_n &= \{f : S^{n-1} \longrightarrow S^{n-1} \mid
+        \text{ホモトピー同値}\}.
+\end{align*}
+
+$X$ を有限複体とする。簡単のため連結と仮定する。
+このとき、\textbf{$J$ 準同型}と $\tilde{J}(X)$ は次によって与えられる。
+\begin{align*}
+  J           &: \widetilde{KO}(X) = [X, BO]
+                \longrightarrow [X, BG] = \widetilde{\mathit{Sph}}(X), \\
+  \tilde{J}(X) &:= \operatorname{Im} J.
+\end{align*}
+
+$\widetilde{\mathit{Sph}}(X)$ は有限群なので、$\tilde{J}(X)$ も有限群である。
+また次の等式が成立する。
+\begin{align*}
+  KO(X) &= \Z \oplus \widetilde{KO}(X), \\
+  J(X)  &= \Z \oplus \tilde{J}(X).
+\end{align*}
+
+%----------------------------------------------------------------------
+\subsection{$J$ 準同型が注目された理由}
+%----------------------------------------------------------------------
+
+\begin{enumerate}
+  \item $X = S^{n+1}$ のとき、
+        \[
+          J : \pi_n(O) \longrightarrow \pi^S_n
+          \quad \text{（球面の安定ホモトピー群）}
+        \]
+        となる。よって球面の安定ホモトピー群の情報の一部を
+        $J$ 準同型が担っている。
+
+  \item 球面上の1次独立なベクトル場の存在問題と、
+        $J(\mathbf{R}P^N)$ が密接に関係する \cite{At61}。
+
+  \item Adams による $\tilde{J}(X)$ の計算のプログラムと
+        Adams 予想 \cite{Ad63, Ad65}。
+
+  \item 多様体の分類理論との関連：
+        \[
+          O \stackrel{J}{\longrightarrow} G
+          \longrightarrow G/O \longrightarrow
+          BO \stackrel{J}{\longrightarrow} BG
+        \]
+        （$\longrightarrow$ 佐藤肇氏の講演）
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\subsection{Adams 予想の解決}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+  \item \cite{Q68} Quillen (1968).
+        \begin{enumerate}
+          \item $\bmod\, k$ Dold 定理に注目する：
+                同次元の球面のふたつの族（つまりふたつの球面束）の間に、
+                写像度 $k$ の写像の族が与えられたとする。
+                このとき、ふたつの球面族を適当に $k$ 冪倍したものにおきかえると、
+                それらの間にホモトピー同値写像の族が存在する。
+          \item $K$ 群の分類空間（$K$-スペクトラム）は $\Q$ 上の代数多様体によって
+                近似されるので、素数 $p$ で完備化をとると Frobenius 写像が
+                \textbf{幾何学的に}作用する。その写像度は $p$ 冪である。
+          \item 上の Frobenius 写像に $\bmod\, p$ Dold 定理を適用すると
+                Adams 予想を得る。
+        \end{enumerate}
+
+  \item \cite{Q71} Quillen (1971).
+        \begin{enumerate}
+          \item モジュラ表現論を援用して任意のベクトル束の問題を、
+                構造群が有限である平坦なベクトル束の問題に帰着させることができる。
+          \item 構造群が有限である場合は、誘導表現によって小さな群の考察に帰着させてゆくと、
+                1次元あるいは2次元の束の場合に帰着する。
+                これについては Adams 予想は比較的容易であった。
+        \end{enumerate}
+
+  \item \cite{S74} Sullivan (1974).
+        \begin{enumerate}
+          \item スペクトラムが $\Q$ 上定義された代数多様体で近似されるとき、
+                絶対 Galois 群の作用がそのスペクトラムの完備化に
+                \textbf{幾何学的に}作用する。
+          \item 一方その作用は、そのスペクトラムに対応する一般コホモロジー上で
+                \textbf{コホモロジー作用素}として働く。
+          \item これを合わせると、「上のようなコホモロジー作用素の作用は、
+                完備化上では幾何学的な写像から induce されている」
+                という命題が得られる。
+                ここで、$K$-スペクトラムの場合、コホモロジー作用素は
+                Adams 作用素によって実質的に尽くされている。
+          \item $J$ 準同型は、$K$ 群の各要素に対してある種幾何学的な同型類のデータを
+                抜き出す操作だと見なせるので Adams 予想が示される。
+        \end{enumerate}
+
+  \item \cite{BG75} Becker--Gottlieb (1975).
+        \begin{enumerate}
+          \item $G$ をコンパクト Lie 群とする。$G$ 主束 $P$ に同伴する
+                $G/N(T)$ 束は、任意の一般コホモロジー理論を考察する限り、
+                切断が存在するのと同等のふるまいをする。
+          \item これによって、$G$ 主束の考察を $N(T)$ 主束の考察に帰着させることが可能になる。
+          \item 特に $G = O(n)$ に対してこの原理を用いると、
+                Adams 予想を容易な場合に帰着することができる。
+        \end{enumerate}
+\end{itemize}
+
+%----------------------------------------------------------------------
+\subsection{理由１について}
+%----------------------------------------------------------------------
+
+$X = S^{n+1}$ のとき、次が成立する。
+\begin{align*}
+  [S^{n+1}, BO] &= [S^n, O] = \pi_n(O), \\
+  [S^{n+1}, BG] &= [S^n, G]
+                = [S^n, \Omega^\infty(S^\infty)]
+                = [S^{n+\infty}, S^\infty] = \pi_n^S.
+\end{align*}
+非安定 $J$
+\[
+  J : \pi_n(O(N)) \longrightarrow \pi_{n+N}(S^N)
+\]
+も定義される。
+
+球面と古典 Lie 群のホモトピー群の計算は
+1950年代におけるハイライトの一つであった。
+
+%----------------------------------------------------------------------
+\subsection{理由２について}
+%----------------------------------------------------------------------
+
+自然数 $n$ に対して
+\[
+  \begin{cases}
+    n = (2a+1)\, 2^b \\
+    b = c + 4d, \quad 0 \leq c \leq 3
+  \end{cases}
+\]
+として $\rho(n) := 2^c + 8d$ とおく。
+
+\begin{theorem}
+  $S^{n-1}$ はちょうど $\rho(n) - 1$ 個の1次独立なベクトル場をもつ。
+\end{theorem}
+
+これは懸案の問題の解決であった。
+
+\begin{remark}
+  前駆となる結果として戸田（$b \leq 10$）の結果などがあった。
+\end{remark}
+
+\subsubsection{証明の方針}
+
+$S^{n-1}$ が $\rho(n) - 1$ 個の1次独立なベクトル場をもつことは知られていた。ここで
+\begin{align*}
+  \xi   &: \mathbf{R}P^{r-1} \text{ 上の標準線束}, \\
+  q_r   &:= J(\xi - 1) \in \tilde{J}(\mathbf{R}P^{r-1}) \text{ の位数}
+\end{align*}
+とおく。Atiyah は次を示した。
+
+\begin{theorem}[\cite{At61}]
+  $n \geq 2r$ を仮定する。
+  $S^{n-1}$ が $r$ 個の1次独立なベクトル場をもつための必要十分条件は
+  \[
+    q_r \mid n
+  \]
+  である。
+\end{theorem}
+
+Adams はこれを別の形に翻訳し、
+$S^{n-1}$ が $\rho(n)$ 本の1次独立なベクトルをもたないことを証明した。
+その際 $KO(\mathbf{R}P^a / \mathbf{R}P^b)$ における
+Adams 作用素の決定が重要な役割を果たした。
+
+\begin{remark}
+  \[
+    J(\mathbf{R}P^{r-1}) = KO(\mathbf{R}P^{r-1})
+  \]
+  である \cite{Ad65}。これと Atiyah の定理から定理が出る。
+\end{remark}
+
+%----------------------------------------------------------------------
+\subsection{理由３について}
+%----------------------------------------------------------------------
+
+\subsubsection{Adams 作用素}
+
+Adams は、Adams 作用素と呼ばれる $K$ コホモロジーの作用素を導入した。
+\[
+  \psi^k : KO(X) \longrightarrow KO(X), \qquad k \in \Z
+\]
+は環準同型であり、その定義は次のように行う。
+\begin{itemize}
+  \item \textit{$K(X)$ の場合。}
+        $\xi$ が線束のとき、$\psi^k(\xi) = \xi^k$ である。
+        "splitting principle" によりこの性質をもつ
+        \[
+          \psi^k : K(X) \longrightarrow K(X)
+        \]
+        が一意的に定まる。
+  \item \textit{$KO(X)$ の場合。}
+        表現論を援用して定義する。
+\end{itemize}
+
+\subsubsection{主要性質}
+
+以下の性質がある。
+\begin{align*}
+  \psi^k(x + y)  &= \psi^k(x) + \psi^k(y), \\
+  \psi^k(xy)     &= \psi^k(x)\,\psi^k(y), \\
+  \psi^{kl}(x)   &= \psi^k(\psi^l(x)).
+\end{align*}
+
+\subsubsection{特性類 $\rho^k$}
+
+$K$ 理論において、Adams 作用素と深く関係する特性類 $\rho$ が定義されている。
+\[
+  \rho^k : KO_{SO(2)}(X) \longrightarrow KO(X) \otimes \Z[k^{-1}]
+\]
+ここで
+\begin{align*}
+  KO_{SO(2)}(X) &= \{ x \in KO(X) \mid w_1(x) = 0,\; \dim x \text{ が偶数}\}, \\
+  \Z[k^{-1}]    &= \left\{ \frac{m}{k^r} \;\middle|\; m, r \in \Z \right\}.
+\end{align*}
+
+\begin{itemize}
+  \item \textit{$K(X)$ の場合。}
+        $\xi$ が複素ベクトル束のとき、$\rho(\xi)$ は次の式によって定義される。
+        \begin{align*}
+          \phi &: K(X) \stackrel{\cong}{\longrightarrow}
+                K(E(\psi), E_0(\psi)) \quad \text{を Thom 同型とするとき}, \\
+          \rho^k(\xi) &:= \phi^{-1} \psi^k \phi(1).
+        \end{align*}
+  \item \textit{$KO(X)$ の場合。}
+        表現論を援用する。
+\end{itemize}
+
+\subsubsection{主要性質}
+
+Adams 作用素の主要性質と対応して、$\rho$ には次の性質がある。
+\begin{align*}
+  \rho^k(x + y) &= \rho^k(x)\,\rho^k(y), \\
+  \psi^k(1)     &= k^n.
+\end{align*}
+
+\subsubsection{コメント}
+
+$\psi^k$ は1次コホモロジー作用素であり、$\rho^k$ は1次特性類である。
+通常のコホモロジー作用素における作用素（1次、2次）よりも使い勝手がよく、
+かつ強力である。
+
+\paragraph{例}
+\begin{itemize}
+  \item \cite{Ad62}：$\psi^k$ on $KO(\mathbf{R}P^a / \mathbf{R}P^b)$。
+        前述の球面上の一次独立なベクトル場の問題に使われた。
+  \item \cite{AdAt66}：Hopf 不変量 $1$ の元の非存在の証明に使われた。
+
+        $\alpha \in \pi_{4n-1}(S^{2n})$ に対して
+        $\alpha : S^{4n-1} \to S^{2n}$ の写像錐を
+        \[
+          X = S^{2n} \cup_\alpha e^{4n}
+        \]
+        とおき、$X$ 上の $\psi^k$ を考察する。
+        （仮に $\alpha$ の Hopf 不変量が奇数であると仮定すると、
+        $\phi^2 \phi^3 = \phi^3 \phi^2$ の作用を別々に計算し比較することによって
+        $n = 1, 2$ または $3$ が得られる。）
+
+  \item 古田 \cite{F}：４次元スピン多様体の交叉形式に関する $11/8$ 問題に
+        \textbf{同変} $\rho^k$ を応用した。
+        $V(X)$（$\widetilde{KO}(X)/V(X) = J'(X)$）の定義と同じ発想である。
+\end{itemize}
+
+%======================================================================
+\section{Adams のプログラム}
+%======================================================================
+
+\paragraph{要約}
+
+Adams のプログラムは次の図式に要約される。
+\[
+  \text{「} J''(X)
+  \stackrel{\text{（全射）？？}}{\longrightarrow} J(X)
+  \stackrel{\text{（全射）}}{\longrightarrow} J'(X) \text{」}
+  \qquad \Longrightarrow \qquad \textbf{Adams 予想}
+\]
+
+\paragraph{設定}
+
+以下の記号を導入する。
+\begin{itemize}
+  \item $X$：連結有限複体。
+  \item $T(X) = \Ker J \subset \widetilde{KO}(X)$。
+  \item $J(X) = \widetilde{KO}(X)/T(X)$。
+\end{itemize}
+
+\paragraph{$J'(X)$ の定義}
+
+\begin{itemize}
+  \item $V(X) := \left\{ x \in \widetilde{KSO}(X) \;\middle|\;
+        \exists\, v \in \widetilde{KO}(X) :
+        \rho^k(x) = \dfrac{\psi^k(1 + v)}{1 + v},\; (\forall\, k) \right\}$.
+  \item $J'(X) := \widetilde{KO}(X)/V(X)$.
+\end{itemize}
+
+以上の定義から次の包含関係と自然な写像が存在する。
+\begin{itemize}
+  \item $T(X) \subset V(X)$.
+  \item $J(X) \to J'(X) \to 0$.
+\end{itemize}
+
+\paragraph{$J''(X)$ の定義}
+
+\begin{itemize}
+  \item $e : \Z \times \widetilde{KO}(X) \longrightarrow \Z_{\geq 0}$.
+  \item $W_e := \left\{ k^{e(k,y)}(\psi^k - 1)y
+        \;\middle|\; (k, y) \in \Z \times \widetilde{KO}(X) \right\}$
+        が生成する $\widetilde{KO}(X)$ の部分群。
+  \item $W(X) := \bigcap_e W_e$.
+  \item $J''(X) := \widetilde{KO}(X)/W(X)$.
+\end{itemize}
+
+このとき、Adams は次のことを示した。
+
+\begin{theorem}[\cite{Ad65}]
+  \[
+    W(X) = V(X), \qquad J''(X) = J'(X).
+  \]
+\end{theorem}
+
+したがって $J(X)$ を決定するには次の予想が示されればよいことになる。
+
+\begin{conjecture}[\textbf{Adams 予想}]
+  $W(X) \subset T(X)$ が成立する。すなわち、
+  $(k, y) \in \Z \times \widetilde{KO}(X)$ に対し、
+  ある $e = e(k, y) \geq 0$ が存在して
+  \[
+    J(k^e(\psi^k - 1)y) = 0
+  \]
+  が成立する。
+\end{conjecture}
+
+上の予想が正しければ、$J(X) = J'(X) = J''(X)$ が示される。
+
+Adams は、上の予想と次の特別な場合を示した。
+
+\begin{theorem}[\cite{Ad63}]
+  \begin{enumerate}
+    \item $O(1)$ 束、$O(2)$ 束に対しては予想は正しい。
+    \item $\operatorname{Im}(\tilde{K}(S^{2n}) \to \widetilde{KO}(S^{2n}))$
+          の元に対しては予想は正しい。
+  \end{enumerate}
+\end{theorem}
+
+一方、次の定理が成立している。
+
+\begin{theorem}[$\bmod\, k$ Dold 定理 \cite{Ad63}]
+  $E$, $E'$ が $X$ 上のふたつの球面束であり、
+  $f : E \to E'$ がファイバーを保つ連続写像であり、
+  各ファイバー上で写像度が $\pm k$ であるものとする。
+  このとき、ある $e \geq 0$ に対してファイバーホモトピー同値
+  $k^e E \simeq k^e E'$ が存在する。すなわち、
+  \[
+    J(k^e(E - E')) = 0
+  \]
+  が成立する。
+\end{theorem}
+
+この定理の Adams 予想との形式的な類似は明らかである。
+また、この定理は予想の証明のいくつかの段階で
+（例えば Quillen の最初の証明）本質的に用いられた。
+
+\paragraph{一つの応用}
+
+上の定理から Adams 予想の特別な場合が示される。次の設定を考える。
+\begin{itemize}
+  \item $\xi$：複素直線束。
+  \item $E(\xi)$：$\xi$ の $S^1$ 束。
+  \item $f : \xi \to \xi^k = \psi^k(\xi)$，$u \mapsto u^k$。
+  \item $f_0 = f|_{E(\xi)} : E(\xi) \to E(\xi^k)$ は各ファイバー上で写像度 $k$。
+\end{itemize}
+このとき、$\bmod\, k$ Dold 定理によりある $e \geq 0$ が存在して
+\[
+  J(k^e(\psi^k - 1)\xi) = 0.
+\]
+すなわち、複素直線束に対して Adams 予想は成立する。
+
+%======================================================================
+\section{Quillen による最初の証明}
+%======================================================================
+
+\cite{Q68}，$K(X)$ の場合。
+
+\subsection{アイディア}
+
+Adams 作用素が $\psi^{kl} = \psi^k \cdot \psi^l$ を満たすので、
+初めから $k$ は素数 $p$ と仮定しても一般性を失わない。
+
+$\gamma$ をグラスマン $G_n(\C^N)$ 上の標準 $n$ 束とするとき
+\[
+  p^e J(\psi^p - 1)\gamma = 0
+\]
+をいえばよい。
+
+\paragraph{設定}
+\begin{itemize}
+  \item $K$：標数 $p$ の代数的閉体。
+  \item $V$：$K$ 上の代数的多様体。
+  \item $\psi : K_{\mathrm{alg}}(V) \to K_{\mathrm{alg}}(V)$：Adams 作用素。
+  \item $\xi$：$V$ 上の代数的 $n$ 束。その推移関数（transition function）を
+        $(g_{\alpha\beta})$ とする。
+  \item $\xi^{(p)}$：$V$ 上の代数的 $n$ 束であって推移関数が $(g_{\alpha\beta}^p)$
+        であるもの。
+\end{itemize}
+
+\begin{lemma}
+  $\psi^p(\xi) = \xi^{(p)}$.
+\end{lemma}
+
+ここで写像 $f : \xi \to \xi^{(p)}$ を局所座標で
+\[
+  (X_1, \ldots, X_n) \mapsto (X_1^p, \ldots, X_n^p)
+\]
+によって定義する。このとき、
+$f$ は単射、かつ $\xi^{(p)}$ の各点で\textbf{重複度} $p^n$。
+
+$f_0$ を $f$ の $0$ 切断の補集合への制限とする：
+\[
+  f_0 := f|_{\xi \setminus 0} : \xi \setminus 0 \longrightarrow \xi^{(p)} \setminus 0.
+\]
+
+すると、$f_0$ は $\bmod\, p$ Dold 定理と類似の状況にある。
+実際、エタール・ホモトピー論を使用すると、
+$G_n(K^N)$ 上の標準 $n$ 束 $\gamma_K$ に対して
+$\xi = \gamma_K$ として $\bmod\, p$ Dold 定理を「適用」することが可能になる。
+これから
+\[
+  p^e J(\psi^p - 1)\gamma = 0
+\]
+を得る。
+
+\subsection{エタール・ホモトピー論}
+
+次のふたつの関手を準備する。
+
+\paragraph{エタール・ホモトピー関手}
+\[
+  V \text{ スキーム} \mapsto V_{\mathrm{et}}
+  \quad \text{副有限（profinite）ホモトピー型}
+\]
+
+\paragraph{完備化}
+\begin{align*}
+  X &\mapsto \hat{X}, \\
+  [Y, \hat{X}] &= \lim_{\longleftarrow_{f_\alpha : X \to F_\alpha}} [Y, F_\alpha],
+\end{align*}
+ただし写像 $f_\alpha : X \to F_\alpha$ は
+$|\pi_*(F_\alpha)| < \infty$, $(p, |\pi_*(F_\alpha)|) = 1$
+を満たすすべてのものに渡って動くものとする。
+
+これに関して次の定理が成立する。
+
+\begin{theorem}[Artin--Mazur によるエタール・ホモトピー論における比較定理]
+  適当な $K$ に対して Adams 作用素を保つ次のホモトピー同値が存在する。
+  \[
+    \widehat{G_n(\C^N)} \cong \widehat{G_n(\C^N)_{\mathrm{et}}}
+    \cong \widehat{G_n(K^N)_{\mathrm{et}}}.
+  \]
+\end{theorem}
+
+以上の準備のもとで、Adams 予想の証明に戻る。
+まず、標数 $p$ でも
+\[
+  J : K_{\mathrm{alg}}(V) \longrightarrow \mathit{Sph}(\widehat{V_{\mathrm{et}}})
+\]
+が定義することができる。
+
+\begin{remark}
+  \cite{Q68} の段階では、この $J$ の存在は予想とされていた。
+\end{remark}
+
+Quillen の議論は次の通りである：
+
+$f_0$ の性質を用いると
+\[
+  J(\gamma_K) = J(\gamma_K^{(p)}) \in \mathit{Sph}(\widehat{G_n(K^N)_{\mathrm{et}}})
+\]
+が成立する。よって、上の比較定理と $\bmod\, p$ Dold 定理を適用すると
+\[
+  J(p^e(\psi^p - 1)\gamma) = 0
+\]
+が得られる。\qed
+
+%======================================================================
+\section{Quillen から Sullivan へ、または Quillen と Sullivan}
+%======================================================================
+
+\cite{S70}, \cite{S74}.
+
+$X$ を\textbf{冪零型}複体（単連結、$BO$, $BG$, $\ldots$）とする。
+
+\subsection{$X$ の遺伝子型（genotype）}
+
+\[
+  \{X_\Q,\; \hat{X}_2,\; \hat{X}_3,\; \ldots,\; \hat{X}_p,\; \ldots\}
+\]
+これから $X$（のホモトピー型）が復元される。
+\begin{itemize}
+  \item 局所化関手 $X \mapsto X_\Q$。
+  \item 完備化関手 $X \mapsto \hat{X}_p$。
+\end{itemize}
+
+\paragraph{局所化（群、空間）}
+\begin{itemize}
+  \item $l = \{p_1, p_2, p_3, \ldots\}$：素数の集まり。
+  \item $G$：アーベル群。
+  \item $G_l := \displaystyle\lim_{\substack{\longrightarrow \\ (n,l)=1}}
+        \bigl\{ G \xrightarrow{n \text{ 倍}} G \bigr\} = G \otimes \Z_l$.
+  \item $X$：冪零型複体。
+  \item $X \mapsto X_l$，\quad $H_*(X)_l \stackrel{\cong}{\longrightarrow} H_*(X_l)$.
+  \item $G_\Q = G_\emptyset$，\quad $X_\Q = X_\emptyset$，\quad $(\Z_\Q = \Q)$.
+\end{itemize}
+
+\begin{example}
+  \begin{itemize}
+    \item $(G/PL)_{\mathrm{odd}} \cong (BO)_{\mathrm{odd}}$.
+    \item $(G/PL)_2 \cong Y \times \prod_{i=1}^\infty K(P_i, i)$.
+    \item $K(\Z_{(2)}, 4) \to Y \to K(\Z/2, 2)$，\quad $k$ 不変量 $\delta Sq^2$.
+    \item ただし、
+          \[
+            P_i\, :\, 0,\; \Z/2,\; 0,\; \Z_{(2)},\; 0,\; \Z/2,\;
+            0,\; \Z_{(2)},\; \cdots
+          \]
+  \end{itemize}
+\end{example}
+
+\paragraph{完備化（finite completion, profinite completion）}
+
+群 $G$ に対して、次のような完備化が考えられる。
+\[
+  \hat{G}_l := \lim_{\longleftarrow} G/H_\alpha
+\]
+ただし、$H_\alpha$ は $|G/H_\alpha| < \infty$,
+$|G/H_\alpha| \in l$ となる正規部分群を動く。
+\[
+  \hat{G} := \hat{G}_\emptyset = \prod_{p\,:\,\text{prime}} \hat{G}_p.
+\]
+
+$X$ が冪零型 CW 複体であると仮定する。このとき、
+$X$ に対しても次のような完備化 $\hat{X}_l$ が考えられる。
+\[
+  [Y, \hat{X}_l] = \lim_{\longleftarrow_{f_\alpha}} [Y, F_\alpha]
+\]
+ここで $f_\alpha$ はすべての連続写像 $f_\alpha : X \to F_\alpha$ を動く。
+ただし $F_\alpha$ は $|\pi_*(F_\alpha)| < \infty$,
+$|\pi_*(F_\alpha)| \in l$ となる連結な CW 複体である。
+\[
+  \hat{X} := \prod_{p\,:\,\text{prime}} \hat{X}_p.
+\]
+このとき、任意の有限加群 $M$ に対して
+\[
+  H^i(\hat{X}, M) \cong H^i(X, M)
+\]
+が成立する。
+
+\paragraph{副有限 $K$-理論 $\hat{K}(X)$（profinite $K$-theory）}
+
+$K = K_\C$ または $K_\R$ ($= KO$) とする。このとき
+\[
+  \hat{K}(X) = \lim_{\longleftarrow_n} K(X) \otimes \Z/n
+\]
+とおくと、
+\[
+  \hat{X} = [X, \hat{B}], \qquad B = BU \text{ または } BO
+\]
+が成立する。また、$J$ 準同型について、次の可換図式が成立する。
+\[
+  \begin{CD}
+    B      @>{J}>>    BG \\
+    @VVV              @| \\
+    \hat{B} @>>{\hat{J}}> \widehat{BG}
+  \end{CD}
+\]
+ここで右の縦の写像が同型になることは、
+$|\pi_*(BG)| < \infty$ すなわち
+球面の安定ホモトピーが全て有限アーベル群であることによる。
+
+%----------------------------------------------------------------------
+\subsection{$\hat{J}$ に関する Adams 予想}
+%----------------------------------------------------------------------
+
+上の可換図式により、本来の Adams 予想は $\hat{J}$ による次の予想に帰着する：
+
+\begin{conjecture}
+  \[
+    k^w \hat{J}(\psi^k - 1)x = 0, \qquad \exists\, e = e(k, x).
+  \]
+\end{conjecture}
+
+この予想をさらに別の形に書き直す。
+
+\paragraph{$\hat{K}$ への $\hat{\Z}^*$ の作用}
+
+$\hat{\Z}^*$ の $\hat{\Z}$ への作用は次のようにして与えられる。
+
+まず次のことに注意する：
+$\{(k) \mid k \in \Z^*\}$ は $\hat{\Z}^*$ の中で稠密である。
+よって各 $k \in \Z^*$ に対して $(k) \in \hat{\Z}^*$ の $\hat{\Z}$ への作用が定まれば十分である。
+
+\begin{enumerate}
+  \item $\hat{\Z} = \prod_p \hat{\Z}_p$ であるので、
+        個々の $\hat{\Z}_p$ への作用が定まればよい。
+  \item $x \in \hat{\Z}_p$ に対して
+        \[
+          (k)x = \begin{cases}
+            kx & (k, p) = 1 \\
+            x  & (k, p) \neq 1
+          \end{cases}
+        \]
+\end{enumerate}
+
+$\hat{\Z}^*$ の $\hat{K}$ への作用は次のようにして与えられる。
+各 $k \in \Z^*$ に対して $(k) \in \hat{\Z}^*$ の $\hat{K}(X)$ への作用が定まれば十分である。
+
+\begin{enumerate}
+  \item $\hat{K}(X) = \prod_p \hat{K}_p(X)$ であるので、
+        個々の $\hat{K}_p(X)$ への作用が定まればよい。
+  \item $\eta \in \hat{K}_p(X)$ に対して
+        \[
+          \eta^{(k)} = \begin{cases}
+            \widehat{(\psi^k)}_p\, \eta & (k, p) = 1 \\
+            \eta                        & (k, p) \neq 1
+          \end{cases}
+        \]
+\end{enumerate}
+
+\paragraph{$\hat{J}$ に関する Adams 予想（Sullivan の形）}
+
+\begin{conjecture}
+  \[
+    \hat{J} \cdot \sigma = \hat{J}
+    \quad \text{on} \quad \hat{K}(X),
+    \qquad \forall\, \sigma \in \hat{\Z}^*.
+  \]
+\end{conjecture}
+
+$\widehat{\mathit{Sph}}_p(X)$ が有限 $p$ 群であることに注意すると、
+上の予想から $\hat{J}$ に関する前の形の Adams 予想が出る。
+
+\begin{theorem}[Sullivan]
+  上の形の Adams 予想は正しい。
+\end{theorem}
+
+%----------------------------------------------------------------------
+\subsection{証明のポイント}
+%----------------------------------------------------------------------
+
+3つのポイントがある。
+
+\subsubsection{証明のポイント（１）
+（$\hat{\Z}^*$ の作用のエタール・ホモトピー論的解釈）}
+
+$V$ を複素代数多様体とする。
+$\mathcal{U} = \{p_i \mid U_i \to V\}_{1 \leq i \leq n}$ が
+$V$ の\textbf{エタール被覆}であるとは次の条件を満たすことである。
+\begin{itemize}
+  \item $p_i$ は Zariski 開集合 $p_i(U_i)$ の上の被覆空間。
+  \item $p_1(U_1) \cup p_2(U_2) \cup \cdots \cup p_n(U_n) = V$.
+\end{itemize}
+
+$N(\mathcal{U})$ を $\mathcal{U}$ の脈体（nerve）とする。
+
+\begin{theorem}[Artin--Mazur（比較定理）]
+  \[
+    \hat{V} = \lim_{\longleftarrow_{\mathcal{U}}} N(\mathcal{U}).
+  \]
+\end{theorem}
+
+\subsection{証明のポイント（２）
+（複素代数多様体による $BU$ または $BO$ の近似）}
+
+$V_{n,k}$ を複素代数多様体による $BU$ あるいは $BO$ の近似とする。
+\begin{align*}
+  V_{n,k} &= G_n(\C^{n+k})
+           \quad \text{（複素グラスマン、$BU$ の場合）}, \\
+  V_{n,k} &= O(n+k, \C) / (O(n, \C) \times O(k, \C))
+           \quad \text{（$\simeq$ 実グラスマン、$BO$ の場合）}.
+\end{align*}
+ポイントは $V_{n,k}$ が $\Q$ 上定義されていることである。
+すると各 $p_i : U_i \to p_i(U_i)$ は代数的写像であるので
+$\mathrm{Gal}(\C/\Q)$ がエタール被覆の全体 $\{\mathcal{U}\}$ に作用している。
+したがって $\{N(\mathcal{U})\}$ にも作用している。
+
+これから、比較定理によって $\mathrm{Gal}(\C/\Q)$ が $\hat{V}_{n,k}$ に作用する。
+
+\subsection{証明のポイント（３）
+（$\hat{\Z}^*$ 作用の $\mathrm{Gal}(\C/\Q)$ 作用による解釈）}
+
+準同型
+\[
+  \mathrm{Gal}(\C/\Q) \longrightarrow \hat{\Z}^*
+\]
+を、$\sigma$ に対して $\sigma$ の $1$ の冪根上への作用を見ることによって定義する。
+（Kronecker の定理「$\Q$ の最大アーベル拡大は $1$ の冪根全体で生成される」に注意すると
+この準同型は $\mathrm{Gal}(\C/\Q)$ のアーベル化に他ならない。）
+
+\begin{proposition}
+  \begin{enumerate}
+    \item $\mathrm{Gal}(\C/\Q)$ の $\hat{V}_{n,k}$ への作用は
+          $\hat{\Z}^*$ の作用を経由する。
+    \item その $\hat{\Z}^*$ の作用は、$\psi^k$ からくる作用と一致する。
+  \end{enumerate}
+\end{proposition}
+
+\[
+  B_n = \lim_{\longrightarrow_k} B_{n,k}, \qquad
+  \hat{B}_n = \lim_{\longrightarrow_k} \hat{B}_{n,k}
+\]
+とおき、$\beta_n$ を $B_n$ 上の標準 $n$ 束 $\gamma_n$ の球面束とする。
+このとき、次の可換図式がある。
+\[
+  \begin{CD}
+    \beta_n  @>{\simeq}>> B_{n-1} \\
+    @VVV                  @VVV    \\
+    B_n      @=           B_n
+  \end{CD}
+  \hspace{2cm}
+  \begin{CD}
+    \hat{\beta}_n  @>{\simeq}>> \hat{B}_{n-1} \\
+    @VVV                        @VVV           \\
+    \hat{B}_n      @=           \hat{B}_n
+  \end{CD}
+\]
+これに対して $\mathrm{Gal}(\C/\Q)$ の要素 $\sigma$ の作用を考えると
+次の可換図式が得られる。
+\[
+  \begin{CD}
+    \hat{\beta}_n^\sigma = \sigma^* \hat{\beta}_n
+      @>{\sigma_*}>> \hat{\beta}_n @>{\sigma^{-1}}>> \hat{\beta}_n \\
+    @VVV              @VVV                            @VVV           \\
+    \hat{B}_n @>{\sigma}>> \hat{B}_n @>{\sigma^{-1*}}>> \hat{B}_n
+  \end{CD}
+\]
+したがって、副有限ファイバーホモトピー同値写像
+\[
+  \hat{\beta}_n^\sigma \simeq \hat{\beta}_n
+\]
+を得る。ここで $n \to \infty$ と極限にとばすことを考えると、求める
+\[
+  \hat{J}(\gamma^\sigma) = \hat{J}(\gamma)
+\]
+が得られる。
+
+%======================================================================
+\section{Quillen による第二の証明と Becker--Gottlieb の証明}
+%======================================================================
+
+\subsection{Quillen による第二の証明}
+
+\cite{Q71}（No magic!）
+
+\paragraph{第1段} ベクトル束の群が有限群に還元する場合。
+
+群の誘導表現と被覆空間の転入（transfer）が $\psi^k$ と交換することを
+用いて1次元か2次元束の場合に還元（$\longrightarrow$ Adams）。
+
+\paragraph{第2段} 一般の場合。
+
+$K$ を標数 $p$ の代数的閉体（$p$：奇素数）であって有限体の極限であるものとする。
+$O(K)$ を $K$ 上の無限次元直交群
+\[
+  O(K) = \lim_{n \to \infty} O(n, K)
+\]
+とすると、モジュラ表現から導かれる連続写像
+\[
+  BO(K) \longrightarrow BO
+\]
+が存在する。これに対して次の定理が成立する。
+
+\begin{theorem}
+  \[
+    H^*(BO;\, \Z/d) \cong H^*(BO(K);\, \Z/d), \qquad (d, p) = 1.
+  \]
+\end{theorem}
+
+これから Adams 予想の証明が従う。
+
+\subsection{Becker--Gottlieb の証明}
+
+\cite{BG75}
+
+次の一般的な設定を考える。
+\begin{itemize}
+  \item $G$：コンパクト Lie 群。
+  \item $F$：コンパクト $G$-多様体。
+  \item $\xi : E \stackrel{p}{\longrightarrow} B$：
+        構造群 $G$、ファイバー $F$ である、有限複体 $B$ 上の束。
+\end{itemize}
+
+$\chi(F)$ を $F$ の Euler 数とする。
+
+\begin{theorem}
+  \textbf{転入（transfer）}と呼ばれる自然な $S$ 写像
+  \[
+    \tau = \tau(\xi) : B^+ \longrightarrow E^+
+  \]
+  が存在し、次をみたす。合成
+  \[
+    \tilde{H}^*(B^+) \stackrel{p^*}{\longrightarrow}
+    \tilde{H}^*(E^+) \stackrel{\tau^*}{\longrightarrow}
+    \tilde{H}^*(B^+)
+  \]
+  は $\chi(F)$ 倍と一致する：
+  \[
+    \tau^* p^* = \chi(F) \cdot \mathrm{id}.
+  \]
+  ここで、コホモロジーの係数は任意である。
+\end{theorem}
+
+\paragraph{応用（Adams 予想の証明）}
+
+$T$ を $O(2n)$ の極大トーラスとし、$N(T) \subset O(2n)$ を $T$ の正規化群とする。
+このとき
+\[
+  \chi(O(2n)/N(T)) = 1
+\]
+が成立する。（これは一般のコンパクト Lie 群で成立する。）
+すると、上の定理（と Atiyah--Hirzebruch spectral sequence）を用いて次が示される。
+
+\begin{theorem}
+  $O(2n)$ 束 $\tilde{E} \to B$ に同伴する $O(2n)/N(T)$ 束を
+  \[
+    X = \tilde{E}/N(T) \stackrel{p}{\longrightarrow} B
+  \]
+  とおく。このとき任意のコホモロジー理論 $h^*$ に対して
+  \[
+    p^* : h^*(B) \longrightarrow h^*(X)
+  \]
+  は単射である。
+\end{theorem}
+
+上の定理を使うと、一種の分裂原理を使うことによって
+次のようにして Adams 予想を示すことができる。
+
+\begin{enumerate}
+  \item $\tilde{E} \to B$ に対する Adams 予想を示したい。
+        引き戻し $p^*\tilde{E} \to X$ に対する Adams 予想を経由することによって考察する。
+        実際、上の定理を $h^* = \mathit{Sph}^*$ に対して適用すれば、
+        前者は後者に帰着する。
+  \item $p^*\tilde{E} \to X$ の構造群は $N(T)$ まで還元される。
+  \item \[
+          N(T) = \mathcal{S}_n \wr O(2) \quad \text{（wreath 積）}
+        \]
+        に注意すると、Quillen の手法によって Adams 予想は
+        構造群 $N(T)$ の束に対しては成立している。
+\end{enumerate}
+
+%======================================================================
+\begin{thebibliography}{AdAt66}
+%======================================================================
+
+\bibitem[At61]{At61}
+  M.~F.~Atiyah,
+  \textit{Thom complex},
+  Proc.\ London Math.\ Soc.\ (3) \textbf{11} (1961), 291--310.
+
+\bibitem[Ad62]{Ad62}
+  J.~F.~Adams,
+  \textit{Vector fields on spheres},
+  Ann.\ of Math.\ \textbf{75} (1962), 603--632.
+
+\bibitem[Ad63]{Ad63}
+  J.~F.~Adams,
+  \textit{On the groups $J(X)$-I},
+  Topology \textbf{2} (1963), 181--195.
+
+\bibitem[Ad65]{Ad65}
+  J.~F.~Adams,
+  \textit{On the groups $J(X)$-II and III},
+  Topology \textbf{3} (1965), 137--171 and 193--222.
+
+\bibitem[Ad66]{Ad66}
+  J.~F.~Adams,
+  \textit{On the groups $J(X)$-IV},
+  Topology \textbf{5} (1966), 21--71.
+  Correction: Topology \textbf{7} (1968), 331.
+
+\bibitem[AdAt66]{AdAt66}
+  J.~F.~Adams and M.~F.~Atiyah,
+  \textit{$K$-theory and the Hopf invariant},
+  Quart.\ J.\ Math.\ Oxford (2) \textbf{17} (1966), 31--38.
+
+\bibitem[Q68]{Q68}
+  D.~Quillen,
+  \textit{Some remarks on étale homotopy theory and a conjecture of Adams},
+  Topology \textbf{7} (1968), 111--116.
+
+\bibitem[Q71]{Q71}
+  D.~Quillen,
+  \textit{The Adams conjecture},
+  Topology \textbf{10} (1971), 67--80.
+
+\bibitem[S70]{S70}
+  D.~Sullivan,
+  \textit{Geometric Topology, Part I: Localization, Periodicity and Galois Symmetry},
+  Lecture Notes, MIT (1970).
+
+\bibitem[S74]{S74}
+  D.~Sullivan,
+  \textit{Genetics of homotopy theory and the Adams conjecture},
+  Ann.\ of Math.\ \textbf{100} (1974), 1--79.
+
+\bibitem[BG75]{BG75}
+  J.~Becker and D.~Gottlieb,
+  \textit{The transfer map and fiber bundles},
+  Topology \textbf{14} (1975), 1--12.
+
+\bibitem[F01]{F}
+  M.~Furuta,
+  \textit{Monopole equation and the $11/8$ conjecture},
+  Math.\ Res.\ Letters \textbf{8} (2001), 279--291.
+
+\end{thebibliography}
+
+\end{document}

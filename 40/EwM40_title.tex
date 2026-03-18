@@ -1,0 +1,144 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第40回}
+\newcommand{\EwMtitle}{力学系のゼータ関数\\[2mm]\large 古典力学と量子力学のカオス}
+\newcommand{\EwMdate}{2007年5月18日（金）14:30～17:40 ～ 5月19日（土）10:30～17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{5月18日（金）}
+
+\talk
+{14:30～15:50}
+{力学系のゼータ関数と Ruelle 転移作用素のスペクトル I}
+{辻井 正人 氏（九大・数理）}
+
+\talk
+{16:20～17:40}
+{量子カオスの諸問題と半古典ゼータ関数 I}
+{首藤 啓 氏（首都大・理工）}
+
+\subsection*{5月19日（土）}
+
+\talk
+{10:30～11:20}
+{マルコフ系のゼータ関数 I}
+{盛田 健彦 氏（広大・理）}
+
+\talk
+{11:40～12:30}
+{力学系のゼータ関数と Ruelle 転移作用素のスペクトル II}
+{辻井 正人 氏（九大・数理）}
+
+\talk
+{14:30～15:20}
+{量子カオスの諸問題と半古典ゼータ関数 II}
+{首藤 啓 氏（首都大・理工）}
+
+\talk
+{15:40～17:00}
+{マルコフ系のゼータ関数 II}
+{盛田 健彦 氏（広大・理）}
+
+\bigskip
+
+17:10～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第40回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS  
+\url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

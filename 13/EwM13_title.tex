@@ -1,0 +1,140 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第13回}
+\newcommand{\EwMtitle}{超平面配置の数学\\[2mm]\large 鏡の国の超幾何関数}
+\newcommand{\EwMdate}{1999年10月22日（金）14:30～18:00 ～ 10月23日（土）10:30～17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{10月22日（金）}
+
+\talk
+{14:50～16:20}
+{超平面配置の数学 I}
+{寺尾 宏明 氏（都立大・理）}
+
+\talk
+{17:00～18:00}
+{超幾何関数の超古典理論 I}
+{吉田 正章 氏（九大・数理）}
+
+\subsection*{10月23日（土）}
+
+\talk
+{10:30～11:30}
+{超幾何関数の超古典理論 II}
+{吉田 正章 氏（九大・数理）}
+
+\talk
+{11:50～12:40}
+{超平面配置の数学 II}
+{寺尾 宏明 氏（都立大・理）}
+
+\talk
+{14:10～15:10}
+{セルバーグ積分と多重ゼータ値}
+{寺杣 友秀 氏（東大・数理）}
+
+\talk
+{15:30～17:00}
+{鏡映群の幾何}
+{斎藤 恭司 氏（京大・数理研）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第13回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

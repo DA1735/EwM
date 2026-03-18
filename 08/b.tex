@@ -1,0 +1,115 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+
+\pagestyle{empty}
+\begin{document}
+
+\noindent
+{\large\bfseries トーリック幾何への招待}
+\hfill
+{\large\bfseries 小田 忠雄・佐藤 拓（東北大・理）}
+
+\bigskip
+
+トーリック幾何は、代数幾何と凸体・格子点の幾何とを関連付ける理論である。
+その基本原理は極めて簡単であるにも拘わらず、
+Demazure、Mumford 達のグループ、佐武、三宅・小田により
+1970年代初頭に創始されて以来、現在もなお発展を続けている。
+参考文献欄に挙げたように、総合的解説や展望（サーベイ）に限っても、既に多数出版されている。
+ユニタリー・トーリック多様体や log 幾何等、
+今後ともまだまだ発展の可能性を秘めていることを、
+今回の一連の講演を通じておわかり頂ければ幸いである。
+
+ここでは時間の関係で触れる余裕はないが、トーリック幾何は
+アーベル多様体理論とも相性が良い。そもそもトーリック幾何創設の
+動機の一つが、アーベル多様体のモジュライ空間のコンパクト化であった。
+トーリック多様体の場合の代数的トーラスの代りに
+半アーベル多様体を考える試みも Alexeev・中村・名児耶により始められている。
+
+ここでは、トーリック幾何において基本的役割を演ずる「扇」の定義をまず紹介する。
+基本定理によれば、扇にはトーリック多様体と呼ばれる代数多様体が対応し、
+扇の初等幾何学的・組合せ論的性質と、トーリック多様体の代数幾何学的性質とを対応づける辞書が存在する。
+その辞書を通じることによって、例えばトーリック多様体の双有理幾何の問題が、
+扇の細分の問題に翻訳される。
+同一次元の非特異完備トーリック多様体同志は互いに双有理であるが、
+それぞれに何回か同変 blow-up の操作を施すことによって共通のトーリック多様体に
+到達できるかとの基本的問題を1970年代に提起したのであるが、
+最近になって遂に W{\l}odarczyk により弱い形が、Morelli によって強い形が
+証明されるに至った（Abramovich・松木・Rashid により証明の補足も行われた）。
+この例でも明らかなように、代数幾何における基本的問題の解決を試みる場合、
+トーリック多様体の場合にまず実験的に取組んでみることがしばしば行われる。
+トーリック幾何が、代数幾何の格好の実験場となっているのである
+（森理論と呼ばれる極小モデル問題の場合には、Reid によるトーリック多様体版が先駆けとなった）。
+
+トーリック多様体は、代数多様体としては極めて単純なものであり、
+アフィン空間や射影空間の一般化と考えることもできる。その意味で、
+興味ある代数多様体の ambient 空間としての役割が期待できる。
+例えば、数理物理学との関係で最近注目を浴びている Calabi--Yau 多様体の内で、
+（非特異あるいはもっと一般に Gorenstein 特異点を許容する）
+トーリック Fano 多様体を ambient 空間とするものが極めて興味深い。
+トーリック幾何によれば、トーリック Fano 多様体は、
+反射的多面体と呼ばれる（格子点を頂点とする）凸多面体に対応しており、
+Calabi--Yau 多様体の鏡映対称現象が反射多面体の双対現象と対応していることを
+Batyrev が見出し、トーリック幾何が数理物理学における基本的道具の一つとなるに至ったようである。
+
+\bigskip
+
+\noindent{\large\bfseries 参考文献}
+
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
+
+\begin{enumerate}
+  \setlength{\itemsep}{3pt}
+
+  \item D.~A.~Cox,
+        Recent developments in toric geometry,
+        in \textit{Algebraic Geometry Santa Cruz 1995}
+        (J.~Koll\'ar, R.~Lazarsfeld and D.~R.~Morrison, eds.),
+        Proc.\ Symposia in Pure Math.\ \textbf{62.2} (1997),
+        Amer.\ Math.\ Soc., 389--436.
+
+  \item V.~I.~Danilov,
+        The geometry of toric varieties,
+        \textit{Russian Math.\ Surveys} \textbf{33} (1978), 97--154.
+
+  \item G.~Ewald,
+        \textit{Combinatorial Convexity and Algebraic Geometry},
+        Graduate Texts in Math.\ \textbf{168}, Springer-Verlag, 1996.
+
+  \item W.~Fulton,
+        \textit{Introduction to Toric Varieties},
+        Ann.\ of Math.\ Studies \textbf{131}, Princeton Univ.\ Press, 1993.
+
+  \item G.~Kempf, F.~Knudsen, D.~Mumford and B.~Saint-Donat,
+        \textit{Toroidal Embeddings I},
+        Lecture Notes in Math.\ \textbf{339}, Springer-Verlag, 1973.
+
+  \item T.~Oda,
+        \textit{Lectures on Torus Embeddings and Applications
+        (Based on Joint Work with Katsuya Miyake)},
+        Tata Inst.\ of Fund.\ Research \textbf{58}, 1978.
+
+  \item 小田忠雄，凸体と代数幾何学，紀伊國屋数学叢書 \textbf{24}，紀伊國屋書店，1985．
+
+  \item T.~Oda,
+        \textit{Convex Bodies and Algebraic Geometry---An Introduction
+        to the Theory of Toric Varieties},
+        Ergebnisse der Math.\ (3) \textbf{15}, Springer-Verlag, 1988.
+
+  \item T.~Oda,
+        Geometry of toric varieties,
+        in \textit{Proc.\ Hyderabad Conf.\ on Algebraic Groups}
+        (S.~Ramanan, ed.), Manoj Prakashan, Madras, 1991, 407--440.
+
+  \item 小田忠雄，トーリック多様体論の最近の発展，
+        数学 \textbf{46} 巻 4 号（1994），35--47；
+        英訳：Recent topics on toric varieties,
+        in \textit{Selected Papers on Number Theory and Algebraic Geometry}
+        (K.~Nomizu, ed.),
+        Amer.\ Math.\ Soc.\ Transl.\ (2) \textbf{172} (1996), 77--91.
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,432 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+
+\pagestyle{empty}
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  {\Huge\bfseries 微分トポロジーと代数トポロジー}
+\end{center}
+
+\vspace{10pt}
+
+\begin{center}
+  {\large 概要}
+\end{center}
+
+\newpage
+
+%======================================================================
+% 講演１：佐藤肇「２０世紀の花形数学（アダ花？）：トポロジー」
+%======================================================================
+\noindent
+{\large\bfseries ２０世紀の花形数学（アダ花？）：トポロジー}
+\hfill
+{\large\bfseries 佐藤 肇（名大・多元数理）}
+
+\medskip
+
+19世紀の終わりに、微分方程式の解の定性的な研究をしていた Poincaré は、
+ホモロジー群、基本群などを定義し、双対定理を示し、
+代数的方法を導入することにより、位相幾何学に大きな進歩を与えた。
+その後、ファイバーバンドルの理論が整備され、1930年代から40年代には、
+バンドルの特性類が Stiefel、Whitney、Pontrjagin、Chern などにより完全に決定された。
+
+一方、球面のホモトピー群の低いステムの決定に多様体の幾何学を用いるという、
+50年代はじめのころの Pontrjagin のアイデアは、
+Rohlin の３・４次元の多様体の幾何学の先駆的な研究をうみ、さらに逆に
+多様体の幾何学（コボルディズムなど）の研究に（当時盛んになった）リー群の
+位相の代数的研究を応用するという Thom の画期的な研究への道を開いた。
+
+コボルディズムの理論を用いることにより、Hirzebruch は滑らかな多様体の
+交点形式の指数は Pontrjagin 類の積分で書けることを示した。
+50年代中頃、Milnor はその等式を満たさない位相多様体を構成し、
+７次元の滑らかな多様体で球面とは位相同型ではあるが、
+微分可能多様体としては異なるというエキゾチックな球面の存在を示し、
+数学界に特大の衝撃を与えた。
+
+また、高次元版の Poincaré 予想（ホモトピー球面は球面と位相同型か？）という問題は、
+60年代はじめ、Smale により Morse 理論を用いて解かれた。
+またこの頃、複体に対する基本予想（位相同型なら組み合わせ的に同型か？）も
+Milnor によって反例が与えられ、代数的 $K$ 理論の元となった。
+指数定理は一般の微分作用素の指数定理として、
+Atiyah--Singer により位相的 $K$ 理論のもとで一般化された。
+
+エキゾチックな球面の分類には手術の手法が使われたが、これはさらに、
+ホモトピー同値な多様体の、位相的・PL-同相的・微分同相とそれぞれのカテゴリーでの分類に
+美しく応用された。$BF$, $BHom$, $BTop$, $BPL$, $BO$ という分類空間の代数位相幾何的研究と
+あいまって、５次元以上の多様体の分類が（単連結の場合）ほぼ完全に決定された。
+これら Browder--Novikov--Wall--Sullivan--Kirby--Siebenmann の仕事により、
+多様体に対する基本予想も70年代に解決し、残されたのは３・４次元の問題だけとなった。
+
+４次元の多様体の基本的問題は、無限反復手術という Casson の方法と、ゲージ理論の導入により、
+80年代に Freedman、Donaldson により解決されたことは皆さんの記憶に新しいことであろう。
+また３次元多様体についても、幾何学的構造と対応させる Thurston の研究、
+ノットの新しい不変量の Jones などによる発見があり、大きく進歩した。
+これら低次元の多様体の理論は、理論物理との密接な関係があることが明らかになったが、
+いまだに Poincaré 予想は未解決である。
+
+\newpage
+
+%======================================================================
+% 講演２：服部晶夫「Adams 予想を巡って」
+%======================================================================
+\noindent
+{\large\bfseries Adams 予想を巡って}
+\hfill
+{\large\bfseries 服部 晶夫（明大・理工）}
+
+\medskip
+
+1960年代のトポロジーを振り返って見ると、５次元以上の多様体の分類理論で頂点に達した
+微分位相幾何学の発展が一番華々しい成果を残している。
+一方、同じ60年代には指数定理が完成されようとしていた（不動点定理、族指数定理）。
+そこから発する流れは今に至るも続いている。
+これらの動きは若い研究者にとっても全く未知のものではないと思われる。
+実はその60年代には Adams により提出された Adams 予想が当時の代数的位相幾何学の
+研究者の強い関心をよんでいた（この見解には筆者の個人的な思い入れがあるかもしれない）。
+Adams 予想はその年代の終わりに Quillen と Sullivan により解決されたが、
+その解決自体がアイディアの新しさ（Quillen）と定式化の発展性（Sullivan）により
+トポロジストに衝撃を与えるものであった（ここにも筆者の個人的な思い入れがあるかもしれない）。
+この Adams 予想は今では人々の口の端に上ることもなく、
+若い人の中ではそれがどういうものかも正確に知らない人もいると思われる。
+そのような意味でこの機会に Adams 予想について振り返ってみるのも多少の意義があると考え
+ここで取り上げることにした。なお、Adams 予想が（その解決の前に）
+何故当時関心の的であったかについて簡単に解説しておこう。
+
+直交群の極限を $O = \displaystyle\lim_{\leftarrow} O(n)$ とし、
+群 $G_n = \{f : S^{n-1} \to S^{n-1} \mid f \text{ はホモトピー同値}\}$ の極限を $G$ とする。
+$X$ を有限 CW 複体とすると $X$ のベクトルバンドルの Grothendieck 群 $KO(X)$ は
+ホモトピー集合 $[X, BO]$ と同一視される。
+$\mathit{Sph}(X) = [X, BG]$ とおいて自然な写像 $J : KO(X) \to \mathit{Sph}(X)$ の像を $J(X)$ と書く。
+$J(X)$ を求めることが当面の目標である。
+$KO(X)$ については十分な情報があるとすれば、$J$ の核 $\operatorname{Ker} J$ を定めることにより
+$J(X)$ が求められる。
+$KO$ 理論には Adams 作用素と呼ばれる各整数 $k$ 毎に定まるコホモロジー作用素 $\Psi^k$ がある。
+Adams の予想は $KO(X)$ におけるすべての $\Psi^k$ の情報が $\operatorname{Ker} J$ を決定するというものである。
+ホモトピーに関する問題では扱うホモトピー集合をコホモロジー作用素を考慮に入れた
+（一般）コホモロジー群に表現して研究するのが一般的であるが、
+その表現が忠実であるのは稀である。
+表現が忠実になるのは問題とコホモロジー理論の相性が特別によい幸福な場合である。
+そして、そのような場合には、結果はたいてい非常に美しい。
+Adams 予想はその典型的な一例である。
+
+\medskip
+\begin{center}
+  \textbf{参考文献}
+\end{center}
+
+\begin{itemize}
+  \setlength{\itemsep}{2pt}
+  \item[{[At61]}] M.~F.~Atiyah,
+        Thom complex,
+        \textit{Proc.\ London Math.\ Soc.}\ (3) \textbf{11} (1961), 291--310.
+  \item[{[Ad62]}] J.~F.~Adams,
+        Vector fields on spheres,
+        \textit{Ann.\ of Math.}\ \textbf{75} (1962), 603--632.
+  \item[{[Ad63]}] J.~F.~Adams,
+        On the groups $J(X)$-I,
+        \textit{Topology} \textbf{2} (1963), 181--195.
+  \item[{[Ad65a]}] J.~F.~Adams,
+        On the groups $J(X)$-II,
+        \textit{Topology} \textbf{3} (1965), 137--171.
+  \item[{[Ad65b]}] J.~F.~Adams,
+        On the groups $J(X)$-III,
+        \textit{Topology} \textbf{3} (1965), 193--222.
+  \item[{[Q68]}] D.~Quillen,
+        Some remarks on étale homotopy theory and a conjecture of Adams,
+        \textit{Topology} \textbf{7} (1968), 111--116.
+  \item[{[Q71]}] D.~Quillen,
+        The Adams conjecture,
+        \textit{Topology} \textbf{10} (1971), 67--80.
+  \item[{[S74]}] D.~Sullivan,
+        Genetics of homotopy theory and the Adams conjecture,
+        \textit{Ann.\ of Math.}\ \textbf{100} (1974), 1--80.
+  \item[{[BG75]}] J.~Becker and D.~Gottlieb,
+        The transfer map and fiber bundles,
+        \textit{Topology} \textbf{14} (1975), 1--12.
+\end{itemize}
+
+\newpage
+
+%======================================================================
+% 講演３：吉田朋好「指数定理への思い入れ」
+%======================================================================
+\noindent
+{\large\bfseries 指数定理への思い入れ}
+\hfill
+{\large\bfseries 吉田 朋好（東工大・理）}
+
+\medskip
+
+私は「指数定理」を修士のころに勉強してそれ以来何とか背景などを込めて理解したいと思って
+努力してきましたが、時間をかけたわりにはなかなか思うようにゆきません。
+最近の物理などとの関連で少しわかりかけた様な気がするのですが、どうでしょうか？
+
+多様体のトポロジーを指数定理の方から眺めて来たわけですが、
+そのあたりの毒にも薬にもならないことをお話しします。
+
+\newpage
+
+%======================================================================
+% パネルディスカッション
+%======================================================================
+\begin{center}
+  {\large\bfseries Panel Discussion}
+\end{center}
+\begin{center}
+  1950年代・1960年代のトポロジー／現在のトポロジー\\
+  1999年6月
+\end{center}
+
+\medskip
+\noindent\textbf{1. パネラー（予定者）}
+
+\medskip
+\begin{tabbing}
+  \hspace{2cm} \= \hspace{4cm} \= \hspace{4cm} \kill
+  \> 服部晶夫 \> 佐藤肇 \\
+  \> 森田茂之 \> 吉田朋好 \\
+  \> 古田幹雄 \> 小野薫 \\
+  \> 太田啓史 \> その他出席者
+\end{tabbing}
+
+\medskip
+\noindent\textbf{司会}\quad 土屋昭博
+
+\bigskip
+\noindent\textbf{2. 内容}
+
+\medskip
+それぞれのパネラーの方々に司会者よりまず最初に次の(1)よりお聞きし、(2)(3)に移ります。
+
+\begin{enumerate}
+  \item 修士の頃
+        \begin{itemize}
+          \item 何を勉強しましたか
+          \item 修論は何でしたか
+          \item その当時何が問題になっていましたか
+        \end{itemize}
+  \item 50年代、60年代のトポロジーで気になっていることについてお話ください。
+  \item 状況をみながら問題を現在へと発展させます。
+\end{enumerate}
+
+\bigskip
+\noindent\textbf{3. 各論}
+
+\begin{enumerate}
+  \item \textbf{Morse 理論}
+
+  \begin{tabbing}
+    \hspace{1cm} \= \hspace{3cm} \= \hspace{8cm} \kill
+    \> Birkhoff \> Minimax theory \\
+    \> Morse \> 1930年 \\
+    \> \> 測地線に関する大域変分学 \\
+    \> \> Morse の不等式 \\
+    \> \> Jacobi 場と指数定理 \\
+    \> Bott \> 1955年 \\
+    \> \> 対称空間のパス空間のトポロジー \\
+    \> \> Bott の periodicity 定理 \\
+    \> Milnor--Smale \> 1960年 \\
+    \> \> 高次元 Poincaré 予想 \\
+    \> \> 多様体のハンドル・ボディ分解 \\
+    \> \> $h$-cobordism 定理 \\
+    \> Novikov \> 1984年 \\
+    \> \> 1-form に associate した Morse 理論 \\
+    \> Floer \> Floer cohomology とその影響 \\
+    \> \> Floer cohomology の革新性 \\
+    \> \> \hspace{1cm}1-form に associate した Morse 理論 \\
+    \> \> \hspace{1cm}臨界点の指数 $= \dfrac{\infty}{2} \pm$ 有限
+  \end{tabbing}
+
+  \item \textbf{特性類}
+
+  ベクトル束の特性類：Chern 類、Pontrjagin 類、Stiefel--Whitney 類。
+  構成法としては、障害の理論、Grassmann 多様体の cell 分割、微分形式による表示（Chern--Weil 理論）、
+  Gauss--Bonnet の定理の高次元化がある。
+  ２次の特性類としては Chern--Simons 類・$\eta$-不変量、
+  Foliation における Bott の消滅定理がある。
+  また $BTop$, $BPL$, $BF$ のコホモロジー、非線型束の特性類（$B\mathrm{Diff}(M)$）、
+  曲面束の特性類（森田--Mumford 類）も重要である。
+
+  \item \textbf{交点理論の発展}
+
+  多様体上の交点理論の登場（Lefschetz）：Poincaré の双対性、コホモロジー環と交点理論、
+  Lefschetz の不動点定理。
+  多様体上の積分定理：de Rham の定理、調和積分論。
+  不動点定理の展開：楕円複体での不動点定理、共変コホモロジー論。
+  有限標数でのコホモロジー論の展開：étale cohomology（Grothendieck）、
+  Weil 予想の解決（Deligne）、étale homotopy 論（Artin--Mazur）。
+  Intersection cohomology、Moduli 空間上での交点理論：Donaldson 不変量、
+  Floer cohomology と Lagrangean 交点理論、量子コホモロジー環、ミラー対称性。
+
+  \item \textbf{指数定理}
+
+  古典論：代数曲線上での Riemann--Roch の定理、Gauss--Bonnet の定理、
+  ベクトル場に関する Hopf の定理。
+  Hirzebruch の Riemann--Roch の定理。
+  位相的 $K$-理論と Grothendieck の Riemann--Roch の定理。
+  Atiyah--Singer の指数定理とその現在への影響。
+
+  \item \textbf{代数的位相幾何学とホモトピー}
+
+  コホモロジー作用素：cup-$i$ 積、Eilenberg--MacLane 空間 $K(\pi,n)$。
+  Steenrod 代数：$K(\pi,n)$ のコホモロジー（Serre）、Steenrod 代数の構造定理（Milnor）。
+  代数的位相幾何学における局所化原理：Serre の $C$ 理論、
+  Morava による複素コボルディズム論の局所化（Morava $K$-theory、
+  Geometric localization theorem、M.~J.~Hopkins 1980年代後半）。
+  球面のホモトピー：$\Pi_n(S^k)$ の有限性、Adams のスペクトル列、
+  Toda の Composition method、Unitary Cobordism における Novikov のスペクトル列、
+  Nishida の巾零性定理、Periodicity Phenomena。
+  ホモトピー論における主要問題：球面上のベクトル場（解決）、
+  Hopf-invariant 問題（解決）、Kervaire invariant 問題（未解決）、
+  $J$-準同型写像に関する Adams 予想（解決）。
+
+  \item \textbf{微分位相幾何学}
+
+  コボルディズム：Pontrjagin 構成、コボルディズムと Thom 空間、ホモトピー論への転化。
+  Milnor の7-球面、高次元 Poincaré 予想：$h$-cobordism、ハンドル体定理。
+  ホモトピー球面の群、surgery。
+  Triangulating homotopy 同値、$F/PL$ のホモトピー型の決定。
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 土屋昭博「私説 トポロジーの生成と消滅、そして再生」
+%======================================================================
+\begin{center}
+  {\large\bfseries 私説　トポロジーの生成と消滅、そして再生}
+\end{center}
+\begin{center}
+  名古屋大学多元数理　土屋昭博\\
+  1999年6月
+\end{center}
+
+\bigskip
+\noindent\textbf{1. 1920年代、1930年代 --- 誕生}
+
+\begin{enumerate}
+  \item ホモロジーとホモトピー
+        \begin{itemize}
+          \item ３角形近似：$\Pi_k(S^n) = 0 \quad (k < n)$
+          \item Brouwer の写像度：$\Pi_k(S^n) \cong \mathbf{Z}$
+          \item Hopf の写像：$S^{2n-1} \longrightarrow S^n,\quad \Pi_{2n-1}(S^n) \supseteq \mathbf{Z}$
+          \item Hurwitz の同型定理：$\Pi_n(X) \stackrel{\sim}{\longrightarrow} H_n(X)$
+                \quad if $\Pi_k(X) = 0 \quad (k < n)$
+        \end{itemize}
+  \item 多様体上の交点理論（Lefschetz）、Lefschetz の不動点定理
+  \item 微分形式とコホモロジー：de Rham の定理
+  \item Morse 理論の誕生
+\end{enumerate}
+
+\medskip
+\noindent\textbf{2. 1940年代 --- 幼年期}
+
+\begin{enumerate}
+  \item ホモトピーとホモロジー
+        \begin{itemize}
+          \item 原始的コホモロジー作用素（cup-$i$ 積）発見（Steenrod、Pontrjagin）
+          \item $\Pi_{n+1}(S^n)$、$\Pi_{n+2}(S^n)$ の計算
+          \item $K(\Pi, n)$ の発見（Eilenberg--MacLane）
+          \item Postnikov 係列
+        \end{itemize}
+  \item Fiber 束と特性類
+        \begin{itemize}
+          \item Chern 類、Pontrjagin 類、Stiefel--Whitney 類
+          \item 障害の理論
+          \item 微分形式と特性類（Chern--Weil 理論）
+          \item 分類空間としての Grassmann 多様体
+        \end{itemize}
+  \item 微分位相幾何学の萌芽：ポントリャーギン構成（in $\Pi_n(S^k)$、framed cobordism）
+\end{enumerate}
+
+\medskip
+\noindent\textbf{3. 1950年代 --- 青年期}
+
+\begin{enumerate}
+  \item ホモトピーとホモロジー
+        \begin{itemize}
+          \item $K(\Pi, n)$ のコホモロジー、Steenrod 代数の決定（Serre）
+          \item Serre の $C$ 理論：$\Pi_n^S(S^0) = \lim_{k\to\infty} \Pi_{n+k}(S^k) \quad (n>0)$
+                は有限アーベル群であること
+          \item Toda bracket
+          \item Adams のスペクトル列 $\Longrightarrow \Pi_*^S(S^0)$
+          \item 無限ループ空間とホモロジー作用素（工藤、荒木、Dyer--Lashof）
+          \item Steenrod 代数の構造定理（Milnor）
+          \item 複素コボルディズム群の決定（Milnor、Novikov）
+        \end{itemize}
+  \item 微分位相幾何学の誕生
+        \begin{itemize}
+          \item Cobordism 群と Thom 空間（Thom）
+          \item 7次元ホモトピー球面（Milnor）
+          \item 高次元ポアンカレ予想（Smale）by Morse theory
+          \item $h$-cobordism 理論、ハンドル体理論
+        \end{itemize}
+  \item Riemann--Roch 理論と位相的 $K$-理論（Hirzebruch--Atiyah、Grothendieck）
+  \item Bott の周期性理論と位相的 $K$-理論（Bott、Morse 理論）
+  \item 幾何学的表現論：Borel--Weil 理論、等質空間上の等質ベクトル束（Bott）
+\end{enumerate}
+
+\medskip
+\noindent\textbf{4. 1960年代・1970年代初め --- 熟年期}
+
+\begin{enumerate}
+  \item ホモトピーとホモロジー
+        \begin{itemize}
+          \item ホモトピー論における主要問題
+          \item Hopf-invariant 1 問題の解決（Adams）
+          \item 球面上の Vector 場の存在個数の解決（Adams）
+          \item Kervaire--invariant 問題（未解決）
+          \item Adams スペクトル列における $h_j^2$ の permanent cycles 問題との等価性（W.~Browder）
+          \item $J$-準同型に関する Adams 予想（解決）
+          \item $\Pi_*^S(S^0)$ における $\beta_1^{(1)}$ の非存在（戸田）
+          \item $\Pi_*^S(S^0)$ の積の巾零性（西田）
+        \end{itemize}
+  \item ホモトピーと微分位相幾何学
+        \begin{itemize}
+          \item ホモトピー球面の群と $\Pi_*^S(S^0)$ の関係（Kervaire--Milnor）
+          \item framed-cobordism と surgery
+          \item Kervaire invariant 問題の登場
+        \end{itemize}
+  \item ホモトピーと代数幾何
+        \begin{itemize}
+          \item エタール-ホモトピー型（Artin--Mazur）
+          \item Adams 予想の解決（Quillen）
+        \end{itemize}
+  \item Atiyah--Singer の指数定理
+        \begin{itemize}
+          \item 証明方法：Cobordism 不変性（Atiyah--Singer）、$K$-theory と切除定理（Atiyah--Bott）、
+                熱方程式（Patodi）、Super-Symmetry と局所表示
+          \item Lefschetz の不動点定理（Atiyah--Bott）
+        \end{itemize}
+  \item 複素コボルディズム理論
+        \begin{itemize}
+          \item コホモロジー作用素の決定（Novikov--Landweber）
+          \item Novikov のスペクトル列
+          \item 局所化（Brown--Peterson スペクトラム）
+          \item １次元 formal 群の普遍性（Quillen）
+          \item 複素コボルディズム理論と $K$-理論、Morava の $K$-theory
+        \end{itemize}
+  \item 微分位相幾何学とホモトピー
+        \begin{itemize}
+          \item Triangulating homotopy equivalence（D.~Sullivan）
+          \item $F/PL$ のホモトピー型の決定
+          \item $H^*(BPL)$、$H^*(BTop)$、$H^*(BSF)$ の決定
+        \end{itemize}
+  \item ２次特性類の登場
+        \begin{itemize}
+          \item Chern--Simons 不変量、$\eta$ 不変量
+          \item Foliation におけるポントリャーギン類の消滅定理（Bott）
+        \end{itemize}
+\end{enumerate}
+
+\medskip
+\noindent\textbf{5. 現在？}
+
+\end{document}

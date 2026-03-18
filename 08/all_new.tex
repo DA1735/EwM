@@ -1,0 +1,240 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries トーリック幾何と Log Scheme}
+
+  \vspace{30pt}
+
+  {\Large\bfseries 代数幾何・トポロジー・数論の交差点}
+
+  \vspace{50pt}
+
+  {\large 前文}
+
+  \vspace{10pt}
+
+  \parbox{0.85\textwidth}{
+    \large\bfseries
+    トーリック幾何の基礎から出発し、
+    トポロジーの視点による多重扇の理論、
+    さらに log scheme 理論へと展開する。
+    組み合わせ論・代数幾何・数論を結ぶ豊かな構造を幅広く論じる。
+  }
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：小田忠雄・佐藤拓
+%======================================================================
+\noindent
+{\large\bfseries トーリック幾何への招待}
+\hfill
+{\large\bfseries 小田 忠雄・佐藤 拓（東北大・理）}
+
+\bigskip
+
+トーリック幾何は、代数幾何と凸体・格子点の幾何とを関連付ける理論である。
+その基本原理は極めて簡単であるにも拘わらず、
+Demazure、Mumford 達のグループ、佐武、三宅・小田により
+1970年代初頭に創始されて以来、現在もなお発展を続けている。
+参考文献欄に挙げたように、総合的解説や展望（サーベイ）に限っても、既に多数出版されている。
+ユニタリー・トーリック多様体や log 幾何等、
+今後ともまだまだ発展の可能性を秘めていることを、
+今回の一連の講演を通じておわかり頂ければ幸いである。
+
+ここでは時間の関係で触れる余裕はないが、トーリック幾何は
+アーベル多様体理論とも相性が良い。そもそもトーリック幾何創設の
+動機の一つが、アーベル多様体のモジュライ空間のコンパクト化であった。
+トーリック多様体の場合の代数的トーラスの代りに
+半アーベル多様体を考える試みも Alexeev・中村・名児耶により始められている。
+
+ここでは、トーリック幾何において基本的役割を演ずる「扇」の定義をまず紹介する。
+基本定理によれば、扇にはトーリック多様体と呼ばれる代数多様体が対応し、
+扇の初等幾何学的・組合せ論的性質と、トーリック多様体の代数幾何学的性質とを対応づける辞書が存在する。
+その辞書を通じることによって、例えばトーリック多様体の双有理幾何の問題が、
+扇の細分の問題に翻訳される。
+同一次元の非特異完備トーリック多様体同志は互いに双有理であるが、
+それぞれに何回か同変 blow-up の操作を施すことによって共通のトーリック多様体に
+到達できるかとの基本的問題を1970年代に提起したのであるが、
+最近になって遂に W{\l}odarczyk により弱い形が、Morelli によって強い形が
+証明されるに至った（Abramovich・松木・Rashid により証明の補足も行われた）。
+この例でも明らかなように、代数幾何における基本的問題の解決を試みる場合、
+トーリック多様体の場合にまず実験的に取組んでみることがしばしば行われる。
+トーリック幾何が、代数幾何の格好の実験場となっているのである
+（森理論と呼ばれる極小モデル問題の場合には、Reid によるトーリック多様体版が先駆けとなった）。
+
+トーリック多様体は、代数多様体としては極めて単純なものであり、
+アフィン空間や射影空間の一般化と考えることもできる。その意味で、
+興味ある代数多様体の ambient 空間としての役割が期待できる。
+例えば、数理物理学との関係で最近注目を浴びている Calabi--Yau 多様体の内で、
+（非特異あるいはもっと一般に Gorenstein 特異点を許容する）
+トーリック Fano 多様体を ambient 空間とするものが極めて興味深い。
+トーリック幾何によれば、トーリック Fano 多様体は、
+反射的多面体と呼ばれる（格子点を頂点とする）凸多面体に対応しており、
+Calabi--Yau 多様体の鏡映対称現象が反射多面体の双対現象と対応していることを
+Batyrev が見出し、トーリック幾何が数理物理学における基本的道具の一つとなるに至ったようである。
+
+\bigskip
+
+\noindent{\large\bfseries 参考文献}
+
+\renewcommand{\labelenumi}{[\arabic{enumi}]}
+
+\begin{enumerate}
+  \setlength{\itemsep}{3pt}
+
+  \item D.~A.~Cox,
+        Recent developments in toric geometry,
+        in \textit{Algebraic Geometry Santa Cruz 1995}
+        (J.~Koll\'ar, R.~Lazarsfeld and D.~R.~Morrison, eds.),
+        Proc.\ Symposia in Pure Math.\ \textbf{62.2} (1997),
+        Amer.\ Math.\ Soc., 389--436.
+
+  \item V.~I.~Danilov,
+        The geometry of toric varieties,
+        \textit{Russian Math.\ Surveys} \textbf{33} (1978), 97--154.
+
+  \item G.~Ewald,
+        \textit{Combinatorial Convexity and Algebraic Geometry},
+        Graduate Texts in Math.\ \textbf{168}, Springer-Verlag, 1996.
+
+  \item W.~Fulton,
+        \textit{Introduction to Toric Varieties},
+        Ann.\ of Math.\ Studies \textbf{131}, Princeton Univ.\ Press, 1993.
+
+  \item G.~Kempf, F.~Knudsen, D.~Mumford and B.~Saint-Donat,
+        \textit{Toroidal Embeddings I},
+        Lecture Notes in Math.\ \textbf{339}, Springer-Verlag, 1973.
+
+  \item T.~Oda,
+        \textit{Lectures on Torus Embeddings and Applications
+        (Based on Joint Work with Katsuya Miyake)},
+        Tata Inst.\ of Fund.\ Research \textbf{58}, 1978.
+
+  \item 小田忠雄，凸体と代数幾何学，紀伊國屋数学叢書 \textbf{24}，紀伊國屋書店，1985．
+
+  \item T.~Oda,
+        \textit{Convex Bodies and Algebraic Geometry---An Introduction
+        to the Theory of Toric Varieties},
+        Ergebnisse der Math.\ (3) \textbf{15}, Springer-Verlag, 1988.
+
+  \item T.~Oda,
+        Geometry of toric varieties,
+        in \textit{Proc.\ Hyderabad Conf.\ on Algebraic Groups}
+        (S.~Ramanan, ed.), Manoj Prakashan, Madras, 1991, 407--440.
+
+  \item 小田忠雄，トーリック多様体論の最近の発展，
+        数学 \textbf{46} 巻 4 号（1994），35--47；
+        英訳：Recent topics on toric varieties,
+        in \textit{Selected Papers on Number Theory and Algebraic Geometry}
+        (K.~Nomizu, ed.),
+        Amer.\ Math.\ Soc.\ Transl.\ (2) \textbf{172} (1996), 77--91.
+
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演２：枡田幹也
+%======================================================================
+\noindent
+{\large\bfseries トポロジーから見たトーリック多様体論}
+\hfill
+{\large\bfseries 枡田　幹也（大阪市立大学大学院理学研究科・理学部）}
+
+\bigskip
+
+「トーリック多様体」（toric variety）という代数幾何学の対象と
+「扇」（fan）という組み合わせ論の対象の間に、１対１対応がある。
+これにより、組み合わせ論の問題を代数幾何学の問題に翻訳し、
+代数幾何学の定理（例えば Riemann--Roch、強 Lefschetz）を用いて解くということがしばしばあった。
+R.~Stanley による $g$-予想の解決は、その最たるものであろう。
+異なる数学分野を結ぶこのような架け橋に、私は魅了される。
+
+本講演では、トーリック多様体論をトポロジーの立場から眺め、
+トーリック多様体論のトポロジー版を考える。
+つまり、トポロジーと組み合わせ論の間に架け橋を構築することを試みる。
+
+トポロジーの観点からすると、対象をトーリック多様体に限る必要はない。
+「ユニタリトーリック多様体」と呼ばれるもっと広い幾何学的対象を取り扱うのが自然である。
+その際現れてくる組み合わせ論の対象は、扇が幾重にも重なった「多重扇」（multi-fan）である。
+この多重扇の重なりの次数は、Todd 種数に対応する。
+よく知られているように、トーリック多様体の Todd 種数は１である。
+（我々の立場からすると）それ故、トーリック多様体の扇は重なりのないものとなると解釈できる。
+
+我々の議論では、同変コホモロジーが中心的な役割を演ずる。
+これは1960年頃 A.~Borel によって導入され、群作用の情報をよく含んでいることが知られている。
+また、同変 $K$ 群などより取り扱いやすいという利点がある。
+しかし、一部の専門家を除いては、同変コホモロジーはあまりポピュラーではないようである。
+１回目の講演では、同変コホモロジーが（ユニタリ）トーリック多様体と相性が良いことを観る。
+我々の多重扇は、同変コホモロジーを用いて定義される。
+２回目の講演では、Riemann--Roch 指数の重複度公式、Pick 公式の一般化等を考える。
+
+以上の書き方では、我々の議論がトーリック多様体論を含んだ形で展開されているような
+印象を与えるが、そうではない。以下の２つの問題点がある。
+\begin{itemize}
+  \item 我々は、コンパクトで滑らかな多様体しか扱っていない。
+        一方、トーリック多様体論では、コンパクトでないものや特異点を許すものも扱っている。
+  \item トーリック多様体論は、トーリック多様体と扇との間の「両方通行の架け橋」である。
+        しかし、（今の所）我々の理論は、ユニタリトーリック多様体に多重扇を対応させることが
+        出来るというだけの「一方通行の架け橋」である。
+        勝手に多重扇を与えたとき、それに対応するユニタリトーリック多様体が
+        （ある意味で）唯一つだけあるということは、判っていない。
+\end{itemize}
+講演の最後に、これらの問題点、今後の研究課題に触れたいと思っている。
+
+\newpage
+
+%======================================================================
+% 講演３：諏訪紀幸
+%======================================================================
+\noindent
+{\large\bfseries Log Scheme 理論入門}
+\hfill
+{\large\bfseries 諏訪紀幸（中央大学・理工学部）}
+
+\bigskip
+
+加藤和也、Fontaine、Illusie によって十年程前導入された
+「logarithmic structure を持つ scheme」すなわち log scheme の理論は、
+toroidal geometry のひとつの一般化を与えているが、
+中山能力、梶原健、中島幸喜、加藤文元、志甫淳といった国内の若手を中心に、
+近年目覚しく研究が進んでおり、広く注目を集めている。
+
+本講演では、toroidal geometry との関連に主眼をおき、log scheme 理論の概説を試みる。
+大学院生や専門以外の方にも、できるだけ具体的なイメージを持ってもらえるように注意しながら、
+\begin{enumerate}
+  \setlength{\itemsep}{2pt}
+  \item[(1)] log scheme とは何か。それが toroidal geometry の一般化と見なせるのは何故か。
+  \item[(2)] どのような応用があるか。
+\end{enumerate}
+の二点を解説することが目標である。
+
+要点をもう少し詳しく述べよう。
+toroidal geometry の理論では扇（fan）が活躍した。
+一方、log scheme の理論では半群が活躍する。
+scheme の構造層が乗法に関してなす半群に $\mathbf{N}$ のような性質の良い半群を
+上手に絡ませて、scheme の morphism が smooth あるいは étale でなくても、
+あたかも smooth あるいは étale であるかのような取り扱いが可能になる。
+誤解を恐れずに言えば、log scheme の世界では通常２重点を smooth な点と見なすことが出来る。
+具体的な応用としては、例えば Tate curve や Mumford curve のような
+semi-stable reduction をもつ局所体の上の代数多様体を考える際に、
+log scheme の理論は良い枠組みを提供している。
+
+これらの点について、個人的な思い入れも交えてざっくばらんに語ってみたいと考えている。
+
+\end{document}

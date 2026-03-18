@@ -1,0 +1,137 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第8回}
+\newcommand{\EwMtitle}{ＴＯＲＩＣ幾何\\[2mm]\large 代数幾何と凸幾何の架け橋}
+\newcommand{\EwMdate}{1998年6月12日（金）15:00 ～ 6月13日（土）17:00}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部5号館 5534号室}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{3mm}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{1日目（6月12日（金））}
+
+\talk
+{15:00～16:20}
+{トーリック幾何への招待 I}
+{小田 忠雄 氏（東北大・理）}
+
+\talk
+{17:00～18:00}
+{トポロジーから見たトーリック多様体論 I}
+{枡田 幹也 氏（阪市大・理）}
+
+\subsection*{2日目（6月13日（土））}
+
+\talk
+{10:30～12:00}
+{トポロジーから見たトーリック多様体論 II}
+{枡田 幹也 氏（阪市大・理）}
+
+\talk
+{14:00～15:10}
+{log scheme 理論入門}
+{諏訪 紀幸 氏（中大・理工）}
+
+\talk
+{15:40～17:00}
+{トーリック幾何への招待 II}
+{小田 忠雄 氏・佐藤 拓 氏（東北大・理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第8回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112 東京都文京区春日1-13-27 中央大学理工学部数学教室  
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

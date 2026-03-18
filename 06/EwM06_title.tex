@@ -1,0 +1,138 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整
+\usepackage[top=18mm,bottom=18mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間調整
+\renewcommand{\baselinestretch}{0.92}
+\setlength{\parskip}{2pt}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\vspace{1mm}
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第6回}
+\newcommand{\EwMtitle}{トロイダル・コンパクト化\\[1mm]\large この怪獣の謎を探る}
+\newcommand{\EwMdate}{1998年2月6日（金）14:30 ～ 2月7日（土）16:30}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部5号館 5534号室}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-7mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{1mm}
+
+{\large 数学との遭遇}
+
+\vspace{3mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{3mm}
+
+\EwMdate
+
+\vspace{1mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{\normalsize プログラム}
+
+\subsection*{\normalsize 1日目（2月6日（金））}
+
+\talk
+{14:30～15:45}
+{トロイダル・コンパクト化について I}
+{佐武 一郎 氏（中央大・理工）}
+
+\talk
+{16:30～17:45}
+{トーリック多様体入門}
+{石井 志保子 氏（東工大・理）}
+
+\subsection*{\normalsize 2日目（2月7日（土））}
+
+\talk
+{10:30～11:45}
+{トロイダル・コンパクト化について II}
+{佐武 一郎 氏（中央大・理工）}
+
+\talk
+{13:20～14:35}
+{アーベル多様体の退化について}
+{浪川 幸彦 氏（名古屋大・多元数理）}
+
+\talk
+{15:10～16:25}
+{$\mathbf{Z}$ 上の構成について}
+{藤原 一宏 氏（名古屋大・多元数理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第6回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。  
+なお、2日目終了後、佐武先生の古稀をお祝いする会を予定しております。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{\normalsize 連絡先}
+
+112 東京都文京区春日1-13-27 中央大学理工学部数学教室
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

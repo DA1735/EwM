@@ -1,0 +1,144 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第28回}
+\newcommand{\EwMtitle}{リーマン面の退化と再生}
+\newcommand{\EwMdate}{2003年11月7日（金）14:30～18:10 ～ 11月8日（土）10:30～17:10}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{11月7日（金）}
+
+\talk
+{14:30～16:00}
+{リーマン面の退化と再生入門}
+{今吉 洋一 氏（大阪市立大・理）}
+
+\talk
+{16:40～18:10}
+{リーマン面の退化形の位相的分類}
+{松本 幸夫 氏（東大・数理）}
+
+\subsection*{11月8日（土）}
+
+\talk
+{10:30～12:00}
+{退化不変量の様々な顔}
+{足利 正 氏（東北学院大・工）}
+
+\talk
+{13:20～14:30}
+{分裂族の織りなす宇宙}
+{高村 茂 氏（京大・理）}
+
+\talk
+{14:50～15:50}
+{タイヒミュラー空間から見たリーマン面の退化と再生}
+{今吉 洋一 氏（大阪市立大・理）}
+
+\talk
+{16:10～17:10}
+{Lefschetz fibration の紹介}
+{松本 幸夫 氏（東大・数理）}
+
+\bigskip
+
+17:30～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第28回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多く方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27 中央大学理工学部数学教室 
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp  
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}

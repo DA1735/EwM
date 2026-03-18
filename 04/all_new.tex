@@ -1,0 +1,456 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsthm}
+
+\pagestyle{empty}
+
+% ============================================================
+% 共通マクロ（c.tex 由来）
+% ============================================================
+\def\Pic{\operatorname{Pic}}
+\def\height{\operatorname{height}}
+\def\Aut{\operatorname{Aut}}
+\def\Gal{\operatorname{Gal}}
+\def\inbook#1{\textit{#1}}
+\def\publ#1{#1}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries モーデル・ヴェイユ格子と代数多様体}
+
+  \vspace{30pt}
+
+  {\Large\bfseries アーベル多様体のランク・代数的サイクル・モチーフ}
+
+  \vspace{50pt}
+
+  {\large 前文}
+
+  \vspace{10pt}
+
+  \parbox{0.85\textwidth}{
+    \large\bfseries
+    モーデル・ヴェイユ格子の理論を基軸として、
+    ランクの高いアーベル多様体の構成、
+    および代数的サイクルとゼータ関数の関係を論じる。
+  }
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：塩田徹治
+%======================================================================
+\noindent
+{\large\bfseries モーデル・ヴェイユ格子　入門}
+
+\medskip
+\noindent
+{\large\bfseries \hfill 塩田 徹治（立教大学・理）}
+
+\bigskip\bigskip
+
+１９８９年春にはじまるモーデル・ヴェイユ格子（と名付けたもの）との出会いは、
+私にとっても文字通り新鮮な「数学との遭遇」であった。
+旧知のひとに出会い、昔よりはるかにそのひとのことをよく理解する機会にめぐりあったようなものだ。
+当時、一つの楕円曲線の有理点を具体的に求めることをコンピュータで実験してみた所、
+特別な形の２４０個の有理点が得られた。
+この結果が、ランク８のルート格子 $E_8$ の２４０個の最短ベクトルの決定に
+相当することに気付いた時が、物事の転回点となった。
+
+\bigskip
+
+モーデル・ヴェイユの定理によれば、有理数などを係数とする楕円曲線
+（やアーベル多様体）の有理点の全体は、
+有限生成なアーベル群となる；それをモーデル・ヴェイユ群とよぶ。
+モーデル・ヴェイユ格子（MWL）の理論の基本的アイデアは、
+「モーデル・ヴェイユ群に、適当な内積をいれて、格子としてみる」ということである。
+この立場からみると、予想外に豊富な事柄が自然なつながりをもって見えてくるのである。
+ある人は私のMWLの話を評して、箱庭のようだ、といったことがある。
+代数、幾何、数論、代数幾何、トポロジー、など色々なものを、
+木々や草花、池や水の流れ、丘や築山などにたとえたのだろうか。
+
+\bigskip
+
+モーデル・ヴェイユ格子に関して、できるだけ分かりやすい紹介を、とのご要望をうけて、
+３回の講演の予定を、以下のようにたててみた。
+
+\bigskip\bigskip
+
+\noindent\textbf{I\@.　モーデル・ヴェイユ格子の背景から定義まで}
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \item 格子と Sphere Packing（球のつめこみ）
+  \item 楕円関数、楕円曲線、モーデル・ヴェイユの定理
+  \item 楕円曲面上の交点理論
+  \item モーデル・ヴェイユ格子（MWL）
+\end{enumerate}
+
+\bigskip
+
+\noindent\textbf{II\@.　$E_6, E_7, E_8$ の背後にひそむもの}
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \item ルート格子　$E_6, E_7, E_8$　とその双対格子
+  \item 有理楕円曲面のMWL
+  \item MWLから生ずる代数方程式とガロア表現
+  \item 特異点の変形とMWL
+  \item 古典再訪：３次曲面上の２７本の直線、４次曲線の２８本の双接線
+\end{enumerate}
+
+\bigskip
+
+\noindent\textbf{III\@.　応用と展望}
+\begin{enumerate}
+  \setlength{\itemsep}{0pt}
+  \item Sphere Packing への応用（標数 $p$ の超特異現象の意外な効用）
+  \item ランクの高い楕円曲線の構成
+  \item より一般の枠組みでのMWL展望
+\end{enumerate}
+
+\bigskip\bigskip
+
+講演を聞かれた方に、なるほど面白いと感じて頂けるならば幸いである。
+
+\bigskip
+
+\noindent
+（お手近な参考文献：雑誌「数学」43巻（1991）所収の論説　「MWLの理論と応用」）
+
+\newpage
+
+%======================================================================
+% 講演２：寺杣友秀
+%======================================================================
+\begin{center}
+  {\large\bfseries 階数の高いアーベル多様体の構成について}
+\end{center}
+\begin{flushright}
+  \textbf{寺杣 友秀}
+\end{flushright}
+
+\medskip
+
+\section*{第一章 序}
+
+今回お話させて頂くのは、一般の次元の有理数体上に定義されたsimple な Abel 多様体で $\mathbf{Q}$-rank の高いものを構成することについてです。
+$\mathbf{Q}$ 上の Abel 多様体で simple なものを得ることは数論的な問題なのですが、ここでアピールしたい事の一つは、こういうものの構成に古典的な topology が役立つことです。
+ここでいう topology とは monodromy 変換から得られる braid 群の表現に関する知識です。
+Abel 多様体で一次元のものは楕円曲線として良く知られており、$\mathbf{Q}$ 上の楕円曲線についても様々な研究がなされています。
+
+一般に $\mathbf{Q}$ 上定義された Abel 多様体についてその $\mathbf{Q}$ 有理点全体のなす群は Mordell--Weil の定理により有限生成であることが知られています。
+その自由部分の rank（以下単に Abel 多様体の rank という）についてもいろいろな研究がなされています。
+しかし楕円曲線においてでさえまだ謎につつまれている部分も多く、たとえばこの楕円曲線の rank が果してどれくらいまで大きくなりえるかという問題については未だに未解決問題として残っています。
+経験的には大きな rank の楕円曲線をみつけることは一般的に難しいようです。
+ある種の楕円曲線の族のなかでは rank が高くなればなる程その分布が少なくなることもわかっていて、そのことからもうなずけると思います。
+ちなみに現在の楕円曲線の rank の world record は 23（?）あたりです。
+
+さて一般次元の $\mathbf{Q}$ 上定義された Abel 多様体についてはどうかというのが今回のテーマです。
+お話させて頂くのは塩田徹治先生との共同研究で、今年の春、Johns Hopkins 大学の日米数学研究所（JAMI Seminar）においてなされました。
+
+今回の話のおおまかな outline はつぎの通りです。
+まず塩田氏による多くの有理点をもつ代数曲線族の構成についての復習をします。
+この楕円曲線族の Jacobi 多様体の族を考えると rank の高い Abel 多様体の族が得られます。
+さらに $\mathbf{Q}$ 上に定義されたひとつのメンバーとして rank の高い Abel 多様体を得ます。
+このとき得られた Abel 多様体が本質的に新しいものであることを保障するために Abel 多様体が simple であること（あるいは simple であるものがとれること）を証明します。
+ここで braid monodromy の既約性を利用します。
+ちなみにもし simple であることを要請しなければ、例えば楕円曲線の直積を考えることにより、$\mathbf{Q}$ 上の次元 $g$ の Abel 多様体で rank が $23g$ のものが存在することになります。
+
+
+\section*{第二章 Section をたくさんもつ曲線族}
+
+$n$ を $3$ 以上の自然数とする。
+まず $3$ 個の $\mathbf{Q}$ 係数の多項式 $\Phi(x)$, $h(x)$, $f(x)$ で次の性質をもつものを考える。
+\begin{enumerate}
+  \item $\Phi(x)$（resp.\ $h(x)$）は degree $N = 2n$（resp.\ $n$）の monic な多項式。$f(x)$ は高々 degree $n-1$ の多項式。
+        \begin{align*}
+          \Phi(x) & = x^{N} + c_1 x^{N-1} + \cdots + c_N, \\
+          h(x)    & = x^n + b_1 x^{n-1} + \cdots + b_n,   \\
+          f(x)    & = a_0 x^{n-1} + a_1 x^{n-2} + \cdots + a_{n-1}.
+        \end{align*}
+  \item $\Phi(x)$, $h(x)$, $f(x)$ は恒等式
+        \[
+          \Phi(x) = (h(x))^2 - f(x)
+        \]
+        を満たす。
+\end{enumerate}
+
+このとき係数 $(c_1, \dots, c_N)$, $(b_1, \dots, b_n)$, $(a_0, \dots, a_{n-1})$ は代数的な関係式で結ばれている。
+$(b_1, \dots, b_n)$, $(a_0, \dots, a_{n-1})$ から $(c_1, \dots, c_N)$ が定まるのは明らかだが、逆に $(c_1, \dots, c_N)$ から $(b_1, \dots, b_n)$, $(a_0, \dots, a_{n-1})$ も定まる。
+すなわち係数 $(b_1, \dots, b_n)$, $(a_0, \dots, a_{n-1})$ は $(c_1, \dots, c_N)$ の多項式として表される。
+$h(x)$ は $\Phi$ の Tschirnhausen root といわれている。
+
+さらに $\Phi(x)$ が $\mathbf{Q}$ 上因数分解された形
+\[
+  \Phi(x) = \prod_{i=1}^{N}(x - u_i), \quad u_i \in \mathbf{Q} \quad (i = 1, \dots, N)
+\]
+で与えられているとすると、係数 $(b_1, \dots, b_n)$, $(a_0, \dots, a_{n-1})$ は $u = (u_1, \dots, u_N)$ の多項式で与えられている。
+
+ここで $(x, y)$ を座標とする超楕円曲線族
+\[
+  \mathcal{C} : y^2 = f(x)
+\]
+を考えれば、これは $u$ をパラメータとする曲線族と考えることができる。
+簡単のため、$n$ を奇数とする。このとき $u$ が generic ならば $\mathcal{C}$ は種数 $g = (n-3)/2$ の超楕円曲線族である。
+
+この超楕円曲線族には $u$ でパラメータ付けされた有理点の族、すなわち曲線族の $u$-パラメータ空間上の section $P_k$ ($k = 1, \dots, N$) が次のようにして定義される：
+\[
+  P_k = \{(x, y) = (u_k,\ h(u_k))\}.
+\]
+
+ここでこの曲線族の Jacobi 多様体の族を考えよう。
+代数曲線 $C$ 上の点の形式的和の有理同値類（因子類と呼ぶ）全体 $\Pic(C)$ のなかで次数 $0$ の元のなす群には代数多様体の構造が入るが、それをその曲線の Jacobi 多様体とよぶ。これは Abel 多様体となる。
+曲線の Jacobi 多様体は Abel 多様体を構成する代表的な方法である。
+曲線族があるパラメータ付けされていれば同じパラメータでパラメータ付けされた Jacobi 多様体の族 $\mathcal{J}$ が構成される。
+
+先に定義した section $P_i$ を使って次数 $0$ の因子類の族を $P_k - P_1$ ($k = 2, \dots, N$) によって定義する。
+パラメータを $\mathbf{Q}$ 上代数的超越元にとれば $\mathcal{J}$ は $N$-変数有理関数体 $\mathbf{Q}(u_1, \dots, u_N)$ 上の Abel 多様体となる。これを $J$ と書く。
+さらに $P_k(u) - P_1(u)$ は $J$ の $\mathbf{Q}(u_1, \dots, u_N)$ 有理点を与える。
+
+\begin{quote}
+\textbf{定理 1 [S]}\quad
+\textit{$P_k(u) - P_1(u)$ は $J$ の $\mathbf{Q}(u_1, \dots, u_N)$ 有理点のなす群 $J(\mathbf{Q}(u_1, \dots, u_N))$ のなかで rank $N - 1 = 4g + 5$ の自由加群を生成する。}
+\end{quote}
+
+\begin{quote}
+\textbf{定理 2 [M, S]}\quad
+\textit{Abel 多様体 $J$ は $\mathbf{Q}(u_1, \dots, u_N)$ の代数閉体上 simple な Abel 多様体である。すなわちより低い次元の Abel 多様体の直積と同種となり得ない。}
+\end{quote}
+
+証明の概略については以下の章でとりあげることとしよう。
+
+
+\section*{第三章 特殊化と $\mathbf{Q}$-rank, simplicity}
+
+いままでの構成法で $u = (u_1, \dots, u_N)$ を $\mathbf{Q}^N$ に特殊化することを考える。
+このとき $\mathbf{Q}$ 上に定義された Abel 多様体およびその $\mathbf{Q}$ 有理点 $P_k(u) - P_1(u)$ ($k = 1, \dots, N$) が得られる。
+定理 1 と定理 2 の性質を保ちつつ特殊化することができるか、というのがここでの主眼である。
+ここまでは算術的というよりも幾何学的な側面で見ていたわけであるが、$\mathbf{Q}$ 上の特殊化に関しては Diophantos 幾何的な見方が必要である。
+まず rank についてはつぎの定理がなりたつ。
+
+\begin{quote}
+\textbf{定理 3 [S]}\quad
+\textit{$u = (u_1, \dots, u_N)$, $u_i \in \mathbf{Q}$ なる特殊化であって、$P_k(u) - P_1(u)$ が $\mathcal{J}$ の $u$ における特殊化 $\mathcal{J}(u_1, \dots, u_N)$ の中で rank $N - 1 = 4g + 5$ の自由群を生成するようなものが無限個存在する。}
+\end{quote}
+
+定理 1 と定理 3 は Néron--Tate height を使って証明できる。
+Mordell--Weil Lattice の考え方では Mordell--Weil group に幾何学的方法を使って楕円曲面や曲線束の Néron--Severi 群を使って二次形式を導入するが、Néron--Tate height では関数体の付値を使って二次形式を導入する。
+二つの二次形式は base = parameter space が一変数有理関数体のときはより直接的に関連している。
+すなわち Mordell--Weil lattice は Néron--Tate height のよい近似を与える。この事実は次のように表される（\cite{L}, p.322）：
+\[
+  \height_{\mathrm{N\acute{e}ron\text{-}Tate}}(P(x))
+  = (P, P)_{\mathrm{MWL}} \cdot \height(x) + O(1).
+\]
+定理 1 および定理 3 は超越次数が $N$ の関数体について定義される Néron--Tate height およびその特殊化の議論を使って証明される。
+ここで有限群 $\mathfrak{S}_N$ の作用をうまく使うことにより height pairing のグラム行列式の非退化性を示す。
+実際の Néron--Tate height を求めるのは困難であるにもかかわらず非退化性は示せるのである。ここでは幾何学的な意味での Mordell--Weil lattice の議論は使わなくてもよい。
+
+つぎに simplicity も保たれるように $\mathbf{Q}$ 上に specialize することができるかどうかということを考えてみる。
+この問に対して威力を発揮するのが braid monodromy の計算と Hilbert の既約性定理である。
+この二つを結びつけるよりどころとなるのが étale cohomology の比較定理である。
+
+$g$ を与えられた $2$ 以上の自然数として、まず複素数体上で generic な種数 $g$ の超楕円曲面の Jacobian が simple であることの証明を与えてみよう。
+この事実は森重文氏による証明があるが、ここでは braid monodromy を使う証明を与えよう。
+まず $n - 3 = 2g$ として
+\[
+  U_{\alpha} = \bigl\{\, (\alpha_0, \dots, \alpha_{n-1}) \mid \alpha_0 \neq 0,\; \alpha_i \neq \alpha_j \; (i \neq j) \,\bigr\}
+\]
+と置くと、$U_{\alpha}$ 上には universal な楕円曲線
+\[
+  \mathcal{D}^0 = \Bigl\{\, (y, x, \alpha_0, \dots, \alpha_{n-1}) \in \mathbf{A}^2 \times U_{\alpha} \Bigm| y^2 = \alpha_0 \prod_{i=1}^{n-1}(x - \alpha_i) \,\Bigr\}
+\]
+およびその compact 化 $\mathcal{D}$ が定義される。
+いま $U_{\alpha}$ 上に起点 $\alpha^{(0)}$ をとれば基本群 $\pi_1(U_{\alpha}, \alpha^{(0)})$ が fiber の cohomology $H^1(\mathcal{D}_{\alpha^{(0)}}, \mathbf{Z})$ に monodromy group として作用する。
+その作用が群の準同型
+\[
+  M_{\alpha^{(0)}}^{an} : \pi_1(U_{\alpha}, \alpha^{(0)}) \to \Aut(H^1(\mathcal{D}_{\alpha^{(0)}}, \mathbf{Z}),\, \psi)
+\]
+で与えられているとする。
+ここで $\Aut(H^1(\mathcal{D}_{\alpha^{(0)}}, \mathbf{Z}), \psi)$ は cup product を保つ $H^1(\mathcal{D}_{\alpha^{(0)}}, \mathbf{Z})$ の自己同型写像で、適当な基底をとることにより $Sp(g, \mathbf{Z})$ と同一視される。
+
+\begin{quote}
+\textbf{命題 4（井草・露峰）}\quad
+\textit{$M_{\alpha^{(0)}}^{an}$ の像は Level 2 の主合同群 $\Gamma(2)$ と一致する。ここで
+\[
+  \Gamma(2) = \{\, g \in Sp(g, \mathbf{Z}) \mid g \equiv \mathrm{id} \pmod{2} \,\}
+\]
+とする。}
+\end{quote}
+
+\begin{proof}
+証明は $g$ に関する帰納法で行う。まず $g = 2$ のときは井草の定理である。
+帰納法のステップは $U_{\alpha}$ の基本群の元すなわち braid をうまくとって fiber の cohomology への作用を位相的に計算することにより、$Sp(g-1, \mathbf{Z}) \cap \Gamma(2)$ と同型な群が十分たくさん含まれることを示す。
+\end{proof}
+
+\begin{quote}
+\textbf{系}\quad
+\textit{generic な超楕円曲面の Jacobian は simple である。}
+\end{quote}
+
+\begin{proof}
+もしも generic な Jacobi 多様体が simple でないとすると、十分小さな指数有限の $\Gamma(2)$ の部分群 $G$ が存在して $H^1(\mathcal{D}_{\alpha^{(0)}}, \mathbf{Q})$ は既約な表現でない。
+ところが $G$ は命題から $Sp(g, \mathbf{Z})$ の指数有限の部分群なのでこれは矛盾である。
+\end{proof}
+
+さて $u = (u_1, \dots, u_N)$ を座標とする $N$-次元 affine space $\mathbf{A}^N(u)$ および $U_{\alpha}$ の対称群 $\mathfrak{S}_{n-1}$ による商多様体 $U_a$ を考える。
+$U_a$ の座標 $(a_0, \dots, a_{n-1})$ と $U_{\alpha}$ の座標は関係式
+\[
+  a_0 x^{n-1} + \cdots + a_{n-2} x + a_{n-1} = \alpha_0 \prod_{i=1}^{n-1}(x - \alpha_i)
+\]
+によって関係付けられている。
+さらに dominant な有理写像 $f : \mathbf{A}^N(u) \to U_a$ が $u = (u_1, \dots, u_N)$ に対して $(a_0, a_1, \dots, a_{n-1})$ を対応させるものとして定義される。
+
+$U_a$ にも超楕円曲線族
+\[
+  \tilde{\mathcal{D}} = \{\, (x, y) \mid y^2 = a_0 x^n + \cdots + a_{n-2} x + a_{n-1} \,\}
+\]
+が定義されていて、$\mathcal{C}$, $\mathcal{D}$ はそれぞれ $\mathbf{A}^N(u)$, $U_{\alpha}$ への $\tilde{\mathcal{D}}$ の引き戻しとして得られている。
+$U_u$ を $\mathbf{A}^N(u)$ の点でそこでの $\mathcal{C}$ の fiber が smooth となるもののなす集合とする。
+写像 $f : U_u \to U_a$ の generic な fiber が connected であることより、$U_u$ 上での超楕円曲面の族 $\mathcal{C}$ の一次の整係数 cohomology への monodromy の像は $\Gamma(2)$ を含むことがわかる。
+
+さて今までの議論に加え étale cohomology と classical cohomology の比較定理を使うと次の命題が示される。
+
+\begin{quote}
+\textbf{命題 5}\quad
+\textit{$\pi_1^{alg}(U_u, \bar{u})$ を $U_u$ の代数的基本群、
+\[
+  M_{u}^{alg} : \pi_1^{alg}(U_u, \bar{u}) \to \Aut(H^1_{\mathrm{et}}(\mathcal{C}_{\bar{u}},\, \mathbf{Z}_l),\, \psi \cdot \mathbf{Z}_l^{\times})
+\]
+を代数的な monodromy representation とする。この時、$M_u^{alg}$ の像は $\Gamma(2)$ の $l$-進閉包を含む。}
+\end{quote}
+
+次に Hilbert の近似定理を使って $H^1(\mathcal{C}_{\bar{u}^{(0)}}, \mathbf{Z})$ への Galois 表現が十分大きくなるような specialization $u \to u^{(0)}$ の存在を示そう。
+像が十分大きい事を示す際、次の補題は有用である。
+
+\begin{quote}
+\textbf{補題}\quad
+\textit{$G$ を $Sp(g, \mathbf{Z}_l)$ の開部分群とする。この時十分大きな $e$ をとると次のことが成立する。$G$ の部分群 $H$ が $G$ の $Sp(g, \mathbf{Z}/l^e\mathbf{Z})$ の像を生成しているならば、$G = H$ となる。}
+\end{quote}
+
+さて代数的基本群と specialization は次のように関連している。
+$U_u$ の $\mathbf{Q}$ 有理点 $u^{(0)}$ が与えられると、自然な基本群の準同型
+\[
+  i_{u^{(0)}*} : \pi_1^{alg}(u^{(0)}, \bar{u}^{(0)}) \to \pi_1^{alg}(U_u, \bar{u}^{(0)})
+\]
+が定まるが、この写像による $M_u^{alg}$ の
+\[
+  \pi_1^{alg}(u^{(0)}, \bar{u}^{(0)}) \simeq \Gal(\bar{\mathbf{Q}} / \mathbf{Q})
+\]
+への制限 $M_u^{alg} \circ i_{u^{(0)}*}$ が $H^1(\mathcal{C}_{\bar{u}^{(0)}}, \mathbf{Z}_l)$ の $l$-進表現を与えている。
+先の補題により十分大きい $e$ に対して $M_u^{alg} \circ i_{u^{(0)}*}$ の像が $\Gamma(2) \bmod l^e$ を生成していれば、$\Gamma(2)$ において $M_u^{alg} \circ i_{u^{(0)}*}$ の像が全体を生成する。
+これにより $\mathcal{J}_{u^{(0)}}$ が simple Abel 多様体となることが結論される。
+$M_u^{alg} \circ i_{u^{(0)}*}$ の像が $\Gamma(2) \bmod l^e$ を生成するような特殊化がとれることは次の Hilbert の既約性定理から結論される。
+
+\begin{quote}
+\textbf{命題（Hilbert の既約性定理）}\quad
+\textit{$L$ 上の既約多項式 $F(X) = \sum_{i=1}^n a_i X^i$ に対して無限に多くの特殊化 $u^{(0)}, u^{(1)}, \dots$ が存在して、$a_i$ を $u^{(j)}$ によって特殊化したものを $a_i(u^{(j)})$ と書くと
+\[
+  F_j(X) = \sum_{i=1}^n a_i(u^{(j)}) X^i
+\]
+は $\mathbf{Q}$ 上既約な多項式となる。}
+\end{quote}
+
+これまでの議論では rank が落ちないようにすることと simplicity を同時に両立させることについては述べなかったが、いままでのことをもう少し注意深くすれば Mordell--Weil rank を落さずかつ simple な特殊化をすることができることがわかる。
+まとめてつぎのような定理を得る。
+
+\begin{quote}
+\textbf{定理 6（塩田--寺杣）}\quad
+\textit{$g$ を $2$ 以上の自然数とする。$\mathbf{Q}$ 上定義された Abel 多様体であって rank が $4g + 5$ 以上となるものが存在する。}
+\end{quote}
+
+\begin{quote}
+\textbf{注意}\quad
+代数曲線の Jacobian のかわりに代数曲線の double covering に関する Prym variety を使うと rank が $4g + 7$ 以上のものを得ることができる。この時も simple なものとしてとることができる。
+\end{quote}
+
+\begin{quote}
+\textbf{注意}\quad
+同様の議論を射影空間の超曲面の完全交叉を fiber としてもつ Lefschetz pencil に対して適用すると、与えられた multi-degree をもつ $\mathbf{Q}$ 上定義された完全交叉で代数的サイクルが超平面切断で生成されるものの存在が示される（\cite{T}）。
+\end{quote}
+
+
+\section*{参考文献}
+
+\begin{thebibliography}{99}
+
+  \bibitem{L}
+  Lang, S.,
+  \inbook{Fundamentals of Diophantine Geometry},
+  \publ{Springer-Verlag} (1983).
+
+  \bibitem{M}
+  Mori, S.,
+  The endomorphism rings of some abelian varieties I, II,
+  \textit{Japanese J.\ Math.}
+  \textbf{2, 3} (1976, 77), 109--130, 105--109.
+
+  \bibitem{S}
+  Shioda, T.,
+  Constructing curves with high rank via symmetry
+  (Preprint).
+
+  \bibitem{T}
+  Terasoma, T.,
+  Complete intersections with middle Picard number 1 defined over $\mathbf{Q}$,
+  \textit{Math.\ Z.}
+  \textbf{189} (1985), 289--296.
+
+  \bibitem{Ts}
+  Tsuyumine, S.,
+  Thetanullwerte on a moduli space of curves and hyperelliptic loci,
+  \textit{Math.\ Z.}
+  \textbf{207, no.\ 4} (1991), 539--568.
+
+\end{thebibliography}
+
+\newpage
+
+%======================================================================
+% 講演３：斎藤毅
+%======================================================================
+\footnotetext{斎藤毅氏による英文の原稿を、止むを得ず三松・高倉が訳しました。}
+
+\noindent
+{\large\bfseries Mordell--Weil 群、代数的サイクル、モチーフ{\ldots}}
+\hfill
+{\large\bfseries 斎藤 毅（東大・数理）}
+
+\bigskip
+
+Fermat 予想の解決以後、楕円曲線の数論についての最も魅力的な未解決問題の一つは、
+Birch--Swinnerton-Dyer の予想である。
+それは、$\mathbb{Q}$ 上定義された楕円曲線 $E$ の Mordell--Weil ランクが、
+$E$ のゼータ関数 $Z(E,s)$ の $s=1$ における零点の位数に等しいことを予言している。
+すなわち、$\bmod\, p$ での $E$ の整数解の個数を Euler 積や解析接続のような
+非常に超越的な方法を用いて集めることによって、
+Mordell--Weil ランクという微妙な数論的不変量がとらえられる、という主張である。
+
+\medskip
+
+この予想は類数公式の一つの現代的な姿であり、
+それはまた、現在発展中のゼータ関数の特殊値の理論を
+大きく一般化するための出発点でもある。
+
+\medskip
+
+数体と関数体の密接な類似性により、
+Tate は代数的サイクルとゼータ関数の間の関係に関する類似の予想に導かれた。
+当初有限体上の代数曲面に対するものであったこの予想は、
+現在 Tate 予想として広く知られている。
+これは種々のコホモロジー理論（エタール、ホッジ、クリスタル{\ldots}）を備えた枠組みに
+非常によく合っており、
+その点をより詳しく研究するならば、我々はモチーフの世界へと導かれるであろう。
+
+\medskip
+
+この講演では、包括的な描像を専門以外の方にもわかりやすく伝えることを目標にする。
+
+\end{document}

@@ -1,0 +1,118 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+\newcommand{\EwMnumber}{第42回}
+\newcommand{\EwMtitle}{Euler 生誕300年\\[2mm]\large Euler からゼータの世界へ}
+\newcommand{\EwMdate}{2007年11月30日（金）14:30～18:00 ～ 12月1日（土）10:30～16:30}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部3号館3階 中央大学高等学校小ホール}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+\newcommand{\EwMtitleblock}{
+\vspace*{-5mm}
+\begin{center}
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+{\large 数学との遭遇}
+
+\vspace{4mm}
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+\EwMdate
+
+\vspace{2mm}
+於：\EwMplace
+\end{center}
+
+\vspace{2mm}
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+\section*{プログラム}
+
+\subsection*{11月30日（金）}
+
+\talk
+{14:30～16:00}
+{サンクトペテルブルクのオイラー}
+{黒川 信重 氏（東工大・理）}
+
+\talk
+{16:30～18:00}
+{オイラー作用素からの発展}
+{落合 啓之 氏（名大・多元数理）}
+
+\subsection*{12月1日（土）}
+
+\talk
+{10:30～12:30}
+{オイラー積の300年}
+{平野 幹 氏（成蹊大・理工）}
+
+\talk
+{14:30～16:30}
+{オイラー五角数定理から保型形式へ}
+{権 寧魯 氏（九大・数理）}
+
+\bigskip
+
+17:10～　懇親会（ワイン・パーティー）
+
+%--------------------------------
+% 案内文
+%--------------------------------
+\bigskip
+
+本集会の第42回を以上のような予定で開催いたします。  
+非専門家向けに入門的な講演をお願い致しました。  
+多くの方々のご参加をお待ちしております。  
+講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。  
+なお，今回は応用数理研究センターとの共催です。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+\section*{連絡先}
+
+112-8551 東京都文京区春日1-13-27  
+中央大学理工学部 数学教室・応用数理センター  
+
+tel : 03-3817-1745  
+
+ENCOUNTER with MATHEMATICS  
+\url{http://www.math.chuo-u.ac.jp/ENCwMATH}  
+
+三松 佳彦 : yoshi@math.chuo-u.ac.jp / 高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\end{document}
