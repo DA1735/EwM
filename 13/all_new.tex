@@ -1,0 +1,329 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries 超平面配置の数学}\\[10pt]
+  {\Large\bfseries ── 鏡の国の超幾何関数 ──}\\[30pt]
+  {\large いろいろな数学の集いの広場}\\[20pt]
+  {\large 第13回}
+\end{center}
+
+\vspace{20pt}
+
+\begin{center}
+  {\large 概要}
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：寺尾宏明「超平面配置の数学 I, II」
+%======================================================================
+\noindent
+{\large\bfseries 超平面配置の数学 I, II}
+\hfill
+{\large\bfseries 寺尾 宏明（都立大・理）}
+
+\medskip
+
+超平面配置は古くて新しい対象である。
+アフィン空間（あるいは、ベクトル空間、射影空間）の中に
+置かれた超平面の有限族というのがその定義であり、
+まことに単純素朴な対象であるが、
+その研究にはいくつかの層が考えられ、
+そこに展開される数学は各層で様相を著しく異にする。
+
+最浅層は「組み合わせ的」層であって、
+マトロイド理論、束理論、オーリック・ソロモン代数などと関係が深く、
+この層においての多くの組み合わせ的不変量が定義される。
+次の層は「位相幾何的」層であって、
+超平面配置の補集合のホモロジー的・ホモトピー的な性質が論ぜられる。
+最深層は「解析幾何的」層であって、
+例え「組み合わせ的」に同一の超平面配置（例えば、相異なる $n$ 点）であっても、
+「解析幾何的」には非自明なモジュライを持つ。
+そのモジュライ空間の周期写像として自然に登場するのが、
+（青本・ゲルファントの意味での）超幾何積分であり、
+対数的ガウス・マニン接続である。
+
+これらの３つの層は互いに密接に繋がり互いに規定し合い、
+響き合ってひとつの世界を形成している。
+その世界をご紹介したい。
+
+\newpage
+
+%======================================================================
+% 講演２：吉田正章「超幾何関数の超古典理論 I, II」
+%======================================================================
+\noindent
+{\large\bfseries 超幾何関数の超古典理論 I, II}
+\hfill
+{\large\bfseries 吉田 正章（九大・数理）}
+
+\medskip
+
+超幾何関数は、
+今や素敵で近代的な定式化が進んで見違えるような様子をしておるようですが、
+私は百年以上も前の古い考えに固執しております、
+私は自嘲的に竹槍数学と呼んでおります。
+私は古い生まれたままの超幾何関数
+（犬井鉄郎著特殊関数にあるような内容です）を述べますから、
+若い人の手で近代数学にして下さい。
+
+\medskip
+\noindent
+\textbf{参考文献}
+\begin{itemize}
+  \item[{[1]}] 吉田正章 著：「私説 超幾何関数」\quad 共立講座 21世紀の数学 24
+\end{itemize}
+
+\newpage
+
+%======================================================================
+% 講演３：寺杣友秀「セルバーグ積分と多重ゼータ値」
+%======================================================================
+\noindent
+{\large\bfseries セルバーグ積分と多重ゼータ値}
+\hfill
+{\large\bfseries 寺杣 友秀（東大・数理）}
+
+\medskip
+
+Gauss の超幾何関数は複素多様体族の周期積分をその変形パラメータ
+に関する関数として見ることによって現れる。
+これを幾何学的にとらえて一般化したものが、
+青本--Gelfand 超幾何関数、すなわち超平面配置に関する超幾何関数である。
+これに関しては、一般の位置にある超平面配置を動く族に関する研究とともに、
+非常に特殊な位置にある超平面配置を動く族に関するものも研究の対象とされてきた。
+その特殊な超平面配置の族として、物理的にも興味深い対象として Selberg 積分がある。
+Selberg 積分の満たす微分方程式が KZ 方程式であり、
+その係数は infinitesimal pure braid relation を満たす。
+Selberg 積分は parameter の関数とみることができるが、
+その parameter の次元が $0$ のとき、
+その値は算術的な性格を持つと考えられる。
+その一番簡単な一例をあげると、ベータ関数である。
+この数論的類似はヤコビ和であることからみても
+幾何的性格よりも算術的性格が強いと思われるのである。
+この場合の Selberg 積分は幾何学的な parameter は持たないので、
+exponent に関する関数とみることができる。
+この exponent 変数に関するテーラー展開には興味深いものがあらわれる。
+例えばベータ関数については
+\[
+  \frac{\Gamma(1+\alpha)\,\Gamma(1+\beta)}{\Gamma(1+\alpha+\beta)}
+  = \exp\!\left(\sum_{n \geq 2}
+    \frac{\zeta(n)\,(\alpha^n + \beta^n - (\alpha+\beta)^n)}{n}
+  \right)
+\]
+となる。
+ここにゼータ関数の特殊値 $\zeta(n)$ が現れることは注目すべき点である。
+それでは高次元の場合の Selberg 積分の場合にはどうなっているのだろうか。
+
+まず積分の de Rham cohomology の基底に関しては $\beta$-nbc 基底が
+様々なものを統制するのに consistent であることがわかる。
+そうやって基底をとった上でテーラー展開にあらわれるのが Euler の多重ゼータ値である。
+整数 $k_1, \dots, k_m$（$k_1, \dots, k_{m-1} \geq 1$, $k_m \geq 2$）に対し
+多重ゼータ値は
+\[
+  \zeta(k_1, \dots, k_m)
+  = \sum_{n_1 < \cdots < n_m} \frac{1}{n_1^{k_1} \cdots n_m^{k_m}}
+\]
+によって定義される複素数である。
+この量は Vassiliev 不変量を与える Kontsevich 積分の計算にもあらわれ、
+また $\pi_1(\mathbf{P}^1 \setminus \{0, 1, \infty\})$ の周期積分にもあらわれ、
+mixed motif の周期としてもっとも基本的なものであると思われている。
+有理数体上で多重ゼータの生成する環の次元に関しては
+Zagier と Broadhurst--Deligne の予想があり、
+依然としてミステリアスな部分を秘めている。
+
+\newpage
+
+%======================================================================
+% 講演４：斎藤恭司「Finite Reflexion Group and Topology」
+%======================================================================
+\begin{center}
+  {\large\bfseries Finite Reflexion Group and Topology}\\[4pt]
+  {\normalsize (A motivation to period mapping for primitive forms)%
+    \footnote{The present article is based on a lecture given at
+    Chuo University on 23 October 1999 on the occasion of
+    ENCOUNTER with MATHEMATICS.}}
+\end{center}
+\begin{flushright}
+  {\large Kyoji Saito}\\
+  RIMS, Kyoto University
+\end{flushright}
+
+\medskip
+\begin{center}
+  \textbf{Preface}
+\end{center}
+
+A finite reflexion group acting on a real vector space
+is a Coxeter group,
+since it admits a chamber as the fundamental domain.
+Then it carries, so called, Coxeter elements having regular eigenvectors.
+These facts lead to a profound understanding of the
+group and its action compared with other reflexion groups (\cite{B}, \cite{Hu}).
+In particular, the (complexified) orbit space of a Weyl group
+(as a special case of finite reflexion groups) is
+isomorphic to the categorical quotient of a simple Lie algebra by the
+adjoint action of a simple Lie group.
+So, the orbit space draws attentions from several
+branches of mathematics (representation theory, algebraic geometry,
+differential geometry, differential equations, \ldots).
+
+The subjects of the talk are some geometric and topological aspects
+of the orbit space for such finite reflexion group $W$ action,
+which seem to be less known.
+We want to show
+that the orbit space still carries deep mysteries to be studied yet further.
+First, we give expositions on the following two facts
+(\cite{Br1, Br2}, \cite{D1}, \cite{B-S}, \cite{S1}, \cite{S-Y-S}):
+
+\medskip
+\noindent
+i) The complexified regular orbit space of $W$ is an
+Eilenberg--MacLane ($K(\pi,1)$) space.
+
+\medskip
+\noindent
+ii) The categorical quotient space by the $W$-action carries the flat metric.
+
+\medskip
+\noindent
+These two facts, which apparently are of quite different nature,
+seem to be deeply connected.
+We give some evidences of the connection symbolically by constructing \cite{S5}:
+
+\medskip
+\noindent
+iii) The polyhedron $K_W$ dual to the chamber decomposition
+which relates i) and ii),
+
+\medskip
+\noindent
+iv) A Kähler metric on the regular orbit space
+by a use of the flat metric in ii).
+
+\medskip
+\noindent
+Nevertheless, the connection remains still unexplained.
+More geometric connection could be,
+hopefully, carried out by the period mapping for primitive forms \cite{S2}
+defined on the Eilenberg--MacLane space, but, on which
+we know very little except for types $A_1$ and $A_2$
+where the uniformization is achieved by
+trigonometric and elliptic functions, respectively.
+
+The purpose of the talk is to draw some attention
+to this somewhat mysterious connection between the topology and
+the flat structure on the orbit space
+and to inspire further challenges to study the
+uniformization and the Kähler metric of the regular orbit space.
+The article is expositorial and is, hopefully,
+readable by non-experts of the subject.
+
+The construction of the paper is as follows.
+\S0 gives a motivation by the examples of types $A_1$ and $A_2$.
+\S1 recalls the well-known materials on finite Coxeter groups.
+The fundamental group of the regular orbit space is calculated in \S2,
+which turns out to be an Artin group.
+We describe the universal covering of the regular orbit space and
+show its contractibility in \S3.
+The flat connection on the orbit space is constructed in \S4,
+whose building block, the primitive vector field,
+is applied to construct the polyhedron $K_W$ in \S5.
+\S6 discusses some further connection with primitive forms and
+some generalizations.
+
+\medskip
+\begin{center}
+  \textbf{Contents}
+\end{center}
+
+\begin{quote}
+  \S0\quad Introduction\\
+  \S1\quad Coxeter group\\
+  \S2\quad Artin group\\
+  \S3\quad Higher homotopy groups\\
+  \S4\quad Flat structure I\quad (flat metric)\\
+  \S5\quad Flat structure II\quad (dual polyhedron)\\
+  \S6\quad Some further problems
+\end{quote}
+
+\medskip
+\begin{center}
+  \textbf{References}
+\end{center}
+
+\begin{itemize}
+  \setlength{\itemsep}{3pt}
+  \item[{[B]}] Bourbaki, N.:
+        \textit{Éléments de mathématique}, Fasc.\ XXXIV,
+        Groupes et algèbres de Lie, Chs.\ 4--6,
+        Hermann, Paris, 1968.
+
+  \item[{[Br1]}] Brieskorn, Egbert:
+        Die Fundamental Gruppe des Raumes der regulären Orbits
+        einer endlichen komplexen Spiegelungsgruppe,
+        \textit{Inventiones Math.}\ \textbf{12}, 57--61 (1971).
+
+  \item[{[Br2]}] Brieskorn, Egbert:
+        Sur les groupes de tresses,
+        \textit{Sém.\ Bourbaki} (1971/72);
+        \textit{Lect.\ Notes Math.}\ \textbf{317}, 21--44 (1973).
+
+  \item[{[B-S]}] Brieskorn, Egbert \& Saito, Kyoji:
+        Artin Gruppen und Coxeter Gruppen,
+        \textit{Inventiones Math.}\ \textbf{17}, 245--271 (1972).
+
+  \item[{[D1]}] Deligne, Pierre:
+        Les immeubles des tresses généralisés,
+        \textit{Inventiones Math.}\ \textbf{17}, 273--302 (1972).
+
+  \item[{[D2]}] Deligne, Pierre:
+        Action du groupe des tresses sur une catégorie,
+        \textit{Invent.\ math.}\ \textbf{128}, 159--175 (1997).
+
+  \item[{[Hu]}] Humphreys, J.~E.:
+        \textit{Reflection Groups and Coxeter Groups},
+        Cambridge University Press, Cambridge, 1990.
+
+  \item[{[S1]}] Saito, Kyoji:
+        On a linear structure of the quotient variety by a
+        finite reflexion group,
+        \textit{Publ.\ RIMS, Kyoto Univ.}\ \textbf{29}, 535--579 (1993).
+
+  \item[{[S2]}] Saito, Kyoji:
+        Period mapping associated to a primitive form,
+        \textit{Publ.\ RIMS, Kyoto Univ.}\ \textbf{19}, 1231--1264 (1983).
+
+  \item[{[S5]}] Saito, Kyoji:
+        The polyhedron dual to the chamber decomposition for
+        a finite Coxeter group, in preparation.
+
+  \item[{[S-Y-S]}] Saito, Kyoji \& Yano, Tamaki \& Sekiguchi, Jiro:
+        On a certain generator system of the ring of invariants
+        of a finite reflexion group,
+        \textit{Comm.\ Algebra}\ \textbf{8}, 373--408 (1980).
+\end{itemize}
+
+\vfill
+
+\begin{footnotesize}
+  \noindent
+  斎藤先生からは既に20ページ近い未完成のノートをお送りいただきました。\\
+  これはその原稿の preface の部分を主催者側で編集したものです。
+\end{footnotesize}
+
+\end{document}

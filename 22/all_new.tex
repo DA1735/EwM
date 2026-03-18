@@ -1,0 +1,199 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsthm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries 「離散」の世界 --- 可換から非可換へ ---}
+\end{center}
+
+\vspace{4mm}
+
+\begin{center}
+  \parbox{140mm}{
+    今回の主題は、頂点を辺で結んで得られる図形であるグラフと、
+    高々可算な濃度を持つ群（離散群）などの、「繋がり構造」を持つ「離散の世界」である。
+    この一見容易に見えながら未知の事柄の多い世界を、
+    「離散幾何解析」と「幾何学的群論」の観点から、
+    可換な対象から非可換な対象へ移行しつつ眺めることを目標とする。
+  }
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：砂田利一「たかがアーベル、されどアーベル」
+%======================================================================
+\noindent
+{\large\bfseries たかがアーベル、されどアーベル}
+\hfill
+{\large\bfseries 砂田　利一（東北大・理）}
+
+\bigskip
+
+有限グラフ $X_0$ の正則被覆グラフ $X$ を「種」にして、
+可換な世界から非可換な世界への「旅行」を楽しみたい。
+被覆変換群 $\Gamma$ が自由アーベル群の場合は、$X$ は結晶格子であり、
+$X_0$ がブーケグラフの場合は、$X$ は $\Gamma$ のケーリー・グラフである。
+一般に、アーベル群 $\mathfrak{A}$ に対して、完全系列
+\[
+  1 \to \mathrm{H}^1(\Gamma, \mathfrak{A})
+  \to \mathrm{H}^1(X_0, \mathfrak{A})
+  \xrightarrow{\pi^*} \mathrm{H}^1(X, \mathfrak{A})^\Gamma
+  \xrightarrow{\Theta} \mathrm{H}^2(\Gamma, \mathfrak{A})
+  \to 1
+\]
+が存在するが、この中に、「磁場」の概念、結晶格子上の乱歩に対する中心極限定理、
+大偏差原理などが「隠れている」。
+詳しい内容は小谷元子氏の講演で扱われることになるが、
+本講演では、この完全系列を基礎にして、「離散幾何解析」の話を進めたい。
+
+\newpage
+
+%======================================================================
+% 講演２：小谷元子「結晶格子上のランダム・ウォークと結晶格子の幾何」
+%======================================================================
+\noindent
+{\large\bfseries 結晶格子上のランダム・ウォークと結晶格子の幾何}
+\hfill
+{\large\bfseries 小谷　元子（東北大・理）}
+
+\bigskip
+
+離散群の中でもっとも扱いやすい $\mathbb{Z}^d$ が作用している無限グラフで、
+特にその商空間が有限グラフとなるものを結晶格子という。
+$\mathbb{Z}^d$ 格子、三角格子、六角格子など物理的にも重要な例となっているものが多い。
+
+結晶格子上のランダム・ウォークの時間無限大での漸近挙動と結晶格子の幾何的な性質の
+係わりを中心に話をする。
+$\mathbb{Z}^d$ 格子上のランダム・ウォークの基本的な極限定理に
+中心極限定理と大偏差原理があるが、
+結晶格子への拡張を通じて、これらの定理の幾何的な意味を考えてみたい。
+
+中心極限定理を通して見えてくるのは、結晶格子のもっとも対称性の高い形での
+（つまり結晶格子からユークリッド空間への周期的な写像の中での
+最小エネルギー写像としての）実現である。
+また大偏差原理を通して見えてくるのは、
+結晶格子を距離空間と見て、その無限遠での漸近錘
+（スケールをゼロに近づけたときのグロモフ・ハウスドルフ極限）である。
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[1]}] W.~Woess,
+        \textit{Random Walks on Infinite Graphs and Groups},
+        Cambridge University Press, 2000.
+  \item[{[2]}] M.~Gromov,
+        Asymptotic invariants of infinite groups,
+        \textit{London Math.~Soc.~Lecture Note Ser.}~\textbf{182}.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演３：藤原耕二「幾何学的群論の話」
+%======================================================================
+\noindent
+{\large\bfseries 幾何学的群論の話}
+\hfill
+{\large\bfseries 藤原　耕二（東北大・理）}
+
+\bigskip
+
+無限離散群への幾何学的なアプローチの成功例として、次のような話題（予定）を紹介したい。
+このような数学は最近「幾何学的群論」と呼ばれている。
+\begin{enumerate}
+  \item Dehn による曲面群の「語の問題」の解決（1911年頃）。
+        組み合わせ群論に幾何学的なアイディアが使われる様子を、
+        Small Cancellation Theory の紹介を含めて話したい。[LS], [GHV].
+  \item Gromov による双曲群（1986年頃）。
+        双曲幾何学における双曲性の類似を Gromov が離散群上で定式化した。
+        これが幾何学的群論の端緒である。[G], [GHV].
+  \item $\mathbf{R}$-tree の話（80年代〜）。
+        Gromov--Hausdorff 収束の離散群論への顕著な応用として
+        $\mathbf{R}$-tree の話をしたい。
+        離散群に関するある種のモジュライを記述する時、
+        $\mathbf{R}$-tree は自然な道具の一つである。
+\end{enumerate}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[G]}] M.~Gromov,
+        Hyperbolic groups,
+        in \textit{Essays in Group Theory},
+        MSRI Publ.~\textbf{8}, Springer, 1987, 75--263.
+  \item[{[LS]}] R.~Lyndon and P.~Schupp,
+        \textit{Combinatorial Group Theory},
+        Springer, 1977.
+  \item[{[GHV]}] \textit{Group Theory from a Geometrical Viewpoint},
+        edited by E.~Ghys, A.~Haefliger, A.~Verjovsky,
+        World Scientific, 1991.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演４：井関裕靖「ユニタリ表現から見た非可換性 --- Kazhdan の性質 (T)」
+%======================================================================
+\noindent
+{\large\bfseries ユニタリ表現から見た非可換性 --- Kazhdan の性質 (T)}
+\hfill
+{\large\bfseries 井関　裕靖（東北大・理）}
+
+\bigskip
+
+群の性質は様々な観点から調べることができるわけですが、
+その群のユニタリ表現から群の性質を眺めてみることにしましょう。
+このとき、アーベル群の対極に位置するのが、Kazhdan の性質 (T) を持つ群です。
+ここに定義を書くのは控えますが、定義を見れば
+アーベル群の持つ性質とは正反対の性質だということはすぐにお分かり頂けますし、
+定義から直ちに
+「Kazhdan の性質 (T) を持つ群は、$\mathbf{Z}$ および $\mathbf{R}$ への
+非自明な表現（準同型）を持たない」ということがわかります。
+
+それだけではなく、この Kazhdan の性質 (T) を持つ群にはある種の剛性がある
+--- あえて幼稚かつ不正確な言い方をすると、あまり多くの表現がない ---
+という傾向があります。
+例えば、Kazhdan の性質 (T) を持つ群の典型的な例として
+階数が $2$ 以上の非コンパクト型半単純 Lie 群の格子を挙げることができますが、
+これらの群に対しては「Margulis の超剛性」と呼ばれる剛性定理が成立します。
+実は、この場合の Kazhdan の性質 (T) と超剛性の関係は、
+微分幾何でよく使われる Bochner technique を通すことによってはっきりと見えてくるのです。
+あくまで技術的なレベルで関係が見えるのであって、
+コンセプチュアルなレベルでの理解を与えてくれるわけではないのですが。
+
+今回の「可換から非可換へ」というサブタイトルを聞いて、
+最近自分自身の研究と関わり始めた Kazhdan の性質 (T)
+--- 一種の非可換性 --- をテーマに選んで、こんな話をしてみようと思っています。
+関わり始めたばかりですし、私自身はユニタリ表現の専門家でもないので、
+このようなテーマで講演をするのはいささか気が引けるのですが、
+こういう話もあるんだな、という軽い調子で聞いて頂ければ幸いです。
+
+最後に、Kazhdan の性質 (T) について書かれた読み易い解説として、
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[HV]}] P.~de la Harpe and A.~Valette,
+        \textit{La propriété (T) de Kazhdan pour les groupes localement compacts},
+        Astérisque \textbf{175}.
+\end{enumerate}
+
+\noindent
+を挙げておきます。
+
+\end{document}

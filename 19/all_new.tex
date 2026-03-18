@@ -1,0 +1,265 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amscd,amsthm}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries Invitation to Diophantine Geometry}
+
+  \vspace{1pc}
+  {\Large 概要}
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：平田典子「ディオファントス問題入門」
+%======================================================================
+\begin{center}
+  {\Large\bfseries ディオファントス問題入門}
+\end{center}
+
+\bigskip
+\hspace*{\fill}{\large\bfseries 平田　典子（Noriko Hirata-Kohno：日大・理工）}
+
+\bigskip
+
+ディオファントス問題とは、フェルマーの大定理に代表される
+整数係数多変数多項式の整数解を求める問題や、
+その様々な拡大解釈を含むものの総称であるといえる。
+
+\medskip
+
+1908年の A.~Thue の結果を K.~F.~Roth が1955年に最良に直してフィールズ賞を得たものは、
+1970年代から1989年にかけて W.~M.~Schmidt により部分空間定理として一般化された。
+
+現在も発展を続けているこの部分空間定理は
+一つの近似不等式で、ディオファントス問題に対する一解法である。
+
+G.~Faltings らによる高次元モーデル予想などの
+数論的代数幾何学の諸問題への応用によっても、
+この解法の重要さは多方面に認められている。
+
+ディオファントス問題に役立つこのような近似不等式を、
+ディオファントス近似と呼ぶ。
+
+\medskip
+
+Faltings、そして近年の J.-H.~Evertse、G.~Rémond らの問題意識は、
+いわば不定方程式の整数解を調べる問題の近代的翻訳とも言えるが、
+ここでは入門としてディオファントス近似が不定方程式で
+どういう働きをするのか、そして整数解の有限性について
+どういう結果を導くのかを述べてみたい。
+
+\medskip
+
+まず、ディオファントス近似の最初の一歩として、
+Thue--Siegel--Roth の定理と呼ばれる20世紀半ばまでの近似不等式の学習から始めよう。
+そして、それが代数体の２変数 Unit Equation の解の有限性を従えるという
+C.~L.~Siegel の議論とその多変数版を述べ、
+Evertse、H.-P.~Schlickewei、Schmidt らによる最近の仕事にも言及する。
+
+部分空間定理を数論的代数幾何に使いやすい形にした Evertse、R.~Ferretti
+らの一般化や、アーベル多様体の整数点の個数数え上げなどの話題にもできるだけ触れる。
+
+\vspace{1pc}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[E1]}] J.-H.~Evertse,
+        An explicit version of Faltings' Product Theorem and an
+        improvement of Roth's lemma,
+        \textit{Acta Arith.}~\textbf{73} (1995), 215--248.
+  \item[{[E2]}] J.-H.~Evertse,
+        An improvement of the quantitative Subspace theorem,
+        \textit{Compos.~Math.}~\textbf{101} (1996), 225--311.
+  \item[{[Schm1]}] W.~M.~Schmidt,
+        \textit{Diophantine Approximations},
+        Lecture Notes in Math.~\textbf{785},
+        Springer-Verlag, 1980.
+  \item[{[Schm2]}] W.~M.~Schmidt,
+        The subspace theorem in diophantine approximations,
+        \textit{Compos.~Math.}~\textbf{69} (1989), 121--173.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演２：宍倉光広「連分数展開と力学系の線型化問題（Siegel--Brjuno--Yoccoz の定理）」
+%======================================================================
+\begin{center}
+  {\Large\bfseries 連分数展開と力学系の線型化問題\\
+  \normalsize （Siegel--Brjuno--Yoccoz の定理）}
+\end{center}
+
+\bigskip
+\hspace*{\fill}{\large\bfseries 宍倉　光広（京大・理）}
+
+\bigskip
+
+力学系が与えられたとき、その軌道の様子などを調べるために、わかりやすい標準形
+（例えば線型力学系）に帰着するというのは、最も古くから使われているアプローチである。
+ただし、このような標準化はいつでも可能なわけではなく、
+それに関連した数多くの問題は力学系の研究の重要なテーマとなっている。
+ここで扱うのは、その中でも最も単純な問題である。
+\[
+  f(z) = \lambda z + a_2 z^2 + \cdots
+\]
+を $z = 0$ のまわりで定義された正則関数とするとき、$z = 0$ は不動点で
+（$f(0) = 0$）、そこでの微分は $\lambda = f'(0)$ である。
+$\lambda \neq 0$ のとき、力学系 $z \mapsto f(z)$ の自然な標準化は、
+線型写像 $z \mapsto \lambda z$ への共役である。
+すなわち、この場合の標準化問題は、$z = 0$ のまわりの正則関数
+$h(z) = b_1 z + b_2 z^2 + \cdots$ で、
+\[
+  h \circ f \circ h^{-1}(z) = \lambda z
+\]
+をみたすものが存在するかどうかである。
+このような $h(z)$ が存在するとき、$f(z)$ は線型化可能であるという。
+$0 < |\lambda| < 1$ または $|\lambda| > 1$ のとき、
+$f(z)$ はいつでも線型化可能である。
+一番微妙な問題が起きるのは、$\lambda = e^{2\pi i\alpha}$ で、
+$\alpha$ が無理数となるときである。
+この場合の線型化問題では、形式的べき級数としては線型化写像 $h(z)$ はいつでも存在するが、
+収束するとは限らず、$\alpha$ がどれくらい「良く」有理数で近似
+（ディオファンタス近似）できるかが密接に絡んでくる。
+それを最終的に必要十分条件という形で解決したのが、Yoccoz である。
+
+\medskip
+
+\noindent\textbf{定理}\quad [Siegel--Brjuno--Yoccoz]\\
+$\alpha$ を無理数とし、$p_n/q_n$（$n = 1, 2, \ldots$）をその連分数展開から定義される
+近似分数とする。Brjuno 和
+\[
+  \sum_{n=1}^{\infty} \frac{\log q_{n+1}}{q_n}
+\]
+が収束するとき、かつそのときに限り、微分が $e^{2\pi i\alpha}$ となるすべての正則関数
+\[
+  f(z) = e^{2\pi i\alpha} z + a_2 z^2 + \cdots
+\]
+は線型化可能である。さらに、Brjuno 和が発散するとき、
+２次多項式 $e^{2\pi i\alpha} z + z^2$ は線型化可能ではない。
+
+\medskip
+
+この定理の証明には、力学系の「幾何学的くりこみ」とでも言うべきアイデアが使われた。
+それは、見方を変えれば、力学系の空間での「連分数展開」ともいえる。
+この講演では、このアイデアについて解説する予定である。
+
+\newpage
+
+%======================================================================
+% 講演３：小林亮一「ネヴァンリンナ理論とディオファンタス幾何学」
+%======================================================================
+\begin{center}
+  {\Large\bfseries ネヴァンリンナ理論とディオファンタス幾何学}
+\end{center}
+
+\bigskip
+\hspace*{\fill}{\large\bfseries 小林　亮一（名古屋大・多元数理）}
+
+\bigskip
+
+ネヴァンリンナ理論とはどのような数学だろうか。
+古典ネヴァンリンナ理論がアラケロフ幾何学のモデルとして注目されて以来、
+ネヴァンリンナ理論は、数論と複素幾何学の2つの顔を備えた、独特の趣きを持つ数学として、
+一部の研究者が好んで研究する分野になった。
+
+\medskip
+
+正則曲線 $f : \mathbf{C} \to X$ を単に像 $f(\mathbf{C})$ として考えるのではなく
+$\mathbf{C}$ からの写像と考えることが、
+数論における素構造（prime structure）の類似である。
+この立場でネヴァンリンナによって導入された3種類の基本関数
+（個数関数、接近関数および特性関数）を見直すと、
+正則曲線 $f : \mathbf{C} \to X$ と因子 $D$ の交点への
+「有限素点」、「無限素点」、および「すべての素点」と解釈できるものの寄与を表していることがわかる。
+
+ネヴァンリンナの第１主要定理は、特性関数を使えば、完備な交点理論が定義できる
+（特性関数は因子を線形同値類で動かしても不変）ことを主張する。
+
+一方、ネヴァンリンナ理論の第２主要定理（予想）は、交点数として接近関数のみを使った場合、
+交点理論が完備からどのくらいずれるのかを $X$ の幾何学的不変量によって統制する不等式で、
+これこそネヴァンリンナ理論の真髄である。
+第２主要定理（予想）と Roth の定理（例えば [HS] 参照）および Schmidt 部分空間定理
+（例えば [L] を参照）、それらを一般化して Vojta が予想しているディオファンタス
+近似不等式（[V] 参照）との驚くべき類似性は、
+ネヴァンリンナ理論とディオファンタス幾何学を統一的に説明するような幾何学が
+存在していることを強く示唆する。
+
+\medskip
+
+では、そのように現代的視点によって活気づいたネヴァンリンナ理論が有効に働く問題とは何だろうか。
+それに答えるために射影代数多様体 $X$ が与えられたとする。
+想像をたくましくして、$X$ に関連するいろいろな代数多様体に $\mathbf{C}$ からの正則曲線を入射し、
+その振る舞いを解析することによって $X$ におけるある種のサイクルの存在・非存在の問題に
+貢献したいな、と思うことが、ネヴァンリンナ理論の代数幾何学への応用研究を動機づける。
+射影代数多様体の中で、正則曲線が周囲よりも高い密度で溜まる部分多様体を検出したい、
+という問題はその一部である。
+微分幾何的に言えば、曲率の概念を素構造を通して見るとどのように見えるか、
+という問題である。例えば [L], [KS] を参照。
+
+このようにネヴァンリンナ理論の範囲にとどまる問題の他に、
+もっと大きな構想として、Vojta、Lang が提唱している（[L], [V] 参照）ように、
+ディオファンタス幾何学への寄与を期待しながら、
+ディオファンタス近似の諸問題の「解ける」幾何学モデルを構築する、という大きな問題がある。
+本講演ではそのような試みを一部紹介する（例えば [Y] における試み）。
+
+\medskip
+
+ネヴァンリンナ理論をディオファンタス近似と比較して類似点と相違点、
+そして相違点を超えてなおも存在する強力な類似点について、
+ネヴァンリンナ理論における第２主要予想への道の模索の試みを通して概観することを、
+本講演の目標とする（[KR] を参照）。
+
+\vspace{1pc}
+
+\begin{center}
+  \textsc{文献}
+\end{center}
+\begin{enumerate}
+  \item[{[A]}] L.~V.~Ahlfors,
+        The theory of meromorphic curves,
+        \textit{Acta Soc.~Sci.~Finn.~N.S.~A.}~\textbf{III} (1941), 1--31.
+  \item[{[C]}] H.~Cartan,
+        Sur les zéros des combinaisons linéaires de $p$ fonctions holomorphes données,
+        \textit{Mathematica}~\textbf{7} (1933), 5--31.
+  \item[{[HS]}] M.~Hindry and J.~Silverman,
+        \textit{Diophantine Geometry: An Introduction},
+        Springer, 2000.
+  \item[{[KR]}] R.~Kobayashi,
+        ネヴァンリンナ理論における積分幾何的方法と対数微分の補題.
+  \item[{[KS]}] S.~Kobayashi,
+        \textit{Complex Hyperbolic Spaces},
+        Springer-Verlag, 1998.
+  \item[{[L]}] S.~Lang,
+        \textit{Number Theory III --- Diophantine Geometry},
+        EMS \textbf{60},
+        Springer-Verlag, 1991.
+  \item[{[M]}] M.~McQuillan,
+        A dynamical counterpart to Faltings' ``Diophantine approximation
+        on Abelian varieties'',
+        IHES preprint (1996).
+  \item[{[V]}] P.~Vojta,
+        \textit{Diophantine Approximation and Value Distribution Theory},
+        LNM \textbf{1239},
+        Springer-Verlag.
+  \item[{[Y]}] K.~Yamanoi,
+        Algebro-geometric version of Nevanlinna's lemma on logarithmic
+        derivative and applications,
+        to appear in \textit{Nagoya Math.~J.}
+\end{enumerate}
+
+\end{document}
