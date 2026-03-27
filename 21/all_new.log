@@ -1,7 +1,6 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2026.2.24)  18 MAR 2026 15:17
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2026.2.24)  27 MAR 2026 18:25
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **all_new.tex
 (./all_new.tex
@@ -246,8 +245,7 @@ File: l3backend-dvipdfmx.def 2025-10-09 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count308
 \g__pdfannot_backend_int=\count309
 \g__pdfannot_backend_link_int=\count310
-)
-No file all_new.aux.
+) (./all_new.aux)
 \openout1 = `all_new.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -284,7 +282,7 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 14.0pt on input line 18.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 14.0pt on input line 18.
-[1
+ [1
 
 ]
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
@@ -306,8 +304,7 @@ File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [2] [3]
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
 21.
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
@@ -379,10 +376,10 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4559 strings out of 468177
- 100603 string characters out of 5434822
+ 4562 strings out of 468177
+ 100651 string characters out of 5434822
  489715 words of memory out of 5000000
- 33456 multiletter control sequences out of 15000+600000
+ 33457 multiletter control sequences out of 15000+600000
  680943 words of font info for 105 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  78i,5n,103p,881b,242s stack positions out of 10000i,1000n,20000p,200000b,200000s

@@ -1,7 +1,6 @@
-This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2026.2.24)  19 MAR 2026 16:22
+This is e-upTeX, Version 3.141592653-p4.1.2-u2.00-250202-2.6 (utf8.uptex) (TeX Live 2025) (preloaded format=uplatex 2026.2.24)  27 MAR 2026 18:24
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **EwM02_title.tex
 (./EwM02_title.tex
@@ -276,8 +275,7 @@ File: l3backend-dvipdfmx.def 2025-10-09 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count311
 \g__pdfannot_backend_int=\count312
 \g__pdfannot_backend_link_int=\count313
-)
-No file EwM02_title.aux.
+) (./EwM02_title.aux)
 \openout1 = `EwM02_title.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 72.
@@ -298,6 +296,7 @@ LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
 LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 72.
 LaTeX Font Info:    ... okay on input line 72.
+
 *geometry* detected driver: dvipdfm
 *geometry* verbose mode - [ preamble ] result:
 * driver: dvipdfm
@@ -434,10 +433,10 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5273 strings out of 468177
- 111410 string characters out of 5434822
- 510348 words of memory out of 5000000
- 34150 multiletter control sequences out of 15000+600000
+ 5276 strings out of 468177
+ 111470 string characters out of 5434822
+ 510339 words of memory out of 5000000
+ 34151 multiletter control sequences out of 15000+600000
  674692 words of font info for 102 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  78i,5n,103p,857b,312s stack positions out of 10000i,1000n,20000p,200000b,200000s
