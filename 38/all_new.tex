@@ -1,0 +1,232 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 講演1：関口次郎「ベキ零軌道の魅力」
+%======================================================================
+\begin{center}
+{\large\bfseries ベキ零軌道の魅力}\\[6pt]
+\hspace*{\fill}{\large\bfseries 関口 次郎（東京農工大学 工学部）}
+\end{center}
+
+単純リー環にはベキ零元というやっかいな代物が住んでいます。
+ベキ零元がなければ、その構造ももう少しあつかいやすものに
+なっていたでしょうが、存在するために複雑になりました。
+逆に言えば、
+そのために構造が豊富になりました。
+
+${\mathbf sl}_2$ はもっとも簡単な単純リー環です。
+一般の単純リー環 ${\mathbf g}$ に対して、
+${\mathbf sl}_2$ から ${\mathbf g}$ へのリー準同型の共役類は
+1950年代に Dynkin が分類しました。
+この Dynkin の論文~[2] で今日 Dynkin 図形と呼ばれる図形を使って、
+単純リー環の場合の分類を記述しました。
+さらに、Kostant がベキ零軌道と ${\mathbf sl}_2$ から ${\mathbf g}$
+へのリー準同型
+の共役類との関係を明確にしたことで (cf.~[4])、
+複素数体上のベキ零軌道の分類が完成しました。
+
+有理2重点と Dynkin 図形の関係が注目されるようになり、
+それを単純リー環のベキ零元との関係へと深化させたのが
+Grothendieck と Brieskorn の成果です (cf.~[6])。
+一方では、Harish-Chandra は不変固有超関数の研究において、
+Kostant の構造論を使って、ベキ零多様体に台をもつ
+不変固有超関数は存在しないという、
+Local integrability theorem の鍵となる結果を導いています
+(cf.~[3])。
+
+この講演では複素数体上の単純リー環のベキ零元について、
+基本的な事柄と上述のことを解説する予定です。
+([1] にはベキ零軌道についての基本的な事柄がまとめられています。)
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item D.H.~Collingwood and W.M.~McGovern:
+    \textit{Nilpotent Orbits in Semisimple Lie Algebras},
+    Van Nostrand Reinhold Mathematics Series.
+  \item E.~Dynkin:
+    Semisimple subalgebras of semisimple Lie algebras,
+    \textit{Amer.\ Math.\ Soc.\ Transl.\ Ser.~2}, \textbf{6} (1957), 111--245.
+  \item Harish-Chandra:
+    Invariant distributions on Lie algebras,
+    \textit{Amer.\ J.\ Math.}, \textbf{86} (1964), 271--309.
+  \item B.~Kostant:
+    The principal three-dimensional subgroup and
+    the Betti numbers of a complex simple Lie group,
+    \textit{Amer.\ J.\ Math.}, \textbf{81} (1959), 973--1032.
+  \item 草場公邦:
+    行列特論, 基礎数学選書21（裳華房）.
+  \item 松澤淳一:
+    特異点とルート系, すうがくの風景6（朝倉書店）.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演2：中島啓「1. 超ケーラー多様体入門 / 2. インスタントンと巾零軌道」
+%======================================================================
+\begin{center}
+{\large\bfseries 1. 超ケーラー多様体入門\\
+2. インスタントンと巾零軌道}\\[6pt]
+\hspace*{\fill}{\large\bfseries 中島 啓（京都大学 大学院理学研究科）}
+\end{center}
+
+Kronheimer は、Nahm 方程式の解、あるいは
+${\mathbb R}^4$ 上の $SU(2)$-不変
+なインスタントン解のモジュライ空間が、複素リー環の巾零軌道（一般には、
+その Slodowy slice）になることを証明し、特に後者が超ケーラー多様体の構造
+を持つことを証明した。超ケーラー多様体は、微分幾何学の片隅で研究されて
+いる分野であるが、このように数学の中心分野で研究されている対象が超ケー
+ラー多様体になることが、ときどき起こる。他の有名な例が、非可換ホッジ理
+論における、複素射影多様体上の半単純局所系のモジュライ空間である。
+（Hitchin、藤木による。）
+
+さて、超ケーラー多様体の理論の応用として、小林--ヒッチン型の定理と組み
+合わせると、二つの一見異る複素多様体が、実は同じ超ケーラー多様体から来
+ていることが分かることがある。Vergne は、このアイデアに基づき、
+Kostant--関口対応を解釈した。
+
+本講演では、超ケーラー多様体入門~[1, 2]（とはいっても入門以
+上の理論は存在しない）から始めて、
+Kronheimer~[3] や Vergne~[4]
+の結果を紹介する予定である。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item N.J.~Hitchin:
+    Monopoles, minimal surfaces and algebraic curves,
+    \textit{S\'eminaire de Math\'ematiques Sup\'erieures} 105,
+    Les Presses de l'Universit\'e de Montr\'eal, 1987.
+  \item N.J.~Hitchin, A.~Karlhede, U.~Lindstr\"om and M.~Ro\v{c}ek:
+    Hyperk\"ahler metrics and supersymmetry,
+    \textit{Comm.\ Math.\ Phys.}, \textbf{108} (1987), 535--589.
+  \item P.B.~Kronheimer:
+    Instantons and geometry of the nilpotent variety,
+    \textit{J.\ Differential Geom.}, \textbf{32} (1990), 473--490.
+  \item M.~Vergne:
+    Instantons et correspondence de Kostant--Sekiguchi,
+    \textit{C.R.\ Acad.\ Sci.\ Paris S\'er.\ I Math.}, \textbf{320} (1995), 901--906.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演3：落合啓之「ベキ零軌道の関口対応」
+%======================================================================
+\begin{center}
+{\large\bfseries ベキ零軌道の関口対応}\\[6pt]
+\hspace*{\fill}{\large\bfseries 落合 啓之（名古屋大学 大学院多元数理科学研究科）}
+\end{center}
+
+舞台は、
+実半単純リー環とその involution（$=$位数2の自己同型）である。
+半単純対称空間の接空間が典型的な例である。
+このとき2種類のベキ零軌道の間に全単射の対応が存在することを、
+関口次郎の原論文に沿って紹介する。
+
+ここでの議論の鍵となるのは、
+ベキ零元から $\mathfrak{sl}(2)$-triple を構成する
+Jacobson--Morozov の定理、
+つまりリー環の構造論である。
+この構成の特徴を述べて、
+次の中島氏の講演で紹介される幾何学的構成との
+長所短所を比較する。
+
+舞台が特別な場合、すなわち、
+複素半単純リー環とその実形を指定する involution の場合には、
+関口対応は
+「Kostant--Sekiguchi 対応」と呼ばれることもある。
+半単純リー群の無限次元表現論の文脈で良く用いられるのはこの場合である。
+
+また、関連して、松木対応
+（旗多様体上のある群の作用に関する軌道分解と
+別の群に関する軌道分解が1対1に対応する）
+についても述べておく予定である。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item D.~Barbasch and M.R.~Sepanski:
+    Closure ordering and the Kostant--Sekiguchi correspondence,
+    \textit{Proc.\ Amer.\ Math.\ Soc.}, \textbf{126} (1998), 311--317.
+  \item T.~Matsuki:
+    The orbits of affine symmetric spaces under the action
+    of minimal parabolic subgroups,
+    \textit{J.\ Math.\ Soc.\ Japan}, \textbf{31} (1979), 331--357.
+  \item J.~Sekiguchi:
+    Remarks on nilpotent orbits of a symmetric pair,
+    \textit{J.\ Math.\ Soc.\ Japan}, \textbf{39} (1987), 127--138.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演4：竹内潔「特性サイクルの理論とその実リー群の無限次元表現論への応用について1・2」
+%======================================================================
+\begin{center}
+{\large\bfseries 特性サイクルの理論とその実リー群の\\
+無限次元表現論への応用について1・2}\\[6pt]
+\hspace*{\fill}{\large\bfseries 竹内 潔（筑波大学 数学系）}
+\end{center}
+
+「複素半単純リー環の表現の指標公式は Kazhdan--Lusztig 多項式
+の特殊値で表現されるであろう」という Kazhdan--Lusztig 予想は、
+1980年代初頭に Brylinski--Kashiwara および Beilinson--Bernstein により、
+リー環の表現と旗多様体上の $D$-加群を結びつける
+画期的な手法で解決された（[7] 参照）。
+
+その後、1980年代後半に入って、Kazhdan--Lusztig 予想
+の解決で使われた手法を用いて、実リー群の無限次元表現を
+同変構成可能層を用いて幾何学的に構成するプログラムが
+柏原により提案された。これは Borel--Weil によるコンパクト
+群の表現の幾何学的構成を、非コンパクト群の表現の
+場合に一気に拡張するものである。
+
+本講演では、柏原による一連の予想の解決の過程において
+Schmid--Vilonen~[4, 5, 6] により解かれた、「表現（の
+Harish-Chandra 加群）の特性多様体と表現の指標超関数の波面集合が
+Kostant--Sekiguchi 対応で対応するであろう」という
+Barbasch--Vogan 予想~[1] の解決のあらましについて、紹介する。
+
+証明には、柏原により導入された構成可能層の特性サイクル
+と呼ばれる概念が本質的に用いられる（[2] 参照）。
+Mirkovic--Uzawa--Vilonen~[3]
+による層の松木対応の超局所版を確立して、モーメント写像でリー環の
+上に落とすことで、懸案であった対応が得られる。すなわち、
+無限次元表現の代数的不変量（特性多様体）と解析的不変量
+（指標超関数の波面集合）が、幾何学的な対象（特性サイクル）
+を仲立ちにして結びつけられる、という世にも美しい理論について
+紹介したい。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item D.~Barbasch and D.A.~Vogan~Jr.:
+    The local structures of characters,
+    \textit{J.\ Funct.\ Anal.}, \textbf{37} (1980), 27--55.
+  \item M.~Kashiwara and P.~Schapira:
+    \textit{Sheaves on Manifolds},
+    Grundlehren der Math.\ Wiss.\ 292, Springer-Verlag, 1990.
+  \item I.~Mirkovic, T.~Uzawa, and K.~Vilonen:
+    Matsuki correspondence for sheaves,
+    \textit{Invent.\ Math.}, \textbf{109} (1992), 231--245.
+  \item W.~Schmid and K.~Vilonen:
+    Characteristic cycles of constructible sheaves,
+    \textit{Invent.\ Math.}, \textbf{124} (1996), 451--502.
+  \item W.~Schmid and K.~Vilonen:
+    Two geometric character formulas for reductive Lie groups,
+    \textit{Jour.\ A.M.S.}, \textbf{11} (1998), 799--867.
+  \item W.~Schmid and K.~Vilonen:
+    Characteristic cycles and wave front cycles of representations of reductive Lie groups,
+    \textit{Ann.\ Math.\ (2)}, \textbf{151} (2000), 1071--1118.
+  \item 谷崎俊之、堀田良之：$D$-加群と表現論, シュプリンガー現代数学シリーズ.
+\end{enumerate}
+
+\vfill
+
+\end{document}

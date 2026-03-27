@@ -1,0 +1,279 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 表紙
+%======================================================================
+\begin{center}
+  \vspace*{20pt}
+  {\Huge\bfseries ENCOUNTER with MATHEMATICS}
+
+  \vspace{10pt}
+  {\huge 第25回}
+
+  \vspace{10pt}
+  {\Huge\bfseries Weil 予想}
+\end{center}
+
+\vspace{20pt}
+
+\noindent
+{\large\bfseries 2002年12月13日（金）14:40 〜 12月14日（土）}
+
+\vspace{5pt}
+\noindent
+{\bfseries 於：東京都文京区春日 1--13--27\quad 中央大学理工学部5号館}
+
+\vspace{10pt}
+
+\noindent\textbf{12月13日（金）}
+\begin{quote}
+  \begin{tabular}{@{}ll@{}}
+    14:40〜16:00 & Weil 予想、その由来と例
+                   \hfill：堀田 良之 氏（岡山理大・理） \\[4pt]
+    16:40〜18:00 & Grothendieck と Weil 予想
+                   \hfill：藤原 一宏 氏（名大・多元数理） \\
+  \end{tabular}
+\end{quote}
+
+\noindent\textbf{12月14日（土）}
+\begin{quote}
+  \begin{tabular}{@{}ll@{}}
+    10:30〜11:50 & Deligne と Weil 予想
+                   \hfill：斎藤 毅 氏（東大・数理） \\[4pt]
+    13:40〜15:00 & Weil 予想と表現論
+                   \hfill：宇澤 達 氏（名大・多元数理） \\[4pt]
+    15:30〜16:50 & Weil 予想と数論 --- 応用と今後
+                   \hfill：藤原 一宏 氏（名大・多元数理） \\[4pt]
+    17:00〜      & 懇親会（ワインパーティー） \\
+  \end{tabular}
+\end{quote}
+
+\vspace{5pt}
+
+\noindent
+別紙の趣旨に沿った集会の第25回を以上のような予定で開催いたします。
+非専門家向けに入門的な講演をお願い致しました。
+多くの方々の御参加をお待ちしております。
+講演者による講演内容へのご案内を添付いたしますので御覧下さい。
+
+\vspace{5pt}
+
+\noindent
+連絡先：112-8551 東京都文京区春日 1-13-27\quad 中央大学理工学部数学教室\quad
+tel: 03-3817-1745\\
+ENCOUNTER with MATHEMATICS : e-mail : encmath@math.chuo-u.ac.jp\\
+homepage : \url{http://www.math.chuo-u.ac.jp/ENCwMATH}\\
+三松 佳彦 : yoshi@math.chuo-u.ac.jp\quad /\quad
+高倉 樹 : takakura@math.chuo-u.ac.jp
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演１：堀田良之「Weil 予想、その由来と例」
+%======================================================================
+\noindent
+{\large\bfseries Weil 予想、その由来と例}
+\hfill
+{\large\bfseries 堀田　良之（岡山理大・理）}
+
+\bigskip
+
+A.~Weil は、1940年および1941年の論文で有限体上の曲線の関数体に対する
+リーマン仮説の成立を予告したが、その「証明」には戦時中から戦後に掛けての数年を要した。
+近代抽象代数幾何学の発生とも見なされるいわゆる３部作である。
+
+Severi らによる古典イタリア学派の対応の幾何学からアイデアを得た、
+対応の跡の正値性（後に Castelnuovo の補題と呼ばれた）の証明である。
+（これは、Jacobi 多様体では、Rosati 元のある正値性にも対応する。）
+A.~Weil はこのように少なくとも２つの幾何学的証明（彼自身の言葉による）を
+曲線の場合に与えた。
+
+1949年に一般次元の多様体の合同ゼータ関数に対するリーマン仮説を予想し、
+これが最終的に1973年の夏 Deligne によって証明されたことは良く知られている。
+Weil のとった幾何学的道筋（正値性）によるものではなく、
+「数論的」ヨガ（いわゆる Weil 層の諸操作）によるものである。
+本講演では、この Deligne 前夜までの歴史を曲線を込めたいくつかの例等を
+引きながらお話ししたい。
+
+\vspace{6pt}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[1]}] Weil 全集、第１巻
+        （[1940b], [1941]; [1946a], [1948a], [1948b]; [1949b], [1954h]）.
+  \item[{[2]}] 現代の学生には、Mumford の３部作が代用となるか？
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演２：藤原一宏「Grothendieck と Weil 予想」
+%======================================================================
+\noindent
+{\large\bfseries Grothendieck と Weil 予想}
+\hfill
+{\large\bfseries 藤原　一宏（名大・多元数理）}
+
+\bigskip
+
+A.~Grothendieck は Weil 予想の解決を目指し、新しい代数幾何学の建設を目指した。
+その成果は彼と協力者による膨大な（にわかには近づきがたいといわれる）
+著作 EGA、SGA としてまとめ上げられている。
+この講演では特に SGA~4、5 を中心とした
+\begin{itemize}
+  \item エタールコホモロジーの発生
+  \item Lefschetz 跡公式、$L$-関数のコホモロジー解釈
+  \item Poincaré 双対性と関数等式
+  \item 関数と層の辞書
+\end{itemize}
+について解説する予定である。
+
+\vspace{6pt}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[SGA4]}] M.~Artin, A.~Grothendieck and J.-L.~Verdier,
+        \textit{Théorie des Topos et Cohomologie Étale des Schémas} (SGA~4),
+        Lecture Notes in Math.~\textbf{269}, \textbf{270}, \textbf{305},
+        Springer-Verlag.
+  \item[{[SGA5]}] L.~Illusie (ed.),
+        \textit{Cohomologie $l$-adique et fonctions $L$} (SGA~5),
+        Lecture Notes in Math.~\textbf{589},
+        Springer-Verlag, 1977.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演３：斎藤毅「Deligne と Weil 予想」
+%======================================================================
+\noindent
+{\large\bfseries Deligne と Weil 予想}
+\hfill
+{\large\bfseries 斎藤　毅（東大・数理）}
+
+\bigskip
+
+Weil 予想は、はじめは有限体上の代数多様体の合同ゼータ関数に関する予想として登場したが、
+``Weil~II'' では、より広く、コホモロジーの重さの理論として捉えられた。
+このようにして、Hodge 構造との類似が明らかになり、
+モチーフの世界へのとびらも開かれた。
+Deligne によるこの新しい展開を解説するとともに、
+数論幾何への様々な応用についても述べる。
+
+\vspace{6pt}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[Weil1]}] P.~Deligne,
+        La conjecture de Weil~I,
+        \textit{Publ.~Math.~IHES}~\textbf{43} (1974), 273--308.
+  \item[{[Weil2]}] P.~Deligne,
+        La conjecture de Weil~II,
+        \textit{Publ.~Math.~IHES}~\textbf{52} (1981), 137--251.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演４：宇澤達「Weil 予想と表現論」
+%======================================================================
+\noindent
+{\large\bfseries Weil 予想と表現論}
+\hfill
+{\large\bfseries 宇澤　達（名大・多元数理）}
+
+\bigskip
+
+有限群の表現では、既約表現の数と共役類の数が一致する。
+対称群の場合には、ヤング図形の理論を経由して、共役類に対応する表現が構成される。
+対称群を、一元体の上の一般線形群であると見る立場にたてば、
+有限体上の一般線形群、$p$-進体上の一般線形群でも似たようなことができないか、
+という自然な疑問がでてくる。
+
+有限体上のシュバレー群に対してこの疑問には、Deligne と Lusztig が解答をあたえたが、
+その解決には Weil 予想の解決にまつわるさまざまな手法が本質的な役割を果たした。
+Deligne--Lusztig 理論、Lusztig の指標層について考え方を概観してから、
+$p$-進群の表現について垣間みることにする。
+
+また、Weil 予想は有限体上の代数多様体の有理点の個数が位相的な性質から決定される、
+という驚くべきものであるが、そのような見方の、
+Height Zeta 関数、跡公式の軌道積分への応用についても述べたい。
+
+\vspace{6pt}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[DL]}] P.~Deligne and G.~Lusztig,
+        Representations of reductive groups over finite fields,
+        \textit{Ann.~of Math.}~\textbf{103} (1976).
+  \item[{[Lu]}] G.~Lusztig,
+        Introduction to character sheaves,
+        \textit{Proc.~Sympos.~Pure Math.}~\textbf{47}, Part~1 (1987).
+  \item[{[KL]}] D.~Kazhdan and G.~Lusztig,
+        Fixed point varieties on affine flag manifolds,
+        \textit{Israel J.~Math.}~\textbf{62} (1988).
+  \item[{[Ha]}] T.~C.~Hales,
+        Hyperelliptic curves and harmonic analysis,
+        \textit{Contemp.~Math.}~\textbf{177} (1994).
+  \item[{[FMT]}] J.~Franke, Y.~I.~Manin and Y.~Tschinkel,
+        Rational points of bounded height on Fano varieties,
+        \textit{Invent.~Math.}~\textbf{95} (1989).
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演５：藤原一宏「Weil 予想と数論 --- 応用と今後」
+%======================================================================
+\noindent
+{\large\bfseries Weil 予想と数論 --- 応用と今後}
+\hfill
+{\large\bfseries 藤原　一宏（名大・多元数理）}
+
+\bigskip
+
+Weil 予想は有限体上の幾何学だけでなく、
+保型形式とガロア表現との予期せぬ関連（非可換類体論）を通し、
+様々な数論の問題と関係する。特に
+\begin{itemize}
+  \item Hasse--Weil 型のゼータ関数
+  \item 保型形式のフーリエ係数に関する Ramanujan 予想
+\end{itemize}
+などを分析する手段を与えている。
+
+しかしながら、Deligne による Weil 予想の証明方針は Grothendieck が望んだ形のもの
+--- 幾何学的な、代数サイクルに対する正値性を使う大胆な仮説（標準予想）---
+とは異なる。
+代数幾何学における究極の対称性（motivic ガロア群）を生み出すべきこの夢は
+果たして実現可能なのだろうか。
+
+\vspace{6pt}
+
+\begin{center}
+  \textsc{参考文献}
+\end{center}
+\begin{enumerate}
+  \item[{[1]}] 「ガロア理論」数学のたのしみ \textbf{13}、日本評論社, 1999年.
+  \item[{[2]}] 「非可換類体論が目指すもの」数学のたのしみ \textbf{17}、日本評論社, 2000年.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,166 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 講演1：小林 治「山辺不変量」
+%======================================================================
+\begin{center}
+{\large\bfseries 山辺不変量}\\[6pt]
+\hspace*{\fill}{\large\bfseries 小林　治（熊本大・理）}
+\end{center}
+
+第32回の ENCOUNTER with MATHEMATICS で山辺の問題を取り上げたが今回は
+その続編である。コンパクト多様体で体積が1の計量を考え、そのスカラー
+曲率を積分する。これをリーマン計量の共形類の中で下限を取り、山辺定数
+あるいは山辺の共形不変量と呼ばれる共形不変量が定義される。これをすべ
+ての共形類にわたって上限をとり、山辺不変量と呼ばれる多様体の微分位相
+幾何的不変量が得られる。いわば「多様体の曲率」とも言えるものである。
+この量は、1980年代に講演者により導入され、ほぼ同じ頃、山辺の問題の最
+終解決を与えた R. Schoen もとりあげた。山辺不変量は興味深いものである
+が、この値を具体的に求めることは大変困難な問題である。この講演では山
+辺不変量の基本的事項および多様体の手術と山辺不変量について解説する。
+\vfill
+
+%======================================================================
+% 講演2：石田 政司「Seiberg--Witten monopole 方程式と山辺不変量 I，II」
+%======================================================================
+\begin{center}
+{\large\bfseries Seiberg--Witten monopole 方程式と山辺不変量 I，II}\\[6pt]
+\hspace*{\fill}{\large\bfseries 石田 政司（上智大・理工）}
+\end{center}
+
+山辺不変量は大きく、正、ゼロ、負の3つの値を取り得る。小林氏の講演で紹介
+されるように山辺不変量が正、またはゼロの多様体の存在は知られていた。では、
+山辺不変量が負である3次元以上の多様体は存在し、さらにその値は決定できる
+のだろうか？ Dirac 作用素を中心とする「線形的」なアプローチからではこの自
+然な問題に答えることはできておらず、山辺不変量に関する基本的問題の1つと
+して残されていた。しかし驚くべき事に1994年の、Dirac 作用素をある種
+「非線形化」した物理にその起源をもつ方程式---Seiberg--Witten monopole 方
+程式---の登場によりこの風景は劇的に変化した。即ち、山辺不変量が負で、さら
+にその値が完全に決定できる、ケーラー曲面を含む非常に広い4次元多様体のク
+ラスの存在が、この方程式を応用して明らかにされたのである。Seiberg--Witten
+monopole 方程式が4次元多様体の山辺不変量に対してもたらす新しい側面は、
+山辺不変量に関する上からの新しい評価を誘導する点にある。負の山辺不変量に
+関するこの現象は、現在までのところ4次元特有なのものであり、3次元または
+5次元以上で負の山辺不変量を持つ多様体の存在、非存在は明らかにされていな
+い。本講演では、Seiberg--Witten monopole 方程式の4次元多様体の幾何への応
+用という立場から、山辺不変量とその周辺を最近の結果も含めて2回にわけてご
+紹介したい。また、芥川氏による逆平均曲率流の手法による3次元多様体の山辺
+不変量の評価との方法論的な差に気をつけてきいて頂けると、山辺不変量にまつ
+わる幾何の深みの一端がより伝わるのではないかと期待する。
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演3：芥川 和雄「逆平均曲率流と山辺不変量 I, II」
+%======================================================================
+\begin{center}
+{\large\bfseries 逆平均曲率流と山辺不変量 I, II}\\[6pt]
+\hspace*{\fill}{\large\bfseries 芥川 和雄（東京理科大・理工）}
+\end{center}
+
+\textbf{小林氏の講演}で述べられるように、$n$ 次元多様体 $M^n$ の山辺不変量
+$Y(M^n)$ の
+\textbf{上からの評価}は、\\
+\textbf{$\bullet\ Y(M^n) \leqq Y(S^n)$・・・Aubin} \\
+\textbf{$\bullet\ Y(M^n) \leqq 0$となる多様体の位相的条件付け・・・
+Lichnerowicz, Hitchin, \\
+\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \
+Schoen--Yau, Gromov--Lawson} \\
+と、先ず'質的な評価'がなされた。その後、
+\textbf{石田氏の講演 I, II}で解説されるように、Seiberg--Witten 理論の応用に
+よる
+\\
+\textbf{$\bullet\ Y(M^4) \leqq 0$となる（ケーラー曲面を含む）広いクラスの
+$4$次元多様体 $M^4$ の \\
+\quad 山辺不変量の決定・・・LeBrun, Petean--Yun, 石田--LeBrun} \\
+と続く。さらに、Seiberg--Witten 理論により改めて見直された Spin${}^c$ 幾
+何、
+および共形的 rescaling argument により、\\
+\textbf{$\bullet\ \mathbb{CP}^2$ の山辺不変量の決定・・・LeBrun,
+Gursky--LeBrun} \\
+が得られた。\\
+\quad 上記の一連の結果において、
+\textbf{Aubinの普遍的評価式}と\textbf{Schoen--Yau による極小超曲面による評価}を
+除くと、
+それらは全て\textbf{Dirac作用素に関する指数定理}に依存している。
+しかし今の所、\\
+\textbf{(1)\ $\mathbb{CP}^2$以外の場合の、正の山辺不変量} \\
+\textbf{(2)\ 奇数次元多様体の山辺不変量} \\
+等のベストな評価を得るまでには、
+指数定理による位相的方法が発展していないのが現状である。\\
+\quad 最近、\textbf{逆平均曲率流の手法}と呼ばれる新しい手法によって、
+$3$ 次元多様体に関する正の山辺不変量の上からの評価について大きな進展があっ
+た。
+この講演では、\textbf{逆平均曲率流の手法と$3$次元多様体の山辺不変量}
+に話題を絞って解説を行なう。
+
+\newpage
+
+\begin{center}\textsc{参考文献}\end{center}
+
+\begin{enumerate}[{[1]}]
+  \item K. Akutagawa and B. Botvinnik, The relative Yamabe invariant,
+    Comm. Anal. Geom. 10 (2002), 935--969.
+  \item ---, Yamabe metrics on cylindrical manifolds, Geom.
+    Funct. Anal. 13 (2003), 259--333.
+  \item K. Akutagawa and A. Neves, Classification of all
+    3-manifolds with Yamabe invariant greater than that of $\mathbf{R}\mathrm{P}^3$,
+    to appear in J. Diff. Geom.
+  \item M. Anderson, On uniqueness and differentiability in
+    the space of Yamabe metrics, Comm. Contemp. Math. 7 (2005), 299--310.
+  \item C. B\"ohm, M. Wang and W. Ziller, A variational approach for compact
+    homogeneous Einstein manifolds, Geom. Funct. Anal. 14 (2004), 407--424.
+  \item H. Bray and A. Neves, Classification of prime
+    3-manifolds with Yamabe invariant greater than $\mathbf{R}\mathrm{P}^3$,
+    Ann. of Math. 159 (2004), 407--424.
+  \item M. Gromov and H. B. Lawson, Spin and scalar curvature in the presence
+    of a fundamental group I, Ann. of Math. 111 (1980), 209--230.
+  \item ---, The classification of simply connected manifolds of positive
+    scalar curvature, Ann. of Math. 111 (1980), 423--434.
+  \item ---, Positive scalar curvature and the Dirac operator on complete
+    Riemannian manifolds, I. H. E. S. Publ. Math. No. 58 (1983), 83--196.
+  \item M. Gursky and C. LeBrun, Yamabe invariants and spin${}^c$ structures,
+    Geom. Funct. Anal. 8 (1998), 965--977.
+  \item M. Ishida and C. LeBrun, Curvature, connected sums, and Seiberg--Witten
+    theory, Comm. Anal. Geom. 11 (2003), 809--836.
+  \item N. Hitchin, Harmonic spinors, Adv. in Math. 14 (1974), 1--55.
+  \item O. Kobayashi, The scalar curvature of a metric with unit volume,
+    Math. Ann. 279 (1987), 253--265.
+  \item ---、山辺の問題について、Seminar on Math. Sci. 16、慶応大、1990.
+  \item C. LeBrun, Four manifolds without Einstein metrics, Math. Res. Lett. 3
+    (1996), 133--147.
+  \item ---, Yamabe constants and the perturbed Seiberg--Witten equations,
+    Comm. Anal. Geom. 5 (1997), 535--553.
+  \item ---, Kodaira dimension and the Yamabe problem, Comm.
+    Anal. Geom. 7 (1999), 133--156.
+  \item A. Lichnerowicz, Spineurs harmoniques, C. R. Acad. Sci. Paris 257
+    (1963), 7--9.
+  \item M. Obata, The conjectures on conformal transformations of Riemannian
+    manifolds, J. Diff. Geom. 6 (1971), 247--258.
+  \item J. Petean, Computations of the Yamabe invariant, Math. Res. Lett. 5
+    (1998), 703--709.
+  \item ---, The Yamabe invariant of simply connected manifolds, J. Reine
+    Angew. Math. 523 (2000), 225--231.
+  \item J. Petean and G. Yun, Surgery and the Yamabe invariant, Geom. Funct.
+    Anal. 9 (1999), 1189--1199.
+  \item R. Schoen, Variational theory for the total scalar curvature functional
+    for Riemannian metrics and related topics, Lect. Notes in Math. 1365,
+    121--154, 1989.
+  \item R. Schoen and S.-T. Yau, On the structure on manifolds with positive
+    scalar curvature, Manuscripta Math. 28 (1979), 159--183.
+  \item S. Stolz, Simply connected manifolds of positive scalar curvature,
+    Ann. of Math. 136 (1992), 511--540.
+  \item E. Witten, Monopoles and four-manifolds, Math. Res. Lett. 1 (1994),
+    809--822.
+\end{enumerate}
+
+\end{document}

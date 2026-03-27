@@ -1,0 +1,129 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+
+\pagestyle{empty}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\begin{document}
+
+%======================================================================
+% 講演1：佐藤肇「導入」
+%======================================================================
+\begin{center}
+{\large\bfseries 導入}\\[6pt]
+\hspace*{\fill}{\large\bfseries 佐藤　肇（名古屋大学・名誉教授）}
+\end{center}
+
+Euler 数と Euler 類について簡単に紹介することにより、他の講演への導入としたいと考えています。特に、
+\begin{itemize}
+  \item[] \underline{Euler の多面体定理}：凸多面体の（面の数）$-$（辺の数）$+$（頂点の数）$= 2$
+  \item[] \underline{Poincaré--Hopf の定理}：有向閉多様体 $M$ 上のベクトル場の特異点の指数の和\\
+  \hspace*{\fill} $= M$ の Euler 数
+\end{itemize}
+などを通して、Euler 数から Euler 類へと進んでみます。
+
+\newpage
+
+%======================================================================
+% 講演2：秋田利之「群のEuler数」
+%======================================================================
+\begin{center}
+{\large\bfseries 群の Euler 数}\\[6pt]
+\hspace*{\fill}{\large\bfseries 秋田　利之}
+\end{center}
+
+任意の群に対して分類空間（あるいは Eilenberg--MacLane 空間）と呼ばれる空間が存在して、ホモトピー同値を除いて一意に定まることがよく知られています。とくに群 $G$ の分類空間 $BG$ が有限複体として実現できるならば、その Euler 数 $\chi(BG)$ は群の不変量となります。従って $\chi(BG)$ を群 $G$ の Euler 数（$\chi(G)$ と書きます）とみなすのは自然です。例えば階数 $n$ の自由群 $F_n$ の Euler 数は $\chi(F_n)=1-n$ となります。
+
+群 $G$ が有限位数の元をもつばあい、$BG$ は有限複体としては実現でないので、上のやり方では $\chi(G)$ を定義することはできません。このような群（のあるクラス）に対して $\chi(G)$ の「適切な定義」を最初に与えたのは C.~T.~C. Wall [5] です。Wall の定義した群の Euler 数は一般には整数ではなく有理数に値をもちます。Wall のアイデアは Serre [3], Stallings [4], Brown [1] などにより、より広いクラスの群に広げられました。
+
+この講演では群の Euler 数の定義・性質・例などを、上に述べた歴史を踏まえて、できるだけ平易に紹介したいと思います。また群の Euler 数は、トポロジーに起源をもつ概念であるものの、同時に群の代数的・群論的な性質を色濃く反映していることが知られています。そのような観点から、群の中心に関する Gottlieb の仕事、有限位数の元に関する Brown の仕事、ホモロジカルな Sylow の定理などを紹介するつもりです。最後に群の Euler 数に関する基本的な文献として [2] の第9章を挙げておきます。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item K.~S. Brown, Euler characteristics of discrete groups and $G$-spaces, Invent. Math. \textbf{27} (1974) 229--264.
+  \item K.~S. Brown, Cohomology of groups, GTM 87, Springer-Verlag, 1982.
+  \item J.-P. Serre, Cohomologie des groupes discrets, Ann. of Math. Studies vol.~70, pp.~77--169, Princeton Univ. Press, Princeton, 1971.
+  \item J. Stallings, Centerless groups---an algebraic formulation of Gottlieb's theorem, Topology \textbf{4} (1965) 129--134.
+  \item C.~T.~C. Wall, Rational Euler characteristics, Proc. Cambridge Philos. Soc. \textbf{57} (1961) 182--184.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演3：Danny Calegari「Euler class of surface groups acting on the plane」
+%======================================================================
+\begin{center}
+{\large\bfseries Euler class of surface groups acting on the plane}\\[6pt]
+\hspace*{\fill}{\large\bfseries Danny Calegari (Caltech／東工大・情報理工)}
+\end{center}
+
+Associated to an orientation-preserving action of a group $G$ on the plane there is a $2$-dimensional characteristic class called the \emph{Euler class}. When $G$ is the fundamental group of a closed orientable surface, the Euler class can be evaluated on the fundamental cycle to give a number, the \emph{Euler number} of the action. The famous Milnor--Wood inequality gives constraints for what Euler numbers can arise in the analogous case of surface group actions on the circle. For the plane, there are no such constraints at the topological level, but for $C^1$ or higher differentiability, a vestige of Milnor--Wood remains, manifesting in a kind of dynamical rigidity for $\Z \oplus \Z$ actions. We will discuss this rigidity, and give the complete homological classification of actions of surface groups on the plane, in every degree of smoothness.
+
+\newpage
+
+%======================================================================
+% 講演4：松本幸夫「オイラーとトポロジーの誕生」
+%======================================================================
+\begin{center}
+{\large\bfseries オイラーとトポロジーの誕生}\\[6pt]
+\hspace*{\fill}{\large\bfseries 松本　幸夫（学習院大学理学部）}
+\end{center}
+
+数年前に、トポロジーについて歴史的なことを書くように頼まれました。それを機に、オイラーの原論文に目を通してみましたので、紹介させていただきます。
+
+ケーニヒスベルクの橋の問題を解決した [1] はグラフ理論の初めと言われていますが（例えば [2]）、オイラーの論文にはグラフは登場しません。しかし、この問題がライブニッツのいう Geometria Situs (Analysis Situs) に属する問題であると、はっきり述べており、今日言うところの「トポロジー」の問題を最初に認識したのはオイラーのようです。このため、この論文は「グラフ理論の初め」なのかも知れませんが、むしろ「トポロジーの初め」というほうが正しそうです。（モンテシノス [3] が断固としてそれを主張しています。）
+
+そのあと書かれた論文 [4] は有名な「オイラーの多面体定理」を証明していますが、証明はやや不厳密です。また、証明されているのは
+\[
+\mbox{面の数}+\mbox{頂点の数}=\mbox{稜の数}+2
+\]
+という関係式だけで、右辺を移項した式
+\[
+\mbox{面の数}-\mbox{稜の数}+\mbox{頂点の数}=2
+\]
+という式は、見当たりません。オイラーは「オイラー標数」に気づいておらず、この公式と「トポロジー的現象」との関係にも気づいていないようです。
+
+なお、オイラーより早く、デカルトが「オイラーの多面体定理」に極めて近い結論を得ていますが [5]、多面体定理自身は述べていません。「多面体定理」の先取権はやはりオイラーにあるようです。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+  \item L. Euler, SOLUTIO PROBLEMATIS AD GEOMETRIAM SITUS PERTINENTIS, Commentarii Academiae Scientiarum Imperialis Petropolitanae \textbf{8} (1736), 128--140.
+  \item N.~L. Biggs, E.~K. Lloyd, R.~J. Wilson, Graph theory 1736--1936, Clarendon Press, Oxford, 1976.
+  \item L.~M. Montesinos-Amilibia, Origen de la Topología: Euler y los puentes de Königsberg, Note presented at Real Academia de Ciencias de Madrid, 2007.
+  \item L. Euler, DEMONSTRATIO NONNULLARUM INSIGNIUM PROPRIETATUM QUIBUS SOLIDA HEDRIS PLANIS INCLUSA SUNT PRAEDITA, Novi commentarii academiae scientiarum Petropolitanae \textbf{4} (1752/3), 1758, p.~140--160.
+  \item P.~J. Federico, Descartes on polyhedra, A study of DE SOLIDORUM ELEMENTIS, Springer-Verlag, 1982.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演5：森田茂之「〜オイラー類を超える日は来るのか？〜」
+%======================================================================
+\begin{center}
+{\large\bfseries $\sim$オイラー類を超える日は来るのか？$\sim$}\\[6pt]
+\hspace*{\fill}{\large\bfseries 森田　茂之（東京大学大学院数理科学研究科）}
+\end{center}
+
+向き付けられた $S^1$ バンドル $\xi$ に対して、その底空間 $B$ の $2$ 次元コホモロジー類として定義されるオイラー類と呼ばれる特性類
+\[
+\chi(\xi)\in H^2(B;\mathbb{Z})
+\]
+は、そのようなバンドルの同型類の完全な不変量となることはよく知られている。この特性類がオイラー類と呼ばれているのは、ガウス・ボンネの定理に示されるオイラー（ポアンカレ）標数との密接な関連から当然と言えるが、（300年に比べれば）歴史的には比較的最近のことのようである。
+
+それはともかく、1930年代から1940年代までには、シュティーフェル・ウィットニー類、ポントリャーギン類、チャーン類、と現在呼ばれている特性類がつぎつぎと定義され、1950年代以降の数学の開花・隆盛の先導役を果たした。
+
+このように多くの特性類が存在するのであるが、その中でオイラー類（と第一シュティーフェル・ウィットニー類）は最も基本的なものであり、すべての特性類はある意味でそれから派生して得られると言ってよい。このことはグロタンディークの分解原理（splitting principle）、すなわちすべての複素ベクトルバンドルは原理的には直線バンドルのウィットニー和と考えてよい、という事実から従う。
+
+1960年代の終わり以降、ゲルファント・フックス理論、チャーン・サイモンズ理論、葉層構造の特性類の理論等、いわゆる $2$ 次特性類の理論が登場して来たが、それらもまだ本質的にはオイラー類の考えの枠内にあると言ってよいだろう。さらに最近、井草およびビスム・ロット・ゲッテ等による、いくつかの高次の特性類の理論が導入され、活発な研究が続いている。
+
+以上のような状況を概観しつつ
+\begin{center}
+オイラー類を真に超えるような特性類は現れるのか？
+\end{center}
+という問いについて、考察してみたい。
+
+\end{document}

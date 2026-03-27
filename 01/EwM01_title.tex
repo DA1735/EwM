@@ -1,0 +1,140 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+
+\documentclass[uplatex,dvipdfmx]{jlreq}
+
+% 余白調整（1ページ収め）
+\usepackage[top=18mm,bottom=20mm,left=20mm,right=20mm]{geometry}
+
+\usepackage{amsmath,amssymb}
+\usepackage{url}
+
+\pagestyle{empty}
+
+% 行間少し詰める
+\renewcommand{\baselinestretch}{0.96}
+
+%--------------------------------
+% 講演マクロ
+%--------------------------------
+
+\newcommand{\talk}[3]{%
+\noindent
+#1\quad #2\par
+\hspace*{2em}#3\par\smallskip
+}
+
+%--------------------------------
+% タイトル情報
+%--------------------------------
+
+\newcommand{\EwMnumber}{第1回}
+\newcommand{\EwMtitle}{岩澤理論と Fermat 予想}
+\newcommand{\EwMdate}{1996年11月22日（金）14:30 ～ 11月23日（土）16:30}
+\newcommand{\EwMplace}{東京都文京区春日1-13-27 中央大学理工学部5号館 5533号室}
+
+%--------------------------------
+% タイトル表示
+%--------------------------------
+
+\newcommand{\EwMtitleblock}{
+
+\vspace*{-5mm}
+
+\begin{center}
+
+{\Large ENCOUNTER with MATHEMATICS}
+
+\vspace{2mm}
+
+{\large 数学との遭遇}
+
+\vspace{4mm}
+
+{\Large \bfseries \EwMnumber\ \EwMtitle}
+
+\vspace{4mm}
+
+\EwMdate
+
+\vspace{2mm}
+
+於：\EwMplace
+
+\end{center}
+
+\vspace{3mm}
+
+\vspace{2mm}
+
+}
+
+\begin{document}
+
+\EwMtitleblock
+
+%--------------------------------
+% プログラム
+%--------------------------------
+
+\section*{プログラム}
+
+\subsection*{1日目（11月22日（金））}
+
+\talk
+{14:30～15:45}
+{Fermat の最終定理と岩澤理論 I}
+{加藤 和也 氏（東工大・理）}
+
+\talk
+{16:30～17:45}
+{Fermat の最終定理と岩澤理論 II}
+{加藤 和也 氏（東工大・理）}
+
+\subsection*{2日目（11月23日（土））}
+
+\talk
+{10:30～11:45}
+{Fermat の最終定理と岩澤理論 III}
+{加藤 和也 氏（東工大・理）}
+
+\talk
+{13:20～14:35}
+{Langlands 予想への試み}
+{百瀬 文之 氏（中大・理工）}
+
+\talk
+{15:10～16:25}
+{楕円曲線と進化するシステム —Euler 系から Taylor-Wiles 系へ}
+{藤原 一宏 氏（名大・多元数理）}
+
+%--------------------------------
+% 案内文
+%--------------------------------
+
+\bigskip
+
+別紙の趣旨に沿った集会の第1回を以上のような予定で開催いたします。概ね非専門家向けということで講演をお願い致しましたので、多くの方々のご参加をお待ちしております。講演者による講演内容へのご案内を別紙に添付いたしますのでご覧下さい。
+
+%--------------------------------
+% 連絡先
+%--------------------------------
+
+\section*{連絡先}
+
+112 東京都文京区春日1-13-27 中央大学理工学部数学教室
+
+tel : 03-3817-1745
+
+ENCOUNTER with MATHEMATICS  
+e-mail : encmath@math.chuo-u.ac.jp  
+
+関口 力 : e-mail : sekiguti@math.chuo-u.ac.jp , tel : 03-3817-1748  
+
+百瀬 文之 : e-mail : momose@math.chuo-u.ac.jp , tel : 03-3817-1763  
+
+三松 佳彦 : e-mail : yoshi@math.chuo-u.ac.jp , tel : 03-3817-1749  
+
+\url{http://www.math.chuo-u.ac.jp/ENCwMATH}
+
+\end{document}

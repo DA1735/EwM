@@ -1,0 +1,438 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{url}
+
+\pagestyle{empty}
+
+\newcommand{\Schrodinger}{Schr\"odinger}
+\newcommand{\squad}{\hspace{2.8pt}}
+\renewcommand{\t}{\tau}
+
+\begin{document}
+
+%======================================================================
+% 講演1：池部晃生「講演会の趣旨について」
+%======================================================================
+\begin{center}
+{\large\bfseries 講演会の趣旨について}\\[6pt]
+\hspace*{\fill}{\large\bfseries 池部 晃生}
+\end{center}
+\vspace{6pt}
+
+スペクトル理論とは、本来の意味からすれば、
+線形作用素の理論と殆んど同義であろうが、
+ここで採り上げられるのは数理物理に現れるより
+具体的な作用素の研究と考えてよいであろう。
+散乱理論の方はもともと時間を含んだ方程式の解の
+漸近挙動を研究するものである。
+手法としては、しかし、（時間を含まない）
+定常的なものもある。
+散乱問題の多くは線形であるが、
+その摂動と見られる非線形のものも登場する。
+また散乱問題はそこに現れる作用素のスペクトル構造
+と密接に関連する。
+これらの問題の解析には関数解析と微分方程式の理論が
+動員されるが、その様相はこれからの講演によって明きらか
+にされるであろう。
+
+\newpage
+
+%======================================================================
+% 講演2：谷島賢二「Regularity and decay estimates for Schrödinger equations」
+%======================================================================
+\begin{center}
+{\large\bfseries Regularity and decay estimates for
+Schr\"odinger equations}\\[6pt]
+\hspace*{\fill}{\large\bfseries 谷島 賢二\ (学習院大・理)}
+\end{center}
+\vspace{6pt}
+
+時間依存型のシュレーディンガー方程式の
+初期値問題の解の正則性と
+解の時間無限大での減衰問題について解説する。
+
+\newpage
+
+%======================================================================
+% 講演3：久保英夫「非線形波動方程式に対する散乱作用素の一つの構成法」
+%======================================================================
+\begin{center}
+{\large\bfseries 非線形波動方程式に対する散乱作用素の一つの構成法}\\[6pt]
+\hspace*{\fill}{\large\bfseries 久保 英夫\ (大阪大学大学院理学研究科)}
+\end{center}
+
+本講演では波動方程式に対して散乱理論を展開する
+手続きの一例をご紹介いたします。
+ここでは、$u(t,x)$ に対する微分方程式
+\begin{equation}\label{ho}
+(\partial_t^2-\Delta)u=0,
+\quad (t,x)\in \mathbb{R} \times \mathbb{R}^n
+\end{equation}
+を波動方程式と呼ぶことにします。
+ただし、$\partial_t=\partial/\partial t$,
+$\Delta=\sum_{j=1}^n \partial^2/\partial x_j^2$ です。
+波動方程式の解は、例えば、均質な媒質中を伝わる音波の
+ポテンシャルを表す関数であることが知られています。
+あるいは、(\ref{ho}) の左辺は相対論に従う素粒子の運動を
+記述する非線形波動方程式
+\begin{equation}\label{non}
+(\partial_t^2-\Delta)u=|u|^{p-1}u,
+\quad (t,x)\in {\mathbb R} \times {\mathbb R}^n \quad
+(p>1)
+\end{equation}
+の線形部分でもあります。
+逆に言うと、(\ref{non}) は (\ref{ho}) に非線形項
+$|u|^{p-1}u$
+による
+摂動を加えた方程式と見ることもできます。
+
+まず、(\ref{non}) の解が ${\mathbb R} \times {\mathbb R}^n$
+で定義されるとします。
+つまり、指数 $p$ に何らかの制限を課し、(\ref{non}) の大域解の存在を保証
+します。
+このとき、$t \to +\infty$ および $t \to -\infty$ での漸近形が何かあるはずです。
+(\ref{non}) の非線形項 $|u|^{p-1}u$ による摂動が時間に関して短距離的であるならば、
+その漸近形が (\ref{ho}) の解になっていると考えるのは自然でしょう。
+事実、$n=2$ および $n=3$ のとき、(\ref{non}) の十分小さい解のみを考える限り、
+その解が ${\mathbb R} \times {\mathbb R}^n$ 全体で定義されるならば、
+同時に $t \to \pm\infty$ において、エネルギー・ノルムの意味で
+(\ref{ho}) の解に漸近することが知られています。
+このとき、(\ref{non}) の解はその非線形項から自由になるという意味で
+漸近自由と呼び、(\ref{ho}) の解を自由解と呼ぶことにします。
+
+このような状況の下であれば、(\ref{non}) の解の無限の過去における挙動と
+無限の未来における挙動を比較することができます。すなわち、この対応によって
+散乱作用素が定義されます。
+具体的には、$t \to -\infty$ において十分小さい自由解 $u_-(t,x)$
+に漸近するような (\ref{non}) の解 $u(t,x)$ を ${\mathbb R} \times {\mathbb R}^n$ 上で
+構成し、さらにそれがある自由解 $u_+(t,x)$ に $t \to +\infty$ のとき漸近する
+ことを示すのです。
+自由解 $u_\pm(t,x)$ はその初期データ
+$(u_\pm(0,x),\partial_t u_\pm(0,x))$ により
+完全に決定されるので、
+\begin{equation}\label{s}
+S:~(u_-(0,x),\partial_t u_-(0,x)) \longmapsto
+(u_+(0,x),\partial_t u_+(0,x))
+\end{equation}
+が所要の散乱作用素となります。
+この主張は、解の詳細な減衰評価を導くことにより、$n=3$ のとき
+\cite{pecher}、また $n=2$ のとき \cite{km} により実現されました。
+
+当日は、これらの結果の証明の核をなす
+
+\begin{itemize}
+\item
+(\ref{ho}) の解の減衰評価
+
+\item
+(\ref{non}) の解の減衰評価
+
+\item
+散乱作用素の構成
+\end{itemize}
+
+の三点に絞ってお話する予定です。
+
+また、時間があれば、漸近自由とはならない非線形波動方程式系の例も取り上げたいと思っています。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{thebibliography}{9}
+\bibitem{km} K. Kubota and K. Mochizuki,
+On small data scattering for 2-dimensional semilinear wave equations,
+\textit{Hokkaido Math. J.}
+\textbf{22} (1993), 79--97.
+
+\bibitem{pecher} H. Pecher,
+Scattering for semilinear wave equations with small data
+in three space dimensions,
+\textit{Math. Z.}
+\textbf{198} (1988), 277--289.
+\end{thebibliography}
+
+\newpage
+
+%======================================================================
+% 講演4：峯拓矢「定数磁場中の Aharonov-Bohm 効果について」
+%======================================================================
+\begin{center}
+{\large\bfseries 定数磁場中の Aharonov--Bohm 効果について}\\[6pt]
+\hspace*{\fill}{\large\bfseries 峯 拓矢\ (京都大・理)}
+\end{center}
+
+平面にいくつかの「穴」が空いた領域において、
+0磁場を与えるベクトル・ポテンシャルが
+観測可能な非自明量子効果を生み出す
+――1959年に Y. Aharonov, D. Bohm
+[1] が提唱したこの量子効果（以下、AB効果）は、
+「「物理」を定めるのは「磁場」であり、
+「ベクトル・ポテンシャル」は
+便宜上のものに過ぎない」
+という当時の常識を覆すものであり、
+物理学界に激しい論争を巻き起こした。
+AB効果は
+1986年に外村彰ら[2]による電子線ホログラフィーを用いた
+精密な実験によって実証されたが、
+今もなお疑念を呈する一派もある[3]。
+
+数学的には、AB効果は
+散乱理論における散乱振幅の変化を
+計算することによって確かめられる。
+特に平面における穴が一点の場合、
+この問題は無限に細い電気的に遮蔽されたソレノイドの
+影響下での電子の運動を調べることに相当するが、
+この場合には対応する Schr\"odinger 方程式を
+極座標を用いて解くことが可能であり、
+精密な計算結果が得られている[4]。
+さらにソレノイドが複数の場合を取り扱うことの
+重要性は南部陽一郎[5]によって指摘され、
+数学的に厳密な結果は伊藤宏、田村英男[6],[7]
+によって得られている。
+
+南部陽一郎は[5]において、
+ソレノイドが複数の場合の Schr\"odinger 方程式の解を計算するために、
+平面に垂直な定数磁場 $B$ を加えて
+$B\rightarrow 0$ の極限を取る、という方法を試みている。
+この定数磁場を加えた Schr\"odinger 作用素のスペクトルには
+「シフトされたランダウ準位」という形でAB効果が表れるため、
+この作用素自身も興味深い研究対象である。
+この「シフトされたランダウ準位」は
+ソレノイドが1本の場合は [5] および
+P. Exner, P. {\v S}t'ov\'{\i}{\v c}ek, P. Vyt{\v r}as [8]
+によって計算されたが、
+ソレノイドが2本以上の場合には具体的な計算によって
+求める事は困難であった。
+
+本講演では、ソレノイドが2本以上のときの定数磁場中の
+Schr\"odinger 作用素のスペクトル、
+特に「シフトされたランダウ準位」について
+現在までに得られた結果を紹介し、
+その物理的な解釈を行う。
+結果の証明において中心的な役割を果たすのは、
+生成作用素と消滅作用素の満たす正準交換関係である。
+ソレノイドが無い場合の定数磁場中の Schr\"odinger 作用素
+においては、正準交換関係がスペクトルを完全に決定することが
+知られている。
+ソレノイドがある場合、形式的には
+正準交換関係の中に $\delta$ 関数による摂動項が現れる。
+この摂動項の意味を
+「作用素の境界条件の差」
+として捉えることにより、
+簡単な議論で「シフトされたランダウ準位」の個数を評価できるようになる。
+
+Aharonov--Bohm 効果については多くの解説書が出版されているが、
+初学者向けに書かれた本として [9], [10], [11] を挙げておく。
+外村彰氏による電子線ホログラフィーの解説が、
+インターネット上の日本物理学会の五十周年記念記事
+\url{http://wwwsoc.nii.ac.jp/jps/jps/butsuri/50th/}
+にあるのでそちらも参照されたい。
+
+\begin{center}\textsc{参考文献}\end{center}
+\begin{enumerate}[{[1]}]
+\item
+Aharonov, Y.; Bohm, D.;
+Significance of electromagnetic potentials in the quantum theory,
+\textit{Phys. Rev.} \textbf{115} (1959) 485--491.
+
+\item
+Tonomura, A.;
+Osakabe, N.;
+Matsuda, T.;
+Kawasaki, T.;
+Endo, J.;
+Yano, S.;
+Yamada, H.;
+Evidence for Aharonov--Bohm effect with magnetic field
+completely shielded from electron wave,
+\textit{Phys. Rev. Lett.} \textbf{56} (1986) 792--795.
+
+\item
+Boyer, Timothy H.;
+Does the Aharonov--Bohm effect exist?
+\textit{Found. Phys.} \textbf{30} (2000), no. 6, 893--905.
+
+\item
+Ruijsenaars, S.~N.~M.;
+The Aharonov--Bohm effect and scattering theory,
+\textit{Ann. Physics} \textbf{146} (1983), no. 1, 1--34.
+
+\item
+Nambu, Yoichiro;
+The Aharonov--Bohm problem revisited,
+\textit{Nuclear Phys. B} \textbf{579} (2000), no. 3, 590--616.
+
+\item
+Ito, Hiroshi T.; Tamura, Hideo;
+Scattering by magnetic fields at large separation,
+\textit{Publ. Res. Inst. Math. Sci.} \textbf{37} (2001), no. 4, 531--578.
+
+\item
+Ito, Hiroshi T.; Tamura, Hideo;
+Aharonov--Bohm effect in scattering by a chain of
+point-like magnetic fields,
+\textit{Asymptot. Anal.} \textbf{34} (2003), no. 3--4, 199--240.
+
+\item
+Exner, P.; {\v S}t'ov\'{\i}{\v c}ek, P.; Vyt{\v r}as, P.;
+Generalized boundary conditions for the Aharonov--Bohm effect combined
+with a homogeneous magnetic field,
+\textit{J. Math. Phys.} \textbf{43} (2002), no. 5, 2151--2168.
+
+\item
+安藤恒也編;
+量子効果と磁場,
+丸善, 1995.
+
+\item
+小野嘉之;
+量子力学的「オームの法則」,
+丸善, 2002.
+
+\item
+矢吹治一;
+量子論における位相,
+日本評論社, 1998.
+\end{enumerate}
+
+\newpage
+
+%======================================================================
+% 講演5：山田修宣「遠方で発散するポテンシャルを持つ Dirac 作用素のスペクトルについて」
+%======================================================================
+\begin{center}
+{\large\bfseries 遠方で発散するポテンシャルを持つ Dirac 作用素のスペクトルについて}\\[6pt]
+\hspace*{\fill}{\large\bfseries 山田 修宣 (立命館大・理工)}
+\end{center}
+
+相対論的量子力学を考えるために Dirac によって提起された
+Dirac 作用素のスペクトル理論は、いくつかの点で Schr\"{o}dinger 作用素の場合とは異なる。もちろん、
+Dirac 作用素のスペクトルの研究では、Schr\"{o}dinger 作用素の研究で得られた手法が多くの所で役立つことは言うまでもない。
+
+Dirac 作用素は1階の偏微分作用素であり、時間に依存した Dirac 方程式は対称双曲系で解は有限伝播性を持つ。Dirac 作用素の自己共役性を考える場合、1階偏微分作用素であるためポテンシャルの局所特異性に弱く、Coulomb ポテンシャルの取り扱いに困難性が伴う (Schmincke [4])。それに対して遠方では、有限伝播性の影響で、ポテンシャルの増大度の条件は不要である (Chernoff [2])。
+
+Schr\"{o}dinger 作用素のスペクトルは下から有界になることが多いが、Dirac 作用素のスペクトルは、一般に上にも下にも非有界になる。
+
+ポテンシャル $V(x)$ が遠方で正の無限大に発散するとき、Schr\"{o}dinger 作用素の場合、スペクトルは多重度有限の離散固有値（離散スペクトル）からなるが、Dirac 作用素の場合、連続スペクトルからなる。この現象は、光速を無限大に近づける非相対論的極限で説明する方法がいくつかあるので紹介したい (Titchmarsh [7], Thaller [6], Amour--Brummelhuis--Nourrigat [1])。
+
+Dirac 作用素の質量項を関数 $m(x)$ にして $m(x)$ も遠方で無限大に発散する場合、$V(x)$ が $m(x)$ に対して大きいときはスペクトルは連続になるが
+(Kalf--\={O}kaji--Yamada [3])、$m(x)$ が $V(x)$ に対して大きいときは離散スペクトルからなる (Yamada [8])。この辺の事情も説明したい。
+
+$V(x)$, $m(x)$ が球対称の場合、変数分離法によって Dirac 方程式を1次元化すると2行2列の1階常微分方程式系 (Dirac 系) になる。$V$ の増大度が $m$ より大きい場合、最近のいわゆる Gilbert--Pearson 理論を用いて、スペクトルは絶対連続であることが証明できる (Schmidt--Yamada [5])。この我々の証明とこの分野の最近の発展を紹介したいと思う。
+
+\begin{center}\textbf{文献}\end{center}
+\noindent [1] Amour, L., Brummelhuis, R. and Nourrigat,
+Resonances of the Dirac Hamiltonian in the non relativistic limit, Ann.
+Henri Poincaré,
+\textbf{2} (2001), 583--603.
+
+\noindent [2] Chernoff, P.R., Schr\"{o}dinger and Dirac operators with
+singular potentials and hyperbolic equations, Pacific J. Math., \textbf{72}
+(1977), 361--382.
+
+\noindent [3] Kalf, H., \={O}kaji, T. and Yamada, O.,
+Absence of eigenvalues of Dirac operators with potentials diverging at
+infinity, \textbf{259} (2003), 19--41.
+
+\noindent [4] Schmincke, U-W., Essential selfadjointness of Dirac operators
+with a strongly singular potential, Math. Z., \textbf{126} (1972), 71--81.
+
+\noindent [5] Schmidt, K.~M. and Yamada, O., Spherically symmetric Dirac
+operators with variable mass and potentials infinite at infinity, Publ.
+RIMS, Kyoto Univ., \textbf{34} (1998), 211--227.
+
+\noindent [6] Thaller, B., \textit{The Dirac equation}, Springer, Berlin, 1992.
+
+\noindent [7] Titchmarsh, E.~C., A problem in relativistic quantum mechanics,
+Proc. London Math. Soc. (3), \textbf{11} (1961), 169--192.
+
+\noindent [8] Yamada, O., On the spectrum of Dirac operators with the
+unbounded potential at infinity, Hokkaido Math. J., \textbf{26} (1997),
+439--449.
+
+\newpage
+
+%======================================================================
+% 講演6：田村英男「指数積公式の話題から（ノルム収束、Schrödinger 半群の積分核近似）」
+%======================================================================
+\begin{center}
+{\large\bfseries 指数積公式の話題から（ノルム収束、Schr\"odinger 半群の積分核近似）}\\[6pt]
+\hspace*{\fill}{\large\bfseries 田村　英男（岡山大・理）}
+\end{center}
+
+ヒルベルト空間 $X$ 上の自己共役作用素 $A,~B$（一般に非有界）の
+和 $C = A + B$ によって生成される半群 $\exp(-tC),~t \geq 0$、が
+指数積
+\[
+\exp(-tC) =
+s-\lim_{N \to \infty}
+\Bigl(\exp(-\t B)\exp(-\t A)\Bigr)^N,
+\quad \t = t/N,
+\]
+によって強収束近似できることは Trotter--Kato 公式として知られている。
+
+講演の前半では、
+この指数積公式が適当な条件
+（例えば、$C$ が ${\cal D}(A)\cap{\cal D}(B)$ を定義域として
+自己共役である）の下でノルム収束すること
+およびその誤差評価について講じる。
+
+後半では、
+ノルム収束の応用として、Schr\"odinger 作用素
+\[
+H = H_0 + V,
+\quad
+H_0 = -\Delta,
+\quad
+V(x) \geq 0,
+\]
+によって生成される半群 $\exp(-tH)$ の積分核に対する
+指数積公式による近似とその誤差評価について講じる。
+とくに、ポテンシャル $V(x)$ を
+\[
+V(x) = 0
+\squad\squad(x \in \Omega),
+\quad V(x) = \infty
+\squad\squad(x \not\in \Omega)
+\]
+のようにとれば、形式的ではあるが、
+$H$ を領域 $\Omega$ 上の Dirichlet Laplacian
+\[
+H_D = -\Delta,
+\quad
+{\cal D}(H_D) = H^2(\Omega)\cap H_0^1(\Omega),
+\]
+とみなすことができる。このとき、
+$\exp(-tV)$ は集合 $\Omega$ の
+特性関数 $\chi_{\Omega}$ に等しく、
+半群 $\exp(-tH_D)$ に対する指数積は
+\[
+\exp(-tH_D) \sim
+\Bigl(\chi_{\Omega}\exp(-\t H_0)\chi_{\Omega}\Bigr)^N,
+\quad \t = t/N,
+\]
+の形をとる。また、
+その積分核 $E_D(x,y;t)$ の近似式として
+\[
+E_D(x,y;t) \sim
+\int_{\Omega}\cdots\int_{\Omega}
+E_0(x,z_1;\t)\cdots E_0(z_{N-1},y;\t)\,dz_1\cdots dz_{N-1},
+\quad (x,y) \in \Omega\times\Omega,
+\]
+を得る。ただし、
+$E_0(x,y;\t)$ は $\exp(-\t H_0)$ の積分核を表す。
+この近似表現式の収束について得られた結果を紹介する。
+
+さらに、
+$t > 0$ を $it$ に置き換えた指数積
+\[
+\exp(-itH_D) \sim
+\Bigl(\chi_{\Omega}\exp(-i\t H_0)\chi_{\Omega}\Bigr)^N
+\]
+を考える。この積公式は、Zeno 積公式と呼ばれ、
+量子系の観察に関わる問題（Zeno 量子効果）に現れる。
+時間が許せば、
+Zeno 積公式の強収束問題についても言及したい。
+
+\end{document}

@@ -1,0 +1,120 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{enumerate}
+\usepackage{url}
+
+\pagestyle{empty}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\N}{{\mathbb N}}
+\newcommand{\IP}{{\mathbb P}}
+\newcommand{\Q}{{\mathbb Q}}
+\newcommand{\R}{{\mathbb R}}
+\newcommand{\Z}{{\mathbb Z}}
+\newcommand{\cF}{{\mathcal{F}}}
+\newcommand{\cG}{{\mathcal{G}}}
+
+\begin{document}
+
+%======================================================================
+% 講演1：岩瀬則夫「Lusternik-Schnirelmann カテゴリ数」
+%======================================================================
+\noindent
+{\large\bfseries Lusternik-Schnirelmann カテゴリ数}\\
+~\hspace*{\fill}{\large\bfseries 岩瀬 則夫（九大・数理）}\\
+
+土器の制作に使われる粘土は、こねて固められた塊からあるいは延ばされあるいはすぼめられて、制作者の思い通りの形に仕上げられる。しかし取手はどうであろうか？　これは別の小さな粘土の塊を「くっつける」という操作を行わねばならない。あるいは注ぎ口はどうであろうか？　これは「穴を開ける」か、注ぎ口の下部を作った後にその上部にやはり別の粘土を「くっつける」といった操作を行わねばならない。
+
+このように土器の制作は「延ばし」たり「すぼめ」たりといった連続的な変形を基に、取手や注ぎ口を付けるなどの形態的な変化が別の粘土の塊を「くっつける」という操作によって与えられると見なされる。では、作り上げたい造形物に対して、製作者は始めに粘土の塊を最少でいくつ用意すれば良いのであろうか？　誤解を恐れずに言えば、
+$\langle$ 粘土の塊の最少数 $\rangle$ に対応する数学的な量が
+L(usternik)-S(chnirelmann) カテゴリ数である。
+
+L-S カテゴリ数は歴史的には $C^\infty$-関数の特異点の個数を下から評価する量として与えられ、一方では Arnold 予想との関連が指摘され、また一方では結び目の複雑さを測る道具となり、他方では $A_\infty$-構造に付随したホップ不変量が決定的な場面で現れるという、単純ながら興味深い位相（ホモトピー）不変量である。
+
+しかしその単純な定義からは、L-S カテゴリ数を計算する手順は見えてこない。その辺りの事情はちょうど数列の極限を計算で求めるのは難しいが、上下に挟み込むことで決定できるのと似ている。そしてすぐに分かるのは、
+L-S カテゴリ数の上限が空間の $\langle$次元$\rangle$ で与えられることであり、下限が空間のコホモロジー環の $\langle$cup length$\rangle$ で与えられることである…
+
+\newpage
+%======================================================================
+% 講演2：岩瀬則夫「Lusternik-Schnirelmann カテゴリ数と $A_\infty$-構造」
+%======================================================================
+\noindent
+{\large\bfseries Lusternik-Schnirelmann カテゴリ数と $A_\infty$-構造}\\
+~\hspace*{\fill}{\large\bfseries 岩瀬 則夫（九大・数理）}\\
+
+古典的なホモトピー論の手法を適用するだけで L-S カテゴリ数が決定できる空間は期待されるほど多くはなく、例えば $n$ 次元トーラス
+$T^n = \mathbb{R}^n/\mathbb{Z}^n \approx S^1 \times (n \mbox{個})\times S^1$
+の L-S カテゴリ数は $n$ であるとすぐに決定できるが、
+lens 空間の L-S カテゴリ数の決定でさえ実は難しい。さらに空間 $X$ の L-S カテゴリ数 $\mathrm{cat}(X)$ がどういう場合に増えるかすら問題であり、例えば等式
+$\mathrm{cat}(X \times S^n) =\mathrm{cat}(X)+1$
+が成立するかどうかも30年近く未解決であった。
+
+この講演では L-S カテゴリ数のホモトピー論的な側面に注目し、1997年以後に得られたいくつかの計算可能な不変量を $A_\infty$-構造との関連を見ながら紹介したい。それらはまず上からの評価を与える $\langle$高次ホップ不変量$\rangle$ であり、また下からの評価を与える Rudyak, Strom の $\langle$category weight$\rangle$ およびその改良版である $\langle$module weight$\rangle$ である。実はそのような新しい不変量の登場する過程で、期待されていた等式 $\mathrm{cat}(X \times S^n) =\mathrm{cat}(X)+1$ が成立しない多様体 $X$ の例があることが 3 次元複素射影空間 $\mathbb{C}P^3$ を用いて見いだされている。
+
+\newpage
+%======================================================================
+% 講演3：Elmar VOGT「Lusternik-Schnirelmann Category for Foliations」
+%======================================================================
+\noindent{\large\bfseries Lusternik-Schnirelmann Category for Foliations}\\
+~\hspace*{\fill}{\large\bfseries Elmar VOGT (University of Tokyo / Free University of Berlin)}\\
+
+In this lecture we extend the notions and concepts of Lusternik-Schnirelmann category that we have heard about in the previous lecture to the case of foliations. A foliation is a way of filling an $n$-dimensional space by connected spaces of a fixed lower dimension in some regular way, sort of like making a ``Baumkuchen'', or a French ``mille feuilles'' pastry, layer by layer. The layers are called the leaves of the foliation.
+
+Mathematically, there are many ways to look at foliations. If the dimension of the leaves is 1, then a foliation is nothing but a vector field without zeroes, where the leaves are the orbits of the dynamical system defined by the vector field. So foliations have a dynamical aspect, and one looks for compact leaves (corresponding to closed orbits), for recurrence, minimal sets, stable leaves, et cetera. In the same vein, the orbits of a locally free action of a Lie group on a space are the leaves of a foliation. On the other hand the components of the fibres of a fibre bundle are leaves of a foliation, so foliations generalize the bundle concept. They also show up in classical mechanics as holonomic restraints of mechanical systems, and as the stable and unstable manifolds of Anosov flows. Naturally, one also likes to study them, because they are beautiful geometric objects to look at, revealing the sometimes stymying global geometric aspects when you follow the leaves as they move inside the space that they fill.
+
+Foliations were introduced by C. Ehresmann and G. Reeb in the early 1940's, and there are many excellent books about the subject, for example 田村一郎, 葉層のトポロジー.
+
+Lusternik-Schnirelmann (LS) category for foliations is a rather new concept. It was introduced by Hellen Colman in her thesis of 1998 at the University of Santiago de Compostela. Her advisor was E. Mac\'ias-Virg\'os. (See: H. Colman, E. Mac\'ias-Virg\'os, \textit{The transverse Lusternik-Schnirelmann category of foliations}, Topology 40 (2000), 419--430, and H. Colman, E. Mac\'ias-Virg\'os, \textit{Tangential Lusternik-Schnirelmann category of foliations}, J. London Math. Soc. (2) 65 (2002), 41--64.)
+
+Actually, there are two ways to generalize LS-category to foliations which produce completely different invariants. When you look at a foliation your eyes might follow the leaves and you try to contract sets inside leaves as you move along. This leads to the concept of tangential LS-category. But you might also move your eyes transverse to the leaves trying to contract the space between leaves, leading to the concept of transverse LS-category (compare the titles of the two papers of Colman, Mac\'ias-Virg\'os above). We will discuss both of them.
+
+In the mean time the literature on the subject of LS-category for foliations, both transverse and tangential, has grown quite a bit. We will report on some of it. Here are some references that you might enjoy looking at.
+
+\begin{enumerate}[{[1]}]
+\item H. Colman, \textit{LS-categories for foliated manifolds}, Proc. Foliations: Geometry and dynamics, Warsaw 2000, World Scientific, 2002, 17--28.
+\item H. Colman, S. Hurder, \textit{Tangential LS-category and cohomology for foliations}, in Cornea, O. (ed.) et al., Lusternik-Schnirelmann category and related topics. Proceedings of the 2001 AMS-IMS-SIAM joint summer research conference on Lusternik-Schnirelmann category in the new millennium, South Hadley, MA, USA, July 29--August 2, 2001. Providence, RI: American Mathematical Society (AMS). Contemp. Math. 316, 41--64 (2002).
+\item S. Hurder, \textit{Category and compact leaves}, Topology Appl. 153, No.~12, 2135--2154 (2006).
+\item S. Hurder, D. T\"{o}ben, \textit{Transverse LS-category for Riemannian foliations}, Preprint Univ. Illinois at Chicago 2006.\\
+(Available on S. Hurder's homepage: \url{http://www.math.uic.edu/~hurder/})
+\item S. Hurder, P. Walczak, \textit{Compact foliations with finite transverse category}, Preprint Univ. Illinois at Chicago 2004.\\
+(Available on S. Hurder's homepage: \url{http://www.math.uic.edu/~hurder/})
+\item W. Singhof, E. Vogt, \textit{Tangential category for foliations}, Topology 42 (2003), 603--627.
+\item W. Singhof, E. Vogt, \textit{Tangential LS-category of $K(\pi,1)$-foliations}, Preprint FU-Berlin 2006. (Available at \url{http://www.ms.u-tokyo.ac.jp/~vogt/})
+\end{enumerate}
+
+\newpage
+%======================================================================
+% 講演4：松元重則「LSカテゴリーと力学系」
+%======================================================================
+\noindent
+{\large\bfseries LSカテゴリーと力学系}\\
+~\hspace*{\fill}{\large\bfseries 松元重則（日大・理工）}\\
+
+LSカテゴリーは、保存力学系とくに測地流の変分法の解析の研究の中で、Ljusternik と Schnirelmann により1930年代に導入された。一般に多様体 $N$ 上に周期的な流れ（周期1）$\{\varphi^t\}$ が与えられたとして、その周期軌道（周期1）を求める問題を考える。このとき保存系では次のような状況が一般的である。
+\\[3mm]
+「$S^1$ から $N$ への（例えば絶対連続な）写像の全体のなす空間 $\Omega$ と、その上の汎関数 $\Phi:\Omega\to\mathbf{R}$ が定まり、$\Phi$ の臨界点（これは $\Omega$ の点なので、$N$ の閉曲線）が、流れ $\{\varphi^t\}$ の周期軌道に対応する。」
+\\[3mm]
+そして上記の問題は自然に、汎関数 $\Phi$ の臨界点の個数を評価すること、へと導かれる。
+
+特に周期軌道としてホモトピー的に自明なもののみを考えることにしよう。この場合、往々にして空間 $\Omega$ の位相は多様体 $N$ の位相を、色濃く反映している。よって $N$ の位相幾何的性質から導かれる、周期軌道の個数の（下からの）評価が期待される。そして、これを与えてくれるものがLSカテゴリーである。
+
+今回の講演では、まず、コンパクト空間 $X$ 上に定義された関数の臨界点の個数の最小値が $\mathrm{cat}(X)+1$ であることを述べる。（証明もつけたい。）次に、保存力学系についてのいくつかの応用（例えばArnold予想）について触れたい。
+
+\newpage
+%======================================================================
+% 講演5：田中和永「無限次元での変分問題」
+%======================================================================
+\noindent
+{\large\bfseries 無限次元での変分問題\quad --- 解析学の立場からの入門的な話題 ---}\\
+~\hspace*{\fill}{\large\bfseries 田中 和永（早稲田大学理工学部数理科学科）}\\
+
+古典力学における最小作用の原理をはじめとして、変分原理によりあらわされる現象は多岐にわたる。変分原理は現象を記述する微分方程式の導出、およびその解のよい特徴付けを与えるものの、一般に変分問題自体は無限次元関数空間上定義された汎関数の臨界点を求める問題として定式化されるため、その解析的な扱いは難しく、直接変分問題を解析し、解の存在等を議論できるようになったのは Hilbert らにより弱解 (weak solution) 等の概念が導入され、関数空間の完備性の重要性が認識されるようになってからである。この講演では非線型楕円型方程式、ハミルトン系、ラグランジュ系に対する周期問題等の非線型問題に対する変分問題を中心に、Palais-Smale 条件の自然さ、重要性からはじめ Lusternik-Schnirelmann theory 等に関連する話題を具体例を挙げながら平易に紹介したい。
+
+\medskip
+
+\noindent
+文献：\quad M. Struwe, \textit{Variational methods}, 3rd edition, Springer-Verlag, 2000.
+
+\end{document}

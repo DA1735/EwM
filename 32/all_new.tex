@@ -1,0 +1,140 @@
+%!TEX program = uplatex
+\RequirePackage{plautopatch}
+\documentclass[uplatex,dvipdfmx]{jlreq}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+
+\pagestyle{empty}
+
+\begin{document}
+
+%======================================================================
+% 第32回：山辺の問題
+%======================================================================
+\begin{center}
+{\Large ENCOUNTER with MATHEMATICS}\\
+第32回\\
+{\LARGE 山辺の問題}\\
+---微分幾何における大域解析のひとつの源流---\\
+梗概
+\vspace{5pt}
+\end{center}
+
+\vfill
+
+\newpage
+
+%======================================================================
+% 講演1：小林治「山辺の問題 I, II, III」
+%======================================================================
+\noindent
+{\bfseries\large「山辺の問題 I, II, III」\hfill　小林　治（熊本大・理）}
+
+\vspace{6pt}
+
+山辺英彦はヒルベルトの第5問題で良く知られている数学者であるが、山辺が
+亡くなる年1960年に次の定理を発表した：3次元以上のコンパクト連結な多様
+体のリーマン計量は共形変形でスカラー曲率を一定にできる。ところがこの論
+文の証明には誤りがあることが1968年に N. Trudinger により指摘され、以来、
+山辺の問題と呼ばれるようになった。この問題は1970年代に T. Aubin により
+大きな進展がなされたが解決にはいたらず、ようやく1980年代に入ってから
+R. Schoen が正質量定理を用いて解決にいたった。ところが予告されていた正
+質量定理の証明（高次元の場合）は未だ発表されておらず、書かれた文献だけ
+で見れば山辺の問題の証明は完全とは言いきれない状況にある。今回のセミナ
+ーでは、山辺の問題がきちんと解けていることを、芥川和雄氏、井関裕靖氏の
+協力を得て解説したい。
+
+\bigskip
+
+%======================================================================
+% 講演2：芥川和雄「正質量定理」
+%======================================================================
+\noindent
+{\bfseries\large「正質量定理」\hfill　芥川和雄（東京理大・理工）}
+
+\vspace{6pt}
+
+小林治氏の講演で、山辺の問題の解決の最後の部分：「$n$ 次元コンパクト共形
+多様体 $(M^n, C)$ の山辺定数が $n$ 次元球面 $S^n$ 上の定曲率計量の共形類
+$C_0$ のそれに等しいとき、$(M^n, C)$ と $(S^n, C_0)$ は共形同値である」
+が、正質量定理に帰着されることまでが解説される。「正質量予想」とは本来、
+漸近的に平坦な時空（4次元ローレンツ多様体）に対する問題であるが、それは
+漸近的に平坦な極大超曲面（3次元リーマン多様体）に対する「リーマン幾何的
+正質量予想」と言うリーマン幾何の問題に帰着される。そしてこの予想は、漸近
+的に平坦な $n$ 次元リーマン多様体 $(N^n, g)$ へと一般化される。山辺の問題
+の最終的解決に必要なのは、次の2つ場合の正質量定理（i.e., リーマン幾何的
+正質量予想の解決）である。（1）$n = 3$, $4$, $5$、または　（2）$n \geq 6$
+かつ $(N^n, g)$ は共形平坦。しかしながら、正質量定理で証明が与えられている
+のは、今のところ $n \leq 7$ の場合のみである。この講演では、$n \leq 7$ の
+場合の正質量定理について解説したい。そうして、井関氏による最終ステップの解
+説：「共形平坦な場合の正質量定理および山辺の問題の最終的解決」へとつなげたい。
+
+\newpage
+
+%======================================================================
+% 講演3：井関裕靖「共形写像の単射性定理と山辺の問題」
+%======================================================================
+\noindent
+{\bfseries\large「共形写像の単射性定理と山辺の問題」\hfill 井関裕靖（東北大・理）}
+
+\vspace{6pt}
+
+小林治氏と芥川和雄氏の講演で、山辺の問題の解決が正質量定理に帰着される
+こと、および R. Schoen 等による正質量定理の証明までが解説される。しか
+しながら、小林治氏がアブストラクトの中で指摘しているように、高次元の場
+合まで含めた正質量定理の証明は未だに発表されていない。そのため、高次元
+の共形的に平坦な多様体の場合については、山辺の問題に完全な証明が与えら
+れたとは言いにくい状況にあった。実は、この場合の山辺の問題は、後に
+R. Schoen と S.-T. Yau により示されたある結果を用いて肯定的に解決され
+る。ところが、この結果は共形平坦多様体の展開写像の単射性に関するもので、
+論文中にも山辺の問題の解決との直接的な関係を示唆するような記述はない。
+そのため、山辺の問題の解決に至る最終ステップは「分かる人には分かる」と
+いう状態に放置され続けることになってしまった。この講演ではこの最終ステッ
+プについて解説したい。
+
+\begin{thebibliography}{99}
+\bibitem{1}{\bfseries T. Aubin,}
+   ``Some Nonlinear Problems in Riemannian Geometry'',
+   Springer, (1997).
+
+\bibitem{2}{\bfseries 小林 治，}
+   「山辺の問題について」，Seminar on Math. Sci.
+   \textbf{16} 慶応大，(1990).
+
+\bibitem{3}{\bfseries J.~M. Lee} \& {\bfseries T.~H. Parker,}
+   ``The Yamabe problem'', Bull. Am. Math. Soc.
+   \textbf{17} (1987), 37--91.
+
+\bibitem{4}{\bfseries R. Schoen,}
+   ``Conformal deformation of a Riemannian metric to constant
+   scalar curvature'', J.D.G.
+   \textbf{20} (1984), 479--495.
+
+\bibitem{5}{\bfseries R. Schoen,}
+   ``Variational theory for the total scalar curvature functional
+   for Riemannian metrics and related topics'',
+   Topics in Calculus of Variations, Springer Lect. Notes in Math. \textbf{1365}
+   (1989), 121--154.
+
+\bibitem{6}{\bfseries R. Schoen} \& {\bfseries S.~T. Yau,}
+   ``On the proof of the positive mass conjecture
+   in general relativity'', Comm. Math. Phys.
+   \textbf{65} (1979), 45--76.
+
+\bibitem{7}{\bfseries R. Schoen} \& {\bfseries S.~T. Yau,}
+   ``Conformally flat manifolds, Kleinian groups
+   and scalar curvature'', Invent. Math.
+   \textbf{92} (1988), 47--71.
+
+\bibitem{8}{\bfseries N. Trudinger,}
+   ``Remarks concerning the conformal deformation of Riemannian
+   structures on compact manifolds'', Ann. Scuola Norm. Sup. Pisa
+   \textbf{22} (1968), 265--274.
+
+\bibitem{9}{\bfseries H. Yamabe,}
+   ``On the deformation of Riemannian structures on compact
+   manifolds'', Osaka Math. J.
+   \textbf{12} (1960), 21--37.
+\end{thebibliography}
+
+\end{document}
